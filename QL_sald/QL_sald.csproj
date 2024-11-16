@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FA1FB32-C92E-47A3-B945-091360EA8F82}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QL_sald</RootNamespace>
+    <AssemblyName>QL_sald</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azure.Core, Version=1.44.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\Azure.Core.1.44.1\lib\net472\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.13.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\Azure.Identity.1.13.1\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Ububox.G2Crack.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.TimeProvider, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.TimeProvider.9.0.0\lib\net462\Microsoft.Bcl.TimeProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.SqlClient.5.2.2\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.66.2.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.4.66.2\lib\net472\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.66.2.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.Extensions.Msal.4.66.2\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Abstractions.8.2.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.8.2.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.8.2.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.8.2.1\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.8.2.1\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.8.2.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ClientModel, Version=1.2.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\System.ClientModel.1.2.1\lib\netstandard2.0\System.ClientModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.9.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.9.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.8.2.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.9.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.Data.9.0.0\lib\net462\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.ProtectedData.9.0.0\lib\net462\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Permissions.9.0.0\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.9.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.9.0.0\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.6.0\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccessLayer\ConnectSQL.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cài_đặt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cài_đặt.Designer.cs">
+      <DependentUpon>Cài_đặt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_cafe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_cafe.Designer.cs">
+      <DependentUpon>menu_cafe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhân_viên1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="nhân_viên1.Designer.cs">
+      <DependentUpon>nhân_viên1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="package_dif.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="package_dif.Designer.cs">
+      <DependentUpon>package_dif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="packages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="packages.Designer.cs">
+      <DependentUpon>packages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menubanh_snack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menubanh_snack.Designer.cs">
+      <DependentUpon>menubanh_snack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menucafe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menucafe.Designer.cs">
+      <DependentUpon>menucafe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuthucuongdaxay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menuthucuongdaxay.Designer.cs">
+      <DependentUpon>menuthucuongdaxay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menutrasua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menutrasua.Designer.cs">
+      <DependentUpon>menutrasua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menutratraicay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="menutratraicay.Designer.cs">
+      <DependentUpon>menutratraicay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sửa_món.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sửa_món.Designer.cs">
+      <DependentUpon>sửa_món.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="themmon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="themmon.Designer.cs">
+      <DependentUpon>themmon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="thêm_nhân_viên.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="thêm_nhân_viên.Designer.cs">
+      <DependentUpon>thêm_nhân_viên.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValueObject\Account.cs" />
+    <Compile Include="ValueObject\AccRole.cs" />
+    <Compile Include="ValueObject\Category.cs" />
+    <Compile Include="ValueObject\Food.cs" />
+    <Compile Include="ValueObject\FoodIngredient.cs" />
+    <Compile Include="ValueObject\Ingredient.cs" />
+    <Compile Include="ValueObject\Invoice.cs" />
+    <Compile Include="ValueObject\InvoiceDetail.cs" />
+    <Compile Include="ValueObject\Order.cs" />
+    <Compile Include="ValueObject\Payment.cs" />
+    <Compile Include="ValueObject\ShiftTime.cs" />
+    <Compile Include="ValueObject\Staff.cs" />
+    <Compile Include="ValueObject\TableFood.cs" />
+    <Compile Include="ValueObject\Warehouse.cs" />
+    <Compile Include="xóa_món.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="xóa_món.Designer.cs">
+      <DependentUpon>xóa_món.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cài_đặt.resx">
+      <DependentUpon>Cài_đặt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu_cafe.resx">
+      <DependentUpon>menu_cafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhân_viên1.resx">
+      <DependentUpon>nhân_viên1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="package_dif.resx">
+      <DependentUpon>package_dif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="packages.resx">
+      <DependentUpon>packages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menubanh_snack.resx">
+      <DependentUpon>menubanh_snack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menucafe.resx">
+      <DependentUpon>menucafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuthucuongdaxay.resx">
+      <DependentUpon>menuthucuongdaxay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menutrasua.resx">
+      <DependentUpon>menutrasua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menutratraicay.resx">
+      <DependentUpon>menutratraicay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sửa_món.resx">
+      <DependentUpon>sửa_món.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themmon.resx">
+      <DependentUpon>themmon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thêm_nhân_viên.resx">
+      <DependentUpon>thêm_nhân_viên.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xóa_món.resx">
+      <DependentUpon>xóa_món.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\bạc xỉu%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\baocao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\donhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\donhangicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\khohang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\nhanvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\trangchu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\trangchu-active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\bacxiulacsua%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\bơ arabica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\cà phê đen đá%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\cà phê đen đá.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\cafe đen nóng%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\cafe sữa đá%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\cafe sữa nóng%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\đường đen sữa đá%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\đường đen%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Cafe\traxanh%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Resources\basil_add-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Resources\typcn_delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Resources\material-symbols_change-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà sữa\ts chân châu đường đen%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà sữa\trà sữa olong%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà sữa\ts tứ quý bơ%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà sữa\ts tứ quý sương sáo%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà sữa\trà đen macchiato%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà sữa\hongtrasuatraan châu%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Thức uống đá xay\phin_gato%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Thức uống đá xay\cà phê đường đen%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Thức uống đá xay\bánh kem dâu%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Thức uống đá xay\choco_chip%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Thức uống đá xay\caramel%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Thức uống đá xay\bus%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bánh\mochi phúc kem bồn tử%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bánh\mochi kem việt quất%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bánh\mochi kem chocolate%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bánh\mousse gấu%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bánh\bánh mì vn%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bánh\bimbim ngô%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\bánh\bim bim sữa dừae%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà trái cây\trà đào cam sả%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà trái cây\đào%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà trái cây\trà vải%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà trái cây\yuzu%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Trà trái cây\olong%281%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LogicLayer\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
+  </Target>
+</Project>
