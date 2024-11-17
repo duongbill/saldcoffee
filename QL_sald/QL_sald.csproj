@@ -251,12 +251,6 @@
     <Compile Include="sửa_món.Designer.cs">
       <DependentUpon>sửa_món.cs</DependentUpon>
     </Compile>
-    <Compile Include="test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
     <Compile Include="themmon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -338,9 +332,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sửa_món.resx">
       <DependentUpon>sửa_món.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="themmon.resx">
       <DependentUpon>themmon.cs</DependentUpon>
