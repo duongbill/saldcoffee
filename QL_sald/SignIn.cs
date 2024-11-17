@@ -76,5 +76,14 @@ namespace QL_sald
         {
 
         }
+
+        private void showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            // Nếu CheckBox được chọn, mật khẩu sẽ hiển thị, nếu không thì ẩn
+            txtMatKhau.PasswordChar = showpass.Checked ? '\0' : '*';
+        }
+
+
+
     }
 }
