@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.xóa_món1 = new QL_sald.xóa_món();
+            this.sửa_món1 = new QL_sald.sửa_món();
             this.SuspendLayout();
             // 
-            // xóa_món1
+            // sửa_món1
             // 
-            this.xóa_món1.Location = new System.Drawing.Point(457, 191);
-            this.xóa_món1.Name = "xóa_món1";
-            this.xóa_món1.Size = new System.Drawing.Size(1121, 745);
-            this.xóa_món1.TabIndex = 0;
+            this.sửa_món1.Location = new System.Drawing.Point(193, 56);
+            this.sửa_món1.Name = "sửa_món1";
+            this.sửa_món1.Size = new System.Drawing.Size(1121, 745);
+            this.sửa_món1.TabIndex = 0;
             // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 753);
-            this.Controls.Add(this.xóa_món1);
+            this.Controls.Add(this.sửa_món1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "test";
             this.Text = "test";
@@ -53,6 +53,6 @@
 
         #endregion
 
-        private xóa_món xóa_món1;
+        private sửa_món sửa_món1;
     }
 }
