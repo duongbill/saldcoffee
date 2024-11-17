@@ -166,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessLayer\ConnectSQL.cs" />
+    <Compile Include="daxaydrink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="daxaydrink.Designer.cs">
+      <DependentUpon>daxaydrink.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +281,12 @@
     <Compile Include="trasua_page.Designer.cs">
       <DependentUpon>trasua_page.cs</DependentUpon>
     </Compile>
+    <Compile Include="tratraicay_page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tratraicay_page.Designer.cs">
+      <DependentUpon>tratraicay_page.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValueObject\Account.cs" />
     <Compile Include="ValueObject\AccRole.cs" />
     <Compile Include="ValueObject\Category.cs" />
@@ -295,6 +307,9 @@
     <Compile Include="xóa_món.Designer.cs">
       <DependentUpon>xóa_món.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="daxaydrink.resx">
+      <DependentUpon>daxaydrink.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -350,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="trasua_page.resx">
       <DependentUpon>trasua_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tratraicay_page.resx">
+      <DependentUpon>tratraicay_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xóa_món.resx">
       <DependentUpon>xóa_món.cs</DependentUpon>
