@@ -55,11 +55,12 @@ namespace QL_sald
 
         }
 
+<<<<<<< HEAD
         private void passhide_CheckedChanged(object sender, EventArgs e)
         {
             txtMatKhau.PasswordChar = passhide.Checked ? '\0' : '*';
         }
 
-        
+   
     }
 }
