@@ -14,31 +14,6 @@ namespace QL_sald
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SignIn_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             try
@@ -56,9 +31,12 @@ namespace QL_sald
 
                     if (dta.Read())
                     {
-                        MessageBox.Show("Đăng nhập thành công!");
-                      
-                        this.Close();
+                       
+
+                        
+                        Form1 form1 = new Form1();
+                        form1.Show();
+                        this.Hide(); 
                     }
                     else
                     {
@@ -76,5 +54,12 @@ namespace QL_sald
         {
 
         }
+
+        private void passhide_CheckedChanged(object sender, EventArgs e)
+        {
+            txtMatKhau.PasswordChar = passhide.Checked ? '\0' : '*';
+        }
+
+        
     }
 }
