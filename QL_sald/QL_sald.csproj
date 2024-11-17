@@ -269,6 +269,12 @@
     <Compile Include="thêm_nhân_viên.Designer.cs">
       <DependentUpon>thêm_nhân_viên.cs</DependentUpon>
     </Compile>
+    <Compile Include="trasua_page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="trasua_page.Designer.cs">
+      <DependentUpon>trasua_page.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValueObject\Account.cs" />
     <Compile Include="ValueObject\AccRole.cs" />
     <Compile Include="ValueObject\Category.cs" />
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="thêm_nhân_viên.resx">
       <DependentUpon>thêm_nhân_viên.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trasua_page.resx">
+      <DependentUpon>trasua_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xóa_món.resx">
       <DependentUpon>xóa_món.cs</DependentUpon>
