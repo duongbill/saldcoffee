@@ -34,9 +34,7 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-
             this.passhide = new System.Windows.Forms.CheckBox();
-
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
@@ -76,7 +74,7 @@
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(196, 53);
             this.guna2HtmlLabel3.TabIndex = 5;
             this.guna2HtmlLabel3.Text = "Đăng nhập";
-
+   
             // 
             // guna2HtmlLabel4
             // 
@@ -89,7 +87,6 @@
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(136, 27);
             this.guna2HtmlLabel4.TabIndex = 6;
             this.guna2HtmlLabel4.Text = "Tài Khoản";
-
             // 
             // guna2HtmlLabel5
             // 
@@ -103,7 +100,6 @@
             this.guna2HtmlLabel5.TabIndex = 11;
             this.guna2HtmlLabel5.Text = "Mật khẩu";
             // 
-
             // passhide
             // 
             this.passhide.AutoSize = true;
@@ -115,7 +111,6 @@
             this.passhide.Text = "Show password";
             this.passhide.UseVisualStyleBackColor = true;
             this.passhide.CheckedChanged += new System.EventHandler(this.passhide_CheckedChanged);
-
             // 
             // guna2Button1
             // 
@@ -151,12 +146,10 @@
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-
             this.txtMatKhau.PlaceholderText = "";
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.Size = new System.Drawing.Size(306, 39);
             this.txtMatKhau.TabIndex = 12;
-
             // 
             // txtTaiKhoan
             // 
@@ -187,9 +180,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(676, 466);
             this.Controls.Add(this.guna2Button1);
-
             this.Controls.Add(this.passhide);
-
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.txtTaiKhoan);
@@ -200,8 +191,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-
-
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);

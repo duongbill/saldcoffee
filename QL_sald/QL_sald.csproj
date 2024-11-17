@@ -153,6 +153,7 @@
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -166,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessLayer\ConnectSQL.cs" />
+    <Compile Include="DataAccessLayer\Staffdata.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +247,12 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff.Designer.cs">
+      <DependentUpon>staff.cs</DependentUpon>
+    </Compile>
     <Compile Include="sửa_món.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -262,6 +270,12 @@
     </Compile>
     <Compile Include="thêm_nhân_viên.Designer.cs">
       <DependentUpon>thêm_nhân_viên.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="trasua_page.cs">
       <SubType>UserControl</SubType>
@@ -330,6 +344,9 @@
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="staff.resx">
+      <DependentUpon>staff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sửa_món.resx">
       <DependentUpon>sửa_món.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="thêm_nhân_viên.resx">
       <DependentUpon>thêm_nhân_viên.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="trasua_page.resx">
       <DependentUpon>trasua_page.cs</DependentUpon>
@@ -513,7 +533,7 @@
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="LogicLayer\" />
+    <Folder Include="logicLayer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

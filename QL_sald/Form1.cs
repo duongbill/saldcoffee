@@ -8,6 +8,9 @@ namespace QL_sald
       
         private menu_cafe menuControl = new menu_cafe();  // `menu_cafe` là Form con
         private Cài_đặt stControl = new Cài_đặt();
+        private TrangChu tcControl = new TrangChu();
+        private packages pgControl = new packages();
+        private staff sfControl = new staff();
         public Form1()
         {
             InitializeComponent();
@@ -66,7 +69,9 @@ namespace QL_sald
         // Sự kiện Click cho nút btnMenu để hiển thị menuControl
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            OpenChildForm(menuControl); // Truyền Form con menuControl vào
+         menu_cafe menuControl1 = new menu_cafe();
+        OpenChildForm(menuControl1); // Truyền Form con menuControl vào
+
         }
 
         // Sự kiện thoát ứng dụng
@@ -78,6 +83,24 @@ namespace QL_sald
         private void btn_ct_Click(object sender, EventArgs e)
         {
             OpenChildControl(stControl); // Truyền Form con menuControl vào
+
+        }
+
+        private void btn_tc_Click(object sender, EventArgs e)
+        {
+            TrangChu tcControl = new TrangChu();
+            OpenChildForm(tcControl); // Truyền Form con menuControl vào
+        }
+
+        private void btn_dh_Click(object sender, EventArgs e)
+        {
+            OpenChildControl(pgControl);
+        }
+
+        private void btn_nv_Click(object sender, EventArgs e)
+        {
+            staff sfControl = new staff();
+            OpenChildForm(sfControl); // Truyền Form con menuControl vào
         }
     }
 }
