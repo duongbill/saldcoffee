@@ -18,7 +18,7 @@ namespace QL_sald
         {
             try
             {
-                SqlConnection conn = new SqlConnection(@"Server=localhost,1433;Database=quanly_cafe;User Id=sa;Password=123456;");
+                SqlConnection conn = new SqlConnection(@"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;");
                 {
                     conn.Open();
                     string tk = txtTaiKhoan.Text;
@@ -61,6 +61,6 @@ namespace QL_sald
             txtMatKhau.PasswordChar = passhide.Checked ? '\0' : '*';
         }
 
-   
+       
     }
 }
