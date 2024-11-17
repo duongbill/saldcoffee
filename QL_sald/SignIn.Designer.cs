@@ -34,7 +34,11 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+<<<<<<< HEAD
+            this.passhide = new System.Windows.Forms.CheckBox();
+=======
             this.showpass = new System.Windows.Forms.CheckBox();
+>>>>>>> bac4639307c263250a8c0fcf18d3da7e2b03d568
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
@@ -74,7 +78,10 @@
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(196, 53);
             this.guna2HtmlLabel3.TabIndex = 5;
             this.guna2HtmlLabel3.Text = "Đăng nhập";
+<<<<<<< HEAD
+=======
             this.guna2HtmlLabel3.Click += new System.EventHandler(this.guna2HtmlLabel3_Click);
+>>>>>>> bac4639307c263250a8c0fcf18d3da7e2b03d568
             // 
             // guna2HtmlLabel4
             // 
@@ -87,7 +94,10 @@
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(136, 27);
             this.guna2HtmlLabel4.TabIndex = 6;
             this.guna2HtmlLabel4.Text = "Tài Khoản";
+<<<<<<< HEAD
+=======
             this.guna2HtmlLabel4.Click += new System.EventHandler(this.guna2HtmlLabel4_Click);
+>>>>>>> bac4639307c263250a8c0fcf18d3da7e2b03d568
             // 
             // guna2HtmlLabel5
             // 
@@ -101,6 +111,19 @@
             this.guna2HtmlLabel5.TabIndex = 11;
             this.guna2HtmlLabel5.Text = "Mật khẩu";
             // 
+<<<<<<< HEAD
+            // passhide
+            // 
+            this.passhide.AutoSize = true;
+            this.passhide.Location = new System.Drawing.Point(551, 304);
+            this.passhide.Margin = new System.Windows.Forms.Padding(2);
+            this.passhide.Name = "passhide";
+            this.passhide.Size = new System.Drawing.Size(101, 17);
+            this.passhide.TabIndex = 16;
+            this.passhide.Text = "Show password";
+            this.passhide.UseVisualStyleBackColor = true;
+            this.passhide.CheckedChanged += new System.EventHandler(this.passhide_CheckedChanged);
+=======
             // showpass
             // 
             this.showpass.AutoSize = true;
@@ -112,6 +135,7 @@
             this.showpass.Text = "Show password";
             this.showpass.UseVisualStyleBackColor = true;
         
+>>>>>>> bac4639307c263250a8c0fcf18d3da7e2b03d568
             // 
             // guna2Button1
             // 
@@ -146,12 +170,19 @@
             this.txtMatKhau.Location = new System.Drawing.Point(346, 247);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMatKhau.Name = "txtMatKhau";
+<<<<<<< HEAD
+            this.txtMatKhau.PasswordChar = '*';
+=======
             this.txtMatKhau.PasswordChar = '●';
+>>>>>>> bac4639307c263250a8c0fcf18d3da7e2b03d568
             this.txtMatKhau.PlaceholderText = "";
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.Size = new System.Drawing.Size(306, 39);
             this.txtMatKhau.TabIndex = 12;
+<<<<<<< HEAD
+=======
             this.txtMatKhau.UseSystemPasswordChar = true;
+>>>>>>> bac4639307c263250a8c0fcf18d3da7e2b03d568
             // 
             // txtTaiKhoan
             // 
@@ -182,7 +213,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(676, 466);
             this.Controls.Add(this.guna2Button1);
+<<<<<<< HEAD
+            this.Controls.Add(this.passhide);
+=======
             this.Controls.Add(this.showpass);
+>>>>>>> bac4639307c263250a8c0fcf18d3da7e2b03d568
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.txtTaiKhoan);
@@ -193,7 +228,10 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+<<<<<<< HEAD
+=======
             this.Load += new System.EventHandler(this.SignIn_Load);
+>>>>>>> bac4639307c263250a8c0fcf18d3da7e2b03d568
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -209,7 +247,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTaiKhoan;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
-        private System.Windows.Forms.CheckBox showpass;
+
+        private System.Windows.Forms.CheckBox passhide;
+
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
