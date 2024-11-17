@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.thêm_nhân_viên1 = new QL_sald.thêm_nhân_viên();
+            this.trasua_page1 = new QL_sald.trasua_page();
             this.SuspendLayout();
             // 
-            // thêm_nhân_viên1
+            // trasua_page1
             // 
-            this.thêm_nhân_viên1.Location = new System.Drawing.Point(-12, 40);
-            this.thêm_nhân_viên1.Name = "thêm_nhân_viên1";
-            this.thêm_nhân_viên1.Size = new System.Drawing.Size(1121, 745);
-            this.thêm_nhân_viên1.TabIndex = 0;
+            this.trasua_page1.Location = new System.Drawing.Point(-21, -1);
+            this.trasua_page1.Name = "trasua_page1";
+            this.trasua_page1.Size = new System.Drawing.Size(1069, 705);
+            this.trasua_page1.TabIndex = 0;
             // 
             // test
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 753);
-            this.Controls.Add(this.thêm_nhân_viên1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(886, 612);
+            this.Controls.Add(this.trasua_page1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "test";
             this.Text = "test";
             this.ResumeLayout(false);
@@ -53,6 +53,6 @@
 
         #endregion
 
-        private thêm_nhân_viên thêm_nhân_viên1;
+        private trasua_page trasua_page1;
     }
 }
