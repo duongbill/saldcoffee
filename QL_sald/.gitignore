@@ -1,2 +1,7 @@
 .vs/
+obj/
+*.cache
+*.user
+*.suo
+*.pdb
 
