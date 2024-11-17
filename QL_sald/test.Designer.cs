@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.thêm_nhân_viên1 = new QL_sald.thêm_nhân_viên();
+            this.packages1 = new QL_sald.packages();
             this.SuspendLayout();
             // 
-            // thêm_nhân_viên1
+            // packages1
             // 
-            this.thêm_nhân_viên1.Location = new System.Drawing.Point(-12, 40);
-            this.thêm_nhân_viên1.Name = "thêm_nhân_viên1";
-            this.thêm_nhân_viên1.Size = new System.Drawing.Size(1121, 745);
-            this.thêm_nhân_viên1.TabIndex = 0;
+            this.packages1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.packages1.Location = new System.Drawing.Point(-9, 56);
+            this.packages1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.packages1.Name = "packages1";
+            this.packages1.Size = new System.Drawing.Size(1425, 868);
+            this.packages1.TabIndex = 0;
             // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 753);
-            this.Controls.Add(this.thêm_nhân_viên1);
+            this.Controls.Add(this.packages1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "test";
             this.Text = "test";
@@ -53,6 +55,6 @@
 
         #endregion
 
-        private thêm_nhân_viên thêm_nhân_viên1;
+        private packages packages1;
     }
 }
