@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nhân_viên11 = new QL_sald.nhân_viên1();
+            this.xóa_món1 = new QL_sald.xóa_món();
             this.SuspendLayout();
             // 
-            // nhân_viên11
+            // xóa_món1
             // 
-            this.nhân_viên11.Location = new System.Drawing.Point(269, 183);
-            this.nhân_viên11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.nhân_viên11.Name = "nhân_viên11";
-            this.nhân_viên11.Size = new System.Drawing.Size(841, 605);
-            this.nhân_viên11.TabIndex = 0;
+            this.xóa_món1.Location = new System.Drawing.Point(457, 191);
+            this.xóa_món1.Name = "xóa_món1";
+            this.xóa_món1.Size = new System.Drawing.Size(1121, 745);
+            this.xóa_món1.TabIndex = 0;
             // 
             // test
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 612);
-            this.Controls.Add(this.nhân_viên11);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(1181, 753);
+            this.Controls.Add(this.xóa_món1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "test";
             this.Text = "test";
             this.ResumeLayout(false);
@@ -54,6 +53,6 @@
 
         #endregion
 
-        private nhân_viên1 nhân_viên11;
+        private xóa_món xóa_món1;
     }
 }
