@@ -124,6 +124,7 @@
             this.btn_ct.Text = "          Cài đặt";
             this.btn_ct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ct.UseVisualStyleBackColor = false;
+            this.btn_ct.Click += new System.EventHandler(this.btn_ct_Click);
             // 
             // btn_nv
             // 

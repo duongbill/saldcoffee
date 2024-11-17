@@ -118,16 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
- <data name="btn_delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAYAAADhu0ooAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAN1JREFUaEPt2UkKwzAQRFEdJTfNUXOURG1SIIwwHqSeVA9Mhk3XX7sQEREREdGa
-        XvV5/z+1WNzcDn7r86mPxmG5IbfkptxW0x6eHat5q0tjgHkkzBziJhJmDHIXCSOHuY2EEQPdR8KToWEi
-        4c7gcJFwZXjYSDgTED4SjkLSREIvKF0k7MNSRkIbmzZSLBHaRspn+z1N7D5Sfvf+C+0oKE3smZDwsVcC
-        wsbeGR4u9sngMLEjhrqPHTnQbeyMYe5iZw5yE6sxxDxWc4Bp7FIvmbRf4VncJCIiIiIiH0r5AVB0r83A
-        wFjeAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="panel_Body.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBwgHBgkICAgKCgkLDhcPDg0NDhwUFREXIh4jIyEeICAl
