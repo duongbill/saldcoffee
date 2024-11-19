@@ -246,7 +246,7 @@
             // guna2PictureBox6
             // 
             this.guna2PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox6.BorderRadius = 1;
+            this.guna2PictureBox6.BorderRadius = 10;
             this.guna2PictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox6.Image = global::QL_sald.Properties.Resources.ts_tứ_quý_sương_sáo_1__1_;
             this.guna2PictureBox6.ImageRotate = 0F;
@@ -291,7 +291,7 @@
             // guna2PictureBox5
             // 
             this.guna2PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox5.BorderRadius = 1;
+            this.guna2PictureBox5.BorderRadius = 10;
             this.guna2PictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox5.Image = global::QL_sald.Properties.Resources.ts_tứ_quý_bơ_1__1_;
             this.guna2PictureBox5.ImageRotate = 0F;
@@ -336,7 +336,7 @@
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox4.BorderRadius = 1;
+            this.guna2PictureBox4.BorderRadius = 10;
             this.guna2PictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox4.Image = global::QL_sald.Properties.Resources.ts_chân_châu_đường_đen_1__1_;
             this.guna2PictureBox4.ImageRotate = 0F;
@@ -382,7 +382,7 @@
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox3.BorderRadius = 1;
+            this.guna2PictureBox3.BorderRadius = 10;
             this.guna2PictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox3.Image = global::QL_sald.Properties.Resources.trà_sữa_olong_1__1_;
             this.guna2PictureBox3.ImageRotate = 0F;
@@ -427,7 +427,7 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox1.BorderRadius = 1;
+            this.guna2PictureBox1.BorderRadius = 10;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox1.Image = global::QL_sald.Properties.Resources.trà_đen_macchiato_1__1_;
             this.guna2PictureBox1.ImageRotate = 0F;
@@ -472,7 +472,7 @@
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox2.BorderRadius = 1;
+            this.guna2PictureBox2.BorderRadius = 10;
             this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox2.Image = global::QL_sald.Properties.Resources.hongtrasuatraan_châu_1__1_;
             this.guna2PictureBox2.ImageRotate = 0F;
