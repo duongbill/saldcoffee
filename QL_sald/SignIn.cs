@@ -14,36 +14,11 @@ namespace QL_sald
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SignIn_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection conn = new SqlConnection(@"Server=localhost,1433;Database=quanly_cafe;User Id=sa;Password=123456;");
+                SqlConnection conn = new SqlConnection(@"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;");
                 {
                     conn.Open();
                     string tk = txtTaiKhoan.Text;
@@ -56,9 +31,12 @@ namespace QL_sald
 
                     if (dta.Read())
                     {
-                        MessageBox.Show("Đăng nhập thành công!");
-                      
-                        this.Close();
+                       
+
+                        
+                        Form1 form1 = new Form1();
+                        form1.Show();
+                        this.Hide(); 
                     }
                     else
                     {
@@ -77,13 +55,12 @@ namespace QL_sald
 
         }
 
-        private void showpass_CheckedChanged(object sender, EventArgs e)
+
+        private void passhide_CheckedChanged(object sender, EventArgs e)
         {
-            // Nếu CheckBox được chọn, mật khẩu sẽ hiển thị, nếu không thì ẩn
-            txtMatKhau.PasswordChar = showpass.Checked ? '\0' : '*';
+            txtMatKhau.PasswordChar = passhide.Checked ? '\0' : '*';
         }
 
-
-
+       
     }
 }

@@ -29,9 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_ls = new System.Windows.Forms.Button();
             this.btn_ct = new System.Windows.Forms.Button();
@@ -40,8 +38,9 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.btn_kh = new System.Windows.Forms.Button();
             this.btn_dh = new System.Windows.Forms.Button();
-            this.btn_tc = new System.Windows.Forms.Button();
             this.panel_Body = new System.Windows.Forms.Panel();
+            this.btn_tc = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,21 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1362, 73);
             this.panel1.TabIndex = 0;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.Control;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = global::QL_sald.Properties.Resources.logo;
-            this.button9.Location = new System.Drawing.Point(26, 12);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(187, 46);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -124,6 +108,7 @@
             this.btn_ct.Text = "          Cài đặt";
             this.btn_ct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ct.UseVisualStyleBackColor = false;
+            this.btn_ct.Click += new System.EventHandler(this.btn_ct_Click);
             // 
             // btn_nv
             // 
@@ -141,6 +126,7 @@
             this.btn_nv.Text = "          Nhân viên";
             this.btn_nv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_nv.UseVisualStyleBackColor = false;
+            this.btn_nv.Click += new System.EventHandler(this.btn_nv_Click);
             // 
             // btn_bc
             // 
@@ -209,6 +195,16 @@
             this.btn_dh.Text = "          Đơn hàng";
             this.btn_dh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_dh.UseVisualStyleBackColor = false;
+            this.btn_dh.Click += new System.EventHandler(this.btn_dh_Click);
+            // 
+            // panel_Body
+            // 
+            this.panel_Body.BackColor = System.Drawing.Color.LightGray;
+            this.panel_Body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_Body.Location = new System.Drawing.Point(235, 75);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(1127, 687);
+            this.panel_Body.TabIndex = 2;
             // 
             // btn_tc
             // 
@@ -219,22 +215,30 @@
             this.btn_tc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tc.ForeColor = System.Drawing.Color.Black;
             this.btn_tc.Image = global::QL_sald.Properties.Resources.trangchu;
-            this.btn_tc.Location = new System.Drawing.Point(0, 0);
+            this.btn_tc.Location = new System.Drawing.Point(0, -2);
             this.btn_tc.Margin = new System.Windows.Forms.Padding(4);
             this.btn_tc.Name = "btn_tc";
-            this.btn_tc.Size = new System.Drawing.Size(236, 86);
+            this.btn_tc.Size = new System.Drawing.Size(236, 88);
             this.btn_tc.TabIndex = 0;
             this.btn_tc.Text = "          Trang chủ";
             this.btn_tc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_tc.UseVisualStyleBackColor = false;
+            this.btn_tc.Click += new System.EventHandler(this.btn_tc_Click);
             // 
-            // panel_Body
+            // button9
             // 
-            this.panel_Body.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_Body.BackgroundImage")));
-            this.panel_Body.Location = new System.Drawing.Point(235, 75);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(1127, 687);
-            this.panel_Body.TabIndex = 2;
+            this.button9.BackColor = System.Drawing.SystemColors.Control;
+            this.button9.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Image = global::QL_sald.Properties.Resources.logo;
+            this.button9.Location = new System.Drawing.Point(26, 12);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(187, 46);
+            this.button9.TabIndex = 0;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
