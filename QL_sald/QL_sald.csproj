@@ -77,6 +77,9 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Tokens.8.2.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="QL_sald">
+      <HintPath>obj\Debug\QL_sald.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
@@ -269,6 +272,18 @@
     <Compile Include="thêm_nhân_viên.Designer.cs">
       <DependentUpon>thêm_nhân_viên.cs</DependentUpon>
     </Compile>
+    <Compile Include="lịch_sử_muahang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lịch_sử_muahang.Designer.cs">
+      <DependentUpon>lịch_sử_muahang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sửa_tt_nhanvien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sửa_tt_nhanvien.Designer.cs">
+      <DependentUpon>sửa_tt_nhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValueObject\Account.cs" />
     <Compile Include="ValueObject\AccRole.cs" />
     <Compile Include="ValueObject\Category.cs" />
@@ -294,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cài_đặt.resx">
       <DependentUpon>Cài_đặt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lịch_sử_muahang.resx">
+      <DependentUpon>lịch_sử_muahang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu_cafe.resx">
       <DependentUpon>menu_cafe.cs</DependentUpon>
@@ -332,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sửa_món.resx">
       <DependentUpon>sửa_món.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sửa_tt_nhanvien.resx">
+      <DependentUpon>sửa_tt_nhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
@@ -511,6 +532,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LogicLayer\" />

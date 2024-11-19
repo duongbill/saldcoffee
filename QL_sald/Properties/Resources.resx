@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bus(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Thức uống đá xay\bus(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,8 +148,8 @@
   <data name="hongtrasuatraan châu(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Trà sữa\hongtrasuatraan châu(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ts tứ quý sương sáo(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Trà sữa\ts tứ quý sương sáo(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,26 +157,20 @@
   <data name="đường đen sữa đá(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Cafe\đường đen sữa đá(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="khohang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\khohang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="donhang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\donhang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bánh mì vn(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\bánh\bánh mì vn(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="olong(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Trà trái cây\olong(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bạc xỉu(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Cafe\bạc xỉu(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bơ arabica" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Cafe\bơ arabica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bánh mì vn(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\bánh\bánh mì vn(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mochi phúc kem bồn tử(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\bánh\mochi phúc kem bồn tử(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bạc xỉu(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Cafe\bạc xỉu(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cafe đen nóng(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Cafe\cafe đen nóng(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mochi kem chocolate(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\bánh\mochi kem chocolate(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,33 +184,38 @@
   <data name="mochi kem việt quất(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\bánh\mochi kem việt quất(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="donhangicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\donhangicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trà sữa olong(1)(1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Trà sữa\trà sữa olong(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bacxiulacsua(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Cafe\bacxiulacsua(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trangchu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\trangchu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
   <data name="cà phê đường đen(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Thức uống đá xay\cà phê đường đen(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cafe đen nóng(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Cafe\cafe đen nóng(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="donhangicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\donhangicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trà sữa olong(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Trà sữa\trà sữa olong(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ts chân châu đường đen(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Trà sữa\ts chân châu đường đen(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="donhang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\donhang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bimbim ngô(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\bánh\bimbim ngô(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="trà vải(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Trà trái cây\trà vải(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cà phê đen đá" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Cafe\cà phê đen đá.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="yuzu(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Trà trái cây\yuzu(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -227,26 +229,29 @@
   <data name="phin_gato(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Thức uống đá xay\phin_gato(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mousse gấu(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\bánh\mousse gấu(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="choco_chip(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Thức uống đá xay\choco_chip(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cafe sữa nóng(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Cafe\cafe sữa nóng(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cafe sữa đá(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Cafe\cafe sữa đá(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trangchu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\trangchu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="olong(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Trà trái cây\olong(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khohang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\khohang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="đào(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Trà trái cây\đào(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mousse gấu(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\bánh\mousse gấu(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bacxiulacsua(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Cafe\bacxiulacsua(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cafe sữa đá(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Cafe\cafe sữa đá(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ts tứ quý bơ(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Trà sữa\ts tứ quý bơ(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -254,12 +259,8 @@
   <data name="cà phê đen đá(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Cafe\cà phê đen đá(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
- 
-  <data name="trà sữa olong(1)(1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Trà sữa\trà sữa olong(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trà vải(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Trà trái cây\trà vải(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ts chân châu đường đen(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Trà sữa\ts chân châu đường đen(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mousse gấu(1)(1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\bánh\mousse gấu(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -267,7 +268,7 @@
   <data name="caramel(1)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Thức uống đá xay\caramel(1)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
