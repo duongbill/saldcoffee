@@ -19,20 +19,21 @@ namespace QL_sald
 
         private void InitializeComponent()
         {
-            this.sửa_tt_nhanvien1 = new QL_sald.sửa_tt_nhanvien();
+            this.menuthucuongdaxay1 = new QL_sald.menuthucuongdaxay();
             this.SuspendLayout();
             // 
-            // sửa_tt_nhanvien1
+            // menuthucuongdaxay1
             // 
-            this.sửa_tt_nhanvien1.Location = new System.Drawing.Point(0, 0);
-            this.sửa_tt_nhanvien1.Name = "sửa_tt_nhanvien1";
-            this.sửa_tt_nhanvien1.Size = new System.Drawing.Size(1200, 700);
-            this.sửa_tt_nhanvien1.TabIndex = 0;
+            this.menuthucuongdaxay1.Location = new System.Drawing.Point(250, 150);
+            this.menuthucuongdaxay1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.menuthucuongdaxay1.Name = "menuthucuongdaxay1";
+            this.menuthucuongdaxay1.Size = new System.Drawing.Size(1121, 745);
+            this.menuthucuongdaxay1.TabIndex = 0;
             // 
             // test
             // 
             this.ClientSize = new System.Drawing.Size(1182, 653);
-            this.Controls.Add(this.sửa_tt_nhanvien1);
+            this.Controls.Add(this.menuthucuongdaxay1);
             this.Name = "test";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
