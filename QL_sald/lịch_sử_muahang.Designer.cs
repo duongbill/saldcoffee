@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(lịch_sử_muahang));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.sửa_tt_nhanvien1 = new QL_sald.sửa_tt_nhanvien();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +42,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.sửa_tt_nhanvien1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.textBox3);
@@ -55,10 +54,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(818, 535);
+            this.pictureBox1.Location = new System.Drawing.Point(785, 574);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(284, 189);
+            this.pictureBox1.Size = new System.Drawing.Size(333, 168);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -112,13 +112,6 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Thay đổi thông tin cửa hàng";
             // 
-            // sửa_tt_nhanvien1
-            // 
-            this.sửa_tt_nhanvien1.Location = new System.Drawing.Point(0, 0);
-            this.sửa_tt_nhanvien1.Name = "sửa_tt_nhanvien1";
-            this.sửa_tt_nhanvien1.Size = new System.Drawing.Size(1121, 745);
-            this.sửa_tt_nhanvien1.TabIndex = 5;
-            // 
             // lịch_sử_muahang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,6 +134,5 @@
         private System.Windows.Forms.TextBox textBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private sửa_tt_nhanvien sửa_tt_nhanvien1;
     }
 }
