@@ -166,7 +166,20 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="compoment\food.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="compoment\food.Designer.cs">
+      <DependentUpon>food.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compoment\testuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="compoment\testuc.Designer.cs">
+      <DependentUpon>testuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataAccessLayer\ConnectSQL.cs" />
+    <Compile Include="DataAccessLayer\Fooddata.cs" />
     <Compile Include="DataAccessLayer\Staffdata.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -293,7 +306,6 @@
     <Compile Include="ValueObject\InvoiceDetail.cs" />
     <Compile Include="ValueObject\Order.cs" />
     <Compile Include="ValueObject\Payment.cs" />
-    <Compile Include="ValueObject\ShiftTime.cs" />
     <Compile Include="ValueObject\Staff.cs" />
     <Compile Include="ValueObject\TableFood.cs" />
     <Compile Include="ValueObject\Warehouse.cs" />
@@ -303,6 +315,12 @@
     <Compile Include="xóa_món.Designer.cs">
       <DependentUpon>xóa_món.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="compoment\food.resx">
+      <DependentUpon>food.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compoment\testuc.resx">
+      <DependentUpon>testuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
