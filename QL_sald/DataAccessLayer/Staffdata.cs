@@ -7,7 +7,12 @@ namespace QL_sald.DataAccessLayer
 {
     class Staffdata
     {
-        SqlConnection conn = new SqlConnection(@"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;");
+        private SqlConnection conn = new SqlConnection(@"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;");
+
+        private SqlConnection GetConnection()
+        {
+            return new SqlConnection(@"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;");
+        }
 
         public DataTable sfData()
         {
@@ -39,5 +44,6 @@ namespace QL_sald.DataAccessLayer
 
             return dataTable;
         }
+
     }
 }

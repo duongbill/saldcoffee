@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QL_sald.DataAccessLayer;
 
 namespace QL_sald
 {
@@ -17,7 +16,7 @@ namespace QL_sald
         public staff()
         {
             InitializeComponent();
-
+           
             displayStaffData();
         }
 
@@ -28,9 +27,6 @@ namespace QL_sald
             viewStaff.DataSource = dataTable;  // Gán DataTable cho DataSource của DataGridView
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-
-        }
+  
     }
 }

@@ -39,14 +39,12 @@
             this.viewStaff = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtpDateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btn_dlt = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_update = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_add = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_import = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txt_date = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
-            this.sex_role = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txt_role = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_sex = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_name = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,7 +57,6 @@
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewStaff)).BeginInit();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -147,14 +144,12 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderRadius = 20;
+            this.guna2Panel2.Controls.Add(this.dtpDateOfBirth);
             this.guna2Panel2.Controls.Add(this.btn_dlt);
             this.guna2Panel2.Controls.Add(this.btn_update);
             this.guna2Panel2.Controls.Add(this.btn_add);
-            this.guna2Panel2.Controls.Add(this.btn_import);
-            this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel2.Controls.Add(this.txt_date);
             this.guna2Panel2.Controls.Add(this.txt_email);
-            this.guna2Panel2.Controls.Add(this.sex_role);
+            this.guna2Panel2.Controls.Add(this.txt_role);
             this.guna2Panel2.Controls.Add(this.txt_phone);
             this.guna2Panel2.Controls.Add(this.txt_sex);
             this.guna2Panel2.Controls.Add(this.txt_name);
@@ -168,6 +163,20 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(826, 249);
             this.guna2Panel2.TabIndex = 2;
+            // 
+            // dtpDateOfBirth
+            // 
+            this.dtpDateOfBirth.Checked = true;
+            this.dtpDateOfBirth.FillColor = System.Drawing.Color.Silver;
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(531, 13);
+            this.dtpDateOfBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDateOfBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(209, 37);
+            this.dtpDateOfBirth.TabIndex = 22;
+            this.dtpDateOfBirth.Value = new System.DateTime(2024, 11, 21, 23, 34, 46, 644);
             // 
             // btn_dlt
             // 
@@ -246,52 +255,6 @@
             this.btn_add.Size = new System.Drawing.Size(98, 32);
             this.btn_add.TabIndex = 19;
             this.btn_add.Text = "Thêm";
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // btn_import
-            // 
-            this.btn_import.BorderThickness = 2;
-            this.btn_import.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_import.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_import.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_import.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_import.FillColor = System.Drawing.Color.White;
-            this.btn_import.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_import.ForeColor = System.Drawing.Color.Black;
-            this.btn_import.Location = new System.Drawing.Point(682, 136);
-            this.btn_import.Name = "btn_import";
-            this.btn_import.Size = new System.Drawing.Size(106, 33);
-            this.btn_import.TabIndex = 18;
-            this.btn_import.Text = "Thêm ảnh";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(682, 13);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(106, 129);
-            this.guna2PictureBox1.TabIndex = 17;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // txt_date
-            // 
-            this.txt_date.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_date.DefaultText = "";
-            this.txt_date.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_date.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_date.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_date.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_date.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_date.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_date.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_date.Location = new System.Drawing.Point(164, 148);
-            this.txt_date.Name = "txt_date";
-            this.txt_date.PasswordChar = '\0';
-            this.txt_date.PlaceholderText = "";
-            this.txt_date.SelectedText = "";
-            this.txt_date.Size = new System.Drawing.Size(250, 36);
-            this.txt_date.TabIndex = 16;
             // 
             // txt_email
             // 
@@ -312,23 +275,25 @@
             this.txt_email.Size = new System.Drawing.Size(250, 36);
             this.txt_email.TabIndex = 15;
             // 
-            // sex_role
+            // txt_role
             // 
-            this.sex_role.BackColor = System.Drawing.Color.Transparent;
-            this.sex_role.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.sex_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sex_role.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sex_role.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sex_role.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.sex_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.sex_role.ItemHeight = 30;
-            this.sex_role.Items.AddRange(new object[] {
+            this.txt_role.BackColor = System.Drawing.Color.Transparent;
+            this.txt_role.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txt_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txt_role.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_role.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_role.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txt_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txt_role.ItemHeight = 30;
+            this.txt_role.Items.AddRange(new object[] {
             "Quản Lý",
-            "Nhân Viên"});
-            this.sex_role.Location = new System.Drawing.Point(512, 61);
-            this.sex_role.Name = "sex_role";
-            this.sex_role.Size = new System.Drawing.Size(133, 36);
-            this.sex_role.TabIndex = 14;
+            "Phục Vụ",
+            "Pha Chế",
+            "Bảo Vệ"});
+            this.txt_role.Location = new System.Drawing.Point(515, 106);
+            this.txt_role.Name = "txt_role";
+            this.txt_role.Size = new System.Drawing.Size(133, 36);
+            this.txt_role.TabIndex = 14;
             // 
             // txt_phone
             // 
@@ -359,7 +324,10 @@
             this.txt_sex.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_sex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txt_sex.ItemHeight = 30;
-            this.txt_sex.Location = new System.Drawing.Point(512, 13);
+            this.txt_sex.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.txt_sex.Location = new System.Drawing.Point(515, 61);
             this.txt_sex.Name = "txt_sex";
             this.txt_sex.Size = new System.Drawing.Size(75, 36);
             this.txt_sex.TabIndex = 12;
@@ -387,7 +355,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(426, 75);
+            this.label6.Location = new System.Drawing.Point(419, 120);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 22);
@@ -398,7 +366,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(428, 27);
+            this.label5.Location = new System.Drawing.Point(424, 75);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 22);
@@ -420,7 +388,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(45, 154);
+            this.label3.Location = new System.Drawing.Point(424, 25);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 24);
@@ -464,7 +432,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewStaff)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,14 +452,12 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2ComboBox txt_sex;
         private Guna.UI2.WinForms.Guna2TextBox txt_name;
-        private Guna.UI2.WinForms.Guna2Button btn_import;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_date;
         private Guna.UI2.WinForms.Guna2TextBox txt_email;
-        private Guna.UI2.WinForms.Guna2ComboBox sex_role;
+        private Guna.UI2.WinForms.Guna2ComboBox txt_role;
         private Guna.UI2.WinForms.Guna2TextBox txt_phone;
         private Guna.UI2.WinForms.Guna2GradientButton btn_dlt;
         private Guna.UI2.WinForms.Guna2GradientButton btn_update;
         private Guna.UI2.WinForms.Guna2GradientButton btn_add;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDateOfBirth;
     }
 }
