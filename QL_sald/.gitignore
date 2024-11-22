@@ -4,6 +4,6 @@ obj/
 *.user
 *.suo
 *.pdb
-
+bin/
 
 
