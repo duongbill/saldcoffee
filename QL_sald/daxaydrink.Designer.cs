@@ -1,6 +1,6 @@
 ﻿namespace QL_sald
 {
-    partial class trasua_page
+    partial class daxaydrink
     {
         /// <summary> 
         /// Required designer variable.
@@ -90,7 +90,7 @@
             this.guna2Button2.Location = new System.Drawing.Point(221, 20);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(141, 39);
-            this.guna2Button2.TabIndex = 14;
+            this.guna2Button2.TabIndex = 17;
             this.guna2Button2.Text = "Mang đi";
             // 
             // guna2Button1
@@ -100,13 +100,13 @@
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Gray;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(42, 20);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(141, 39);
-            this.guna2Button1.TabIndex = 13;
+            this.guna2Button1.TabIndex = 16;
             this.guna2Button1.Text = "Dùng tại bàn";
             // 
             // panel1
@@ -120,7 +120,7 @@
             this.panel1.Location = new System.Drawing.Point(26, 82);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1017, 602);
-            this.panel1.TabIndex = 12;
+            this.panel1.TabIndex = 15;
             // 
             // guna2Button6
             // 
@@ -237,18 +237,18 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 112);
+            this.label6.Location = new System.Drawing.Point(3, 123);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 30);
+            this.label6.Size = new System.Drawing.Size(90, 16);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Trà sữa tứ quý sương sáo";
+            this.label6.Text = "Phin Gato";
             // 
             // guna2PictureBox6
             // 
             this.guna2PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox6.BorderRadius = 10;
+            this.guna2PictureBox6.BorderRadius = 1;
             this.guna2PictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox6.Image = global::QL_sald.Properties.Resources.ts_tứ_quý_sương_sáo_1__1_;
+            this.guna2PictureBox6.Image = global::QL_sald.Properties.Resources.phin_gato_1__1_;
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
@@ -282,18 +282,18 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 113);
+            this.label5.Location = new System.Drawing.Point(3, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 27);
+            this.label5.Size = new System.Drawing.Size(91, 18);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Trà sữa tứ quý bơ";
+            this.label5.Text = "Choco chip";
             // 
             // guna2PictureBox5
             // 
             this.guna2PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox5.BorderRadius = 10;
+            this.guna2PictureBox5.BorderRadius = 1;
             this.guna2PictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox5.Image = global::QL_sald.Properties.Resources.ts_tứ_quý_bơ_1__1_;
+            this.guna2PictureBox5.Image = global::QL_sald.Properties.Resources.choco_chip_1__1_;
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
@@ -327,18 +327,18 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1, 112);
+            this.label4.Location = new System.Drawing.Point(3, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 28);
+            this.label4.Size = new System.Drawing.Size(102, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Trà sữa chân châu đường đen";
+            this.label4.Text = "Caramel";
             // 
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox4.BorderRadius = 10;
+            this.guna2PictureBox4.BorderRadius = 1;
             this.guna2PictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox4.Image = global::QL_sald.Properties.Resources.ts_chân_châu_đường_đen_1__1_;
+            this.guna2PictureBox4.Image = global::QL_sald.Properties.Resources.caramel_1__1_;
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
@@ -375,16 +375,16 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Trà sữa olong";
+            this.label2.Text = "Kem cà phê";
             // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox3.BorderRadius = 10;
+            this.guna2PictureBox3.BorderRadius = 1;
             this.guna2PictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox3.Image = global::QL_sald.Properties.Resources.trà_sữa_olong_1__1_;
+            this.guna2PictureBox3.Image = global::QL_sald.Properties.Resources.cà_phê_đường_đen_1__1_;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -418,18 +418,18 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 112);
+            this.label1.Location = new System.Drawing.Point(3, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 28);
+            this.label1.Size = new System.Drawing.Size(89, 19);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Trà đen macchiato";
+            this.label1.Text = "Matcha Latte";
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox1.BorderRadius = 10;
+            this.guna2PictureBox1.BorderRadius = 1;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox1.Image = global::QL_sald.Properties.Resources.trà_đen_macchiato_1__1_;
+            this.guna2PictureBox1.Image = global::QL_sald.Properties.Resources.bus_1__1_;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -463,18 +463,18 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 112);
+            this.label3.Location = new System.Drawing.Point(3, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 32);
+            this.label3.Size = new System.Drawing.Size(94, 22);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Hồng trà sữa chân châu";
+            this.label3.Text = "Kem dâu";
             // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox2.BorderRadius = 10;
+            this.guna2PictureBox2.BorderRadius = 1;
             this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox2.Image = global::QL_sald.Properties.Resources.hongtrasuatraan_châu_1__1_;
+            this.guna2PictureBox2.Image = global::QL_sald.Properties.Resources.bánh_kem_dâu_1__1_;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
@@ -483,14 +483,14 @@
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // trasua_page
+            // daxaydrink
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.panel1);
-            this.Name = "trasua_page";
+            this.Name = "daxaydrink";
             this.Size = new System.Drawing.Size(1069, 705);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
