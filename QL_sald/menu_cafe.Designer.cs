@@ -38,25 +38,25 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.food1 = new QL_sald.food();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.foodCPT1 = new QL_sald.compoment.FoodCPT();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel19.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -199,50 +199,6 @@
             this.guna2Button1.TabIndex = 7;
             this.guna2Button1.Text = "Cà phê";
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.food1);
-            this.guna2Panel1.Controls.Add(this.panel19);
-            this.guna2Panel1.Location = new System.Drawing.Point(5, 55);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(830, 437);
-            this.guna2Panel1.TabIndex = 18;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.pictureBox13);
-            this.panel19.Controls.Add(this.pictureBox14);
-            this.panel19.Location = new System.Drawing.Point(344, 397);
-            this.panel19.Margin = new System.Windows.Forms.Padding(2);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(150, 26);
-            this.panel19.TabIndex = 17;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.guna2GradientButton3);
-            this.panel6.Controls.Add(this.guna2GradientButton2);
-            this.panel6.Controls.Add(this.guna2GradientButton1);
-            this.panel6.Location = new System.Drawing.Point(11, 496);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(824, 51);
-            this.panel6.TabIndex = 17;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 20;
-            this.guna2Elipse1.TargetControl = this.guna2Panel1;
-            // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
@@ -270,6 +226,28 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(214, 25);
             this.guna2TextBox1.TabIndex = 4;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.foodCPT1);
+            this.guna2Panel1.Controls.Add(this.panel19);
+            this.guna2Panel1.Location = new System.Drawing.Point(5, 55);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(830, 437);
+            this.guna2Panel1.TabIndex = 18;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.pictureBox13);
+            this.panel19.Controls.Add(this.pictureBox14);
+            this.panel19.Location = new System.Drawing.Point(344, 397);
+            this.panel19.Margin = new System.Windows.Forms.Padding(2);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(150, 26);
+            this.panel19.TabIndex = 17;
+            // 
             // pictureBox13
             // 
             this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
@@ -291,6 +269,17 @@
             this.pictureBox14.Size = new System.Drawing.Size(38, 26);
             this.pictureBox14.TabIndex = 5;
             this.pictureBox14.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.guna2GradientButton3);
+            this.panel6.Controls.Add(this.guna2GradientButton2);
+            this.panel6.Controls.Add(this.guna2GradientButton1);
+            this.panel6.Location = new System.Drawing.Point(11, 496);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(824, 51);
+            this.panel6.TabIndex = 17;
             // 
             // guna2GradientButton3
             // 
@@ -370,11 +359,23 @@
             this.guna2GradientButton1.TabIndex = 4;
             this.guna2GradientButton1.Text = "Thêm món";
             // 
-            // food1
+            // contextMenuStrip1
             // 
-          
-            this.food1.Size = new System.Drawing.Size(140, 173);
-            this.food1.TabIndex = 18;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.TargetControl = this.guna2Panel1;
+            // 
+            // foodCPT1
+            // 
+            this.foodCPT1.Location = new System.Drawing.Point(9, 5);
+            this.foodCPT1.Name = "foodCPT1";
+            this.foodCPT1.Size = new System.Drawing.Size(131, 186);
+            this.foodCPT1.TabIndex = 18;
             // 
             // menu_cafe
             // 
@@ -390,9 +391,9 @@
             this.panel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -418,6 +419,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
-        private food food1;
+        private compoment.FoodCPT foodCPT1;
     }
 }
