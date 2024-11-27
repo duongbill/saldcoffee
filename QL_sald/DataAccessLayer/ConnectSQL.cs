@@ -10,7 +10,7 @@ namespace DataAcessLayer
 
         public ConnectSQL()
         {
-            conn = new SqlConnection("Server=localhost,1433;Database=cafe_sald;User Id=sa;Password=123456;");
+            conn = new SqlConnection("Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;");
         }
 
         // Hàm kiểm tra kết nối và in ra thông báo

@@ -77,6 +77,8 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Tokens.8.2.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
@@ -154,6 +156,7 @@
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -166,20 +169,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="compoment\food.cs">
+    <Compile Include="compoment\FoodCPT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="compoment\food.Designer.cs">
-      <DependentUpon>food.cs</DependentUpon>
-    </Compile>
-    <Compile Include="compoment\testuc.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="compoment\testuc.Designer.cs">
-      <DependentUpon>testuc.cs</DependentUpon>
+    <Compile Include="compoment\FoodCPT.Designer.cs">
+      <DependentUpon>FoodCPT.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\ConnectSQL.cs" />
-    <Compile Include="DataAccessLayer\Fooddata.cs" />
+    <Compile Include="DataAccessLayer\FoodDAL.cs" />
     <Compile Include="DataAccessLayer\Staffdata.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -193,6 +190,7 @@
     <Compile Include="Cài_đặt.Designer.cs">
       <DependentUpon>Cài_đặt.cs</DependentUpon>
     </Compile>
+    <Compile Include="logicLayer\FoodLL.cs" />
     <Compile Include="menu_cafe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,11 +313,8 @@
     <Compile Include="xóa_món.Designer.cs">
       <DependentUpon>xóa_món.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="compoment\food.resx">
-      <DependentUpon>food.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="compoment\testuc.resx">
-      <DependentUpon>testuc.cs</DependentUpon>
+    <EmbeddedResource Include="compoment\FoodCPT.resx">
+      <DependentUpon>FoodCPT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -550,9 +545,7 @@
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="logicLayer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
