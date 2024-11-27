@@ -419,6 +419,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
-        private compoment.FoodCPT foodCPT1;
+        private food food1;
     }
 }

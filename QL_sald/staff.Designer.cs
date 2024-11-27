@@ -170,11 +170,11 @@
             this.dtpDateOfBirth.FillColor = System.Drawing.Color.Silver;
             this.dtpDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpDateOfBirth.Location = new System.Drawing.Point(531, 13);
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(531, 27);
             this.dtpDateOfBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDateOfBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(209, 37);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(209, 23);
             this.dtpDateOfBirth.TabIndex = 22;
             this.dtpDateOfBirth.Value = new System.DateTime(2024, 11, 21, 23, 34, 46, 644);
             // 
