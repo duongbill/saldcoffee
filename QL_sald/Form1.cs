@@ -6,7 +6,7 @@ namespace QL_sald
     public partial class Form1 : Form
     {
       
-        private menu_cafe menuControl = new menu_cafe();  // `menu_cafe` là Form con
+        private menu_cf menuControl = new menu_cf();  // `menu_cafe` là Form con
         private Cài_đặt stControl = new Cài_đặt();
         private TrangChu tcControl = new TrangChu();
         private packages pgControl = new packages();
@@ -103,6 +103,9 @@ namespace QL_sald
             OpenChildForm(sfControl); // Truyền Form con menuControl vào
         }
 
-       
+        private void btnMenu_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
