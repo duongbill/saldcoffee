@@ -13,9 +13,9 @@ namespace QL_sald.logicLayer
             foodDAL = new FoodDAL();
         }
 
-        public List<Food> GetFoods()
+        public List<Food> GetFoodsByCategory(int categoryId)
         {
-            return foodDAL.GetFoodData();
+            return foodDAL.GetFoodDataByCategory(categoryId);
         }
     }
 }

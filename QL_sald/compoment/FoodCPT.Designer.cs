@@ -63,9 +63,10 @@
             this.txtFoodName.Location = new System.Drawing.Point(-1, 147);
             this.txtFoodName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.Size = new System.Drawing.Size(146, 12);
+            this.txtFoodName.Size = new System.Drawing.Size(74, 12);
             this.txtFoodName.TabIndex = 5;
-            this.txtFoodName.Text = "Trà sữa trân châu đường đen";
+            this.txtFoodName.Text = "Tên sản phẩm";
+            this.txtFoodName.Click += new System.EventHandler(this.txtFoodName_Click);
             // 
             // FoodCPT
             // 
