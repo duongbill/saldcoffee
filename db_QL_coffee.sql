@@ -1,6 +1,10 @@
-﻿-- Create the quanly_cafe database
+﻿use master
+go
+drop database  if EXISTS quanly_sald;
+go
 CREATE DATABASE quanly_sald;
-GO
+
+go
 
 USE quanly_sald;
 GO
@@ -212,30 +216,30 @@ VALUES
 
 INSERT INTO Food (FoodName, CategoryId, IngredientId, Price,ImageURL)
 VALUES
-(N'Trà xanh espresso marble', 1, 1, 45000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Bạc xỉu lắc sữa yến mạch', 1, 1, 50000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Bạc xỉu lắc caramel muối', 1, 1, 55000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Bạc xỉu lắc hạnh nhân nướng', 1, 1, 55000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Bơ arabica', 1, 1, 60000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Đường đen sữa đá', 1, 1, 30000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Cà phê sữa đá', 1, 1, 25000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Cà phê sữa nóng', 1, 1, 25000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Bạc xỉu', 1, 1, 30000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Cà phê đen', 1, 1, 20000,'\\img\\cafe\\traxanh(1)(1).png'),
+(N'Trà xanh espresso marble', 1, 1, 45000,'/img/Cafe/bacxiulacsua.png'),
+(N'Bạc xỉu lắc sữa yến mạch', 1, 1, 50000,'/img/Cafe/bacxiulacsua.png'),
+(N'Bạc xỉu lắc caramel muối', 1, 1, 55000,'/img/Cafe/bacxiulacsua.png'),
+(N'Bạc xỉu lắc hạnh nhân nướng', 1, 1, 55000,'/img/Cafe/bacxiulacsua.png'),
+(N'Bơ arabica', 1, 1, 60000,'/img/Cafe/bacxiulacsua.png'),
+(N'Đường đen sữa đá', 1, 1, 30000,'/img/Cafe/bacxiulacsua.png'),
+(N'Cà phê sữa đá', 1, 1, 25000,'/img/Cafe/bacxiulacsua.png'),
+(N'Cà phê sữa nóng', 1, 1, 25000,'/img/Cafe/bacxiulacsua.png'),
+(N'Bạc xỉu', 1, 1, 30000,'/img/Cafe/bacxiulacsua.png'),
+(N'Cà phê đen', 1, 1, 20000,'/img/Cafe/bacxiulacsua.png'),
 
 
-(N'Trà sữa trân châu đường đen', 2, 2, 35000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Trà sữa olong', 2, 2, 30000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Trà sữa olong tứ quý bơ', 2, 2, 35000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Trà sữa olong nướng sương sáo', 2, 2, 35000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Trà đen macchito', 2, 2, 30000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Hồng trà sữa trân châu', 2, 2, 30000,'\\img\\cafe\\traxanh(1)(1).png'),
+(N'Trà sữa trân châu đường đen', 2, 2, 35000,'/img/cafe/traxanh(1)(1).png'),
+(N'Trà sữa olong', 2, 2, 30000,'/img/cafe/traxanh(1)(1).png'),
+(N'Trà sữa olong tứ quý bơ', 2, 2, 35000,'/img/cafe/traxanh(1)(1).png'),
+(N'Trà sữa olong nướng sương sáo', 2, 2, 35000,'/img/cafe/traxanh(1)(1).png'),
+(N'Trà đen macchito', 2, 2, 30000,'/img/cafe/traxanh(1)(1).png'),
+(N'Hồng trà sữa trân châu', 2, 2, 30000,'/img/cafe/traxanh(1)(1).png'),
 
-(N'Frosty phin-gato', 3, 3, 40000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Frosty cà phê đường đen', 3, 3, 40000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Frosty bánh kem dâu', 3, 3, 45000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Frosty choco chip', 3, 3, 45000,'\\img\\cafe\\traxanh(1)(1).png'),
-(N'Frosty caramel', 3, 3, 45000,'\\img\\cafe\\traxanh(1)(1).png'),
+(N'Frosty phin-gato', 3, 3, 40000,'/img/cafe/traxanh(1)(1).png'),
+(N'Frosty cà phê đường đen', 3, 3, 40000,'/img/cafe/traxanh(1)(1).png'),
+(N'Frosty bánh kem dâu', 3, 3, 45000,'/img/cafe/traxanh(1)(1).png'),
+(N'Frosty choco chip', 3, 3, 45000,'/img/cafe/traxanh(1)(1).png'),
+(N'Frosty caramel', 3, 3, 45000,'/img/cafe/traxanh(1)(1).png'),
 
 (N'Butter croissant', 4, 4, 25000,'\\img\\cafe\\traxanh(1)(1).png'),
 (N'Mochi kem phúc bồn tử', 4, 4, 30000,'\\img\\cafe\\traxanh(1)(1).png'),
@@ -444,7 +448,7 @@ VALUES
 -- Ingredients for Bim bim sữa dừa
 INSERT INTO FoodIngredient (FoodId, IngredientId, Quantity)
 VALUES 
-(29, 31, 1); -- Coconut milk snack
+(29, 31, 1); -- Coconut milk snack                                            
 
 -- Ingredients for Bánh gấu
 INSERT INTO FoodIngredient (FoodId, IngredientId, Quantity)
@@ -511,7 +515,7 @@ VALUES
 
 
 -- Bảng Staff
-INSERT INTO Staff (FullName, Phone, DateOfBirth, Email, Gender, AccountId, RoleId)
+INSERT INTO Staff (FullName, Phone, DateOfBirth, Email, Gender, AccountId, RoleId) 
 VALUES
 (N'Nguyen Hai Duong', '0985082004', '2004-08-05', 'billduongg@gmail.com', 'Nam', 1, 1),
 (N'Nguyen Minh Hoang', '0985082005', '2004-08-06', 'staff2@gmail.com', 'Nam', null, 2),
@@ -537,6 +541,15 @@ INSERT INTO Orders (InvoiceDetailId, Status)
 VALUES
 (1, N'Hoàn thành'),
 (2, N'Chưa hoàn thành');
+
+
+
+
+
+
+
+
+
 
 SELECT * FROM dbo.Account
 
@@ -570,24 +583,6 @@ EXEC GetFoodDetailsByName @FoodName = N'Bạc xỉu';
 
 
 
-CREATE PROCEDURE GetFoodDetailsByName
-    @FoodName NVARCHAR(100)
-AS
-BEGIN
-    SET NOCOUNT ON;
-
-    SELECT 
-        FoodName, 
-        Price, 
-        ImageURL
-    FROM 
-        Food
-    WHERE 
-        FoodName = @FoodName;
-END;
-go
-EXEC GetFoodDetailsByName @FoodName = N'Bạc xỉu';
-
 SELECT 
     FoodName, 
     Price, 
@@ -600,3 +595,28 @@ WHERE
 select * from staff
 
 SELECT FoodName, Price, ImageURL FROM Food
+
+CREATE PROCEDURE GetTop10FoodsByCategory
+    @CategoryId INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT TOP 100
+        FoodName, 
+        Price, 
+        ImageURL
+    FROM 
+        Food
+    WHERE 
+        CategoryId = @CategoryId
+END
+GO
+
+EXEC GetTop10FoodsByCategory @CategoryId = 1
+
+--DROP PROCEDURE GetTop10FoodsByCategory;
+
+select foodname, price, imageURL from food
+role id => chuc vu
+chuc vu => id 
