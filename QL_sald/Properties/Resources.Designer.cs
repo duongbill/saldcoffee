@@ -63,9 +63,19 @@ namespace QL_sald.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bạc_xỉu_1__1_ {
+        internal static System.Drawing.Bitmap bac_xiu {
             get {
-                object obj = ResourceManager.GetObject("bạc xỉu(1)(1)", resourceCulture);
+                object obj = ResourceManager.GetObject("bac_xiu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bacxiulacsua {
+            get {
+                object obj = ResourceManager.GetObject("bacxiulacsua", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
