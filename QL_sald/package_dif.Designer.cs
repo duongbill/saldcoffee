@@ -369,7 +369,7 @@
             this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox3.BorderRadius = 1;
             this.guna2PictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox3.Image = global::QL_sald.Properties.Resources.bơ_arabica;
+           
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -415,7 +415,7 @@
             this.guna2PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox4.BorderRadius = 1;
             this.guna2PictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox4.Image = global::QL_sald.Properties.Resources.cà_phê_đen_đá_1__1_;
+       
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
@@ -461,7 +461,7 @@
             this.guna2PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox5.BorderRadius = 1;
             this.guna2PictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox5.Image = global::QL_sald.Properties.Resources.cafe_đen_nóng_1__1_;
+          
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
@@ -507,7 +507,7 @@
             this.guna2PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox6.BorderRadius = 1;
             this.guna2PictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox6.Image = global::QL_sald.Properties.Resources.cafe_sữa_đá_1__1_;
+          
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
@@ -553,7 +553,7 @@
             this.guna2PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox7.BorderRadius = 1;
             this.guna2PictureBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox7.Image = global::QL_sald.Properties.Resources.cafe_sữa_nóng_1__1_;
+       
             this.guna2PictureBox7.ImageRotate = 0F;
             this.guna2PictureBox7.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
@@ -598,7 +598,7 @@
             this.guna2PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox8.BorderRadius = 1;
             this.guna2PictureBox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox8.Image = global::QL_sald.Properties.Resources.đường_đen_sữa_đá_1__1_;
+           
             this.guna2PictureBox8.ImageRotate = 0F;
             this.guna2PictureBox8.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox8.Name = "guna2PictureBox8";
@@ -644,7 +644,7 @@
             this.guna2PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox9.BorderRadius = 1;
             this.guna2PictureBox9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox9.Image = global::QL_sald.Properties.Resources.đường_đen_1__1_;
+            
             this.guna2PictureBox9.ImageRotate = 0F;
             this.guna2PictureBox9.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox9.Name = "guna2PictureBox9";
@@ -690,7 +690,7 @@
             this.guna2PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox10.BorderRadius = 1;
             this.guna2PictureBox10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox10.Image = global::QL_sald.Properties.Resources.traxanh_1__1_;
+          
             this.guna2PictureBox10.ImageRotate = 0F;
             this.guna2PictureBox10.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox10.Name = "guna2PictureBox10";

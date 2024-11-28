@@ -19,7 +19,7 @@
             }
             base.Dispose(disposing);
         }
-
+        //db
         #region Component Designer generated code
 
         /// <summary> 
@@ -460,7 +460,11 @@
             this.guna2PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox6.BorderRadius = 1;
             this.guna2PictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
+<<<<<<< Updated upstream
             this.guna2PictureBox6.Image = global::QL_sald.Properties.Resources.cafe_sữa_đá_1__1_;
+=======
+            
+>>>>>>> Stashed changes
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
@@ -506,7 +510,11 @@
             this.guna2PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox5.BorderRadius = 1;
             this.guna2PictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
+<<<<<<< Updated upstream
             this.guna2PictureBox5.Image = global::QL_sald.Properties.Resources.cafe_đen_nóng_1__1_;
+=======
+        
+>>>>>>> Stashed changes
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
@@ -552,7 +560,11 @@
             this.guna2PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox4.BorderRadius = 1;
             this.guna2PictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
+<<<<<<< Updated upstream
             this.guna2PictureBox4.Image = global::QL_sald.Properties.Resources.cà_phê_đen_đá_1__1_;
+=======
+           
+>>>>>>> Stashed changes
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
@@ -598,7 +610,11 @@
             this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox3.BorderRadius = 1;
             this.guna2PictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
+<<<<<<< Updated upstream
             this.guna2PictureBox3.Image = global::QL_sald.Properties.Resources.bơ_arabica;
+=======
+          
+>>>>>>> Stashed changes
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -644,7 +660,11 @@
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox1.BorderRadius = 1;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+<<<<<<< Updated upstream
             this.guna2PictureBox1.Image = global::QL_sald.Properties.Resources.bạc_xỉu_1__1_;
+=======
+           
+>>>>>>> Stashed changes
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -690,7 +710,11 @@
             this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox2.BorderRadius = 1;
             this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+<<<<<<< Updated upstream
             this.guna2PictureBox2.Image = global::QL_sald.Properties.Resources.bacxiulacsua_1__1_;
+=======
+           
+>>>>>>> Stashed changes
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
