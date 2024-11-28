@@ -176,7 +176,7 @@
             this.btnMenu.Text = "          Menu";
             this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenu.UseVisualStyleBackColor = false;
-     
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click_1);
             // 
             // btn_kh
             // 

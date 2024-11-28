@@ -197,12 +197,6 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="logicLayer\FoodLL.cs" />
-    <Compile Include="menu_cafe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="menu_cafe.Designer.cs">
-      <DependentUpon>menu_cafe.cs</DependentUpon>
-    </Compile>
     <Compile Include="menu_cf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,9 +330,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="menu_cafe.resx">
-      <DependentUpon>menu_cafe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu_cf.resx">
       <DependentUpon>menu_cf.cs</DependentUpon>
