@@ -27,7 +27,7 @@ namespace QL_sald
                 List<Food> foods = foodLL.GetFoodsByCategory(1); // Thay 1 bằng CategoryId tương ứng
 
                 // Thiết lập padding và hướng sắp xếp cho FlowLayoutPanel
-                flowLayoutPanel1.Padding = new Padding(10, 10, 10, 10);
+                flowLayoutPanel1.Padding = new Padding(20, 5,5, 5);
                 flowLayoutPanel1.AutoScroll = true;
 
 
@@ -39,7 +39,7 @@ namespace QL_sald
 
                     // Giảm khoảng cách giữa các FoodCPT bằng cách thiết lập Margin nhỏ hơn
                     foodCPT.Margin = new Padding(0);  // Giảm từ 5 xuống 2 (hoặc giá trị nhỏ hơn tùy ý)
-                    foodCPT.Width = 150; // Điều chỉnh theo nhu cầu
+                    foodCPT.Width = 140; // Điều chỉnh theo nhu cầu
                     foodCPT.Dock = DockStyle.None;
 
                     flowLayoutPanel1.Controls.Add(foodCPT);
