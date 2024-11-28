@@ -45,6 +45,5 @@ namespace QL_sald.DataAccessLayer
 
             return dataTable;
         }
-
     }
 }
