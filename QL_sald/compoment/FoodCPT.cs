@@ -1,55 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using QL_sald.logicLayer;
 using ValueObject;
 
 namespace QL_sald.compoment
 {
     public partial class FoodCPT : UserControl
     {
-        private FoodLL foodLL;
-        private readonly string defaultImagePath = "path_to_default_image\\default.png"; // Đường dẫn ảnh mặc định
-
         public FoodCPT()
         {
             InitializeComponent();
-            foodLL = new FoodLL();
-            LoadData(1); // Thay 1 bằng CategoryId tương ứng
+            this.Size = new Size(200, 150); // Đặt kích thước hợp lý cho từng FoodCPT
         }
 
-        private void LoadData(int categoryId)
+        public void LoadData(Food food)
         {
             try
             {
-                var foods = foodLL.GetFoodsByCategory(categoryId);
-                Console.WriteLine($"Foods count: {foods.Count}");
+                txtFoodName.Text = food.FoodName;
+                txtPrice.Text = string.Format("{0:N2}đ", food.Price); // Định dạng giá trị tiền tệ với đơn vị "đ"
 
-                if (foods.Count > 0)
+                // Lấy đường dẫn ảnh từ ImageURL
+                string imagePath = Path.Combine(Application.StartupPath, food.ImageURL.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
+                Console.WriteLine($"Using image path: {imagePath}");
+
+                if (File.Exists(imagePath))
                 {
-                    Food selectedFood = foods[0];
-                    txtFoodName.Text = selectedFood.FoodName;
-                    txtPrice.Text = selectedFood.Price.ToString("C");
-
-                    if (!string.IsNullOrEmpty(selectedFood.ImageURL) && File.Exists(selectedFood.ImageURL))
-                    {
-                        pic.Image = Image.FromFile(selectedFood.ImageURL);
-                    }
-                    else
-                    {
-                        LoadDefaultImage(); // Luôn tải ảnh mặc định khi không tìm thấy ảnh hoặc URL rỗng
-                    }
+                    pic.Image = Image.FromFile(imagePath);
                 }
                 else
                 {
-                    LoadDefaultImage(); // Tải ảnh mặc định khi danh mục không có dữ liệu
+                    LoadDefaultImage(); // Tải ảnh mặc định nếu không tìm thấy ảnh
                 }
             }
             catch (Exception ex)
             {
-                // Chỉ ghi log, không hiển thị thông báo lỗi
                 Console.WriteLine($"Error: {ex}");
                 LoadDefaultImage(); // Tải ảnh mặc định trong trường hợp xảy ra lỗi
             }
@@ -57,21 +43,7 @@ namespace QL_sald.compoment
 
         private void LoadDefaultImage()
         {
-            if (File.Exists(defaultImagePath))
-            {
-                pic.Image = Image.FromFile(defaultImagePath);
-            }
-            else
-            {
-                
-                pic.Image = pic.Image = Properties.Resources.bac_xiu; 
-            
-            }
-        }
-
-        private void txtFoodName_Click(object sender, EventArgs e)
-        {
-            // Xử lý sự kiện click vào tên món ăn (nếu cần)
+            pic.Image = Properties.Resources.bac_xiu;
         }
     }
 }

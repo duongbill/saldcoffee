@@ -33,6 +33,7 @@ namespace QL_sald.DataAccessLayer
                     adapter.Fill(dataTable);  // Lưu trữ dữ liệu vào DataTable
                 }
             }
+          
             catch (Exception ex)
             {
                 Console.WriteLine("Lỗi: " + ex.Message);

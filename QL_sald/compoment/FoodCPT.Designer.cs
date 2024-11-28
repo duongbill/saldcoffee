@@ -40,7 +40,7 @@
             this.pic.ImageRotate = 0F;
             this.pic.Location = new System.Drawing.Point(0, 0);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(150, 144);
+            this.pic.Size = new System.Drawing.Size(138, 144);
             this.pic.TabIndex = 0;
             this.pic.TabStop = false;
             // 
@@ -66,7 +66,6 @@
             this.txtFoodName.Size = new System.Drawing.Size(74, 12);
             this.txtFoodName.TabIndex = 5;
             this.txtFoodName.Text = "Tên sản phẩm";
-            this.txtFoodName.Click += new System.EventHandler(this.txtFoodName_Click);
             // 
             // FoodCPT
             // 
@@ -76,7 +75,7 @@
             this.Controls.Add(this.txtFoodName);
             this.Controls.Add(this.pic);
             this.Name = "FoodCPT";
-            this.Size = new System.Drawing.Size(150, 186);
+            this.Size = new System.Drawing.Size(141, 186);
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
