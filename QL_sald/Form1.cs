@@ -69,7 +69,7 @@ namespace QL_sald
         // Sự kiện Click cho nút btnMenu để hiển thị menuControl
         private void btnMenu_Click(object sender, EventArgs e)
         {
-         menu_cafe menuControl1 = new menu_cafe();
+         menu_cf menuControl1 = new menu_cf();
         OpenChildForm(menuControl1); // Truyền Form con menuControl vào
 
         }
@@ -102,5 +102,7 @@ namespace QL_sald
             staff sfControl = new staff();
             OpenChildForm(sfControl); // Truyền Form con menuControl vào
         }
+
+       
     }
 }
