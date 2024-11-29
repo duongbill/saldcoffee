@@ -35,7 +35,7 @@ namespace DataAcessLayer
                 }
             }
         }
-
+        // cai nay de doc du lieu cho vao datatable nhu cai datagidview j y
         public DataTable GetData(string strSQL) // Dùng để thực hiện truy vấn Select
         {
             DataTable dt = new DataTable();
@@ -72,7 +72,7 @@ namespace DataAcessLayer
             }
             return dt;
         }
-
+        // dung de insert update delete 
         public int ExecuteSQL(string strSQL)
         {
             int row = 0;
@@ -85,7 +85,7 @@ namespace DataAcessLayer
             }
             return row;
         }
-
+        // cai nay dung de doc proc 
         public int ExecuteSQL(string procName, SqlParameter[] para)
         {
             int row = 0;
