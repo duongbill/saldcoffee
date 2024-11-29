@@ -48,7 +48,7 @@ namespace DataAcessLayer
             }
             return dt;
         }
-
+        //  doc proc dang bang
         public DataTable GetData(string procName, SqlParameter[] para)
         {
             DataTable dt = new DataTable();

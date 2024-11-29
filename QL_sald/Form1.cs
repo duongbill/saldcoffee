@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using QL_sald.table;
 namespace QL_sald
 {
     public partial class Form1 : Form
@@ -9,7 +9,7 @@ namespace QL_sald
         private menu_cf menuControl = new menu_cf();  // `menu_cafe` là Form con
         private Cài_đặt stControl = new Cài_đặt();
         private TrangChu tcControl = new TrangChu();
-        private packages pgControl = new packages();
+       // private TableShow pgControl = new TableShow();
         private staff sfControl = new staff();
         public Form1()
         {
@@ -94,7 +94,8 @@ namespace QL_sald
 
         private void btn_dh_Click(object sender, EventArgs e)
         {
-            OpenChildControl(pgControl);
+            //TableShow pgControl = new TableShow();
+           // OpenChildForm(pgControl);
         }
 
         private void btn_nv_Click(object sender, EventArgs e)
@@ -106,6 +107,12 @@ namespace QL_sald
         private void btnMenu_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_ls_Click(object sender, EventArgs e)
+        {
+           Form2 sfControl = new Form2();
+            OpenChildForm(sfControl); // Truyền Form con menuControl vào
         }
     }
 }

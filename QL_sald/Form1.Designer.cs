@@ -106,6 +106,7 @@
             this.btn_ls.Text = "     Lịch sử mua hàng";
             this.btn_ls.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ls.UseVisualStyleBackColor = false;
+            this.btn_ls.Click += new System.EventHandler(this.btn_ls_Click);
             // 
             // btn_ct
             // 

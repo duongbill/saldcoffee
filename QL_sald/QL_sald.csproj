@@ -286,6 +286,21 @@
     <Compile Include="sửa_món.Designer.cs">
       <DependentUpon>sửa_món.cs</DependentUpon>
     </Compile>
+    <Compile Include="table\TableCPT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="table\TableCPT.Designer.cs">
+      <DependentUpon>TableCPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="table\TableFood.cs" />
+    <Compile Include="table\TableFoodDAL.cs" />
+    <Compile Include="table\TableFoodLL.cs" />
+    <Compile Include="table\TableInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="table\TableInfoControl.Designer.cs">
+      <DependentUpon>TableInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="themmon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -321,7 +336,6 @@
     <Compile Include="ValueObject\Order.cs" />
     <Compile Include="ValueObject\Payment.cs" />
     <Compile Include="ValueObject\Staff.cs" />
-    <Compile Include="ValueObject\TableFood.cs" />
     <Compile Include="ValueObject\Warehouse.cs" />
     <Compile Include="xóa_món.cs">
       <SubType>UserControl</SubType>
@@ -384,6 +398,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sửa_món.resx">
       <DependentUpon>sửa_món.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="table\TableCPT.resx">
+      <DependentUpon>TableCPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="table\TableInfoControl.resx">
+      <DependentUpon>TableInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="themmon.resx">
       <DependentUpon>themmon.cs</DependentUpon>
