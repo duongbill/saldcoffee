@@ -415,166 +415,103 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\baocao.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\donhang.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\donhangicon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\history.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\khohang.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\nhanvien.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\setting.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\trangchu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\trangchu-active.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="img\Cafe\bacxiulacsua.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="img\Cafe\loi_img.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="img\Cafe\bơ arabica.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="img\Cafe\cà phê đen đá%281%29%281%29.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="img\Cafe\cà phê đen đá.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Cafe\cafe đen nóng%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Cafe\cafe sữa đá%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Cafe\cafe sữa nóng%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Cafe\đường đen sữa đá%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Cafe\đường đen%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Cafe\traxanh%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Resources\basil_add-solid.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Resources\typcn_delete %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Resources\material-symbols_change-circle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà sữa\ts chân châu đường đen%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà sữa\trà sữa olong%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà sữa\ts tứ quý bơ%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà sữa\ts tứ quý sương sáo%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà sữa\trà đen macchiato%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà sữa\hongtrasuatraan châu%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Thức uống đá xay\phin_gato%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Thức uống đá xay\cà phê đường đen%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Thức uống đá xay\bánh kem dâu%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Thức uống đá xay\choco_chip%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Thức uống đá xay\caramel%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Thức uống đá xay\bus%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\bánh\mochi phúc kem bồn tử%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\bánh\mochi kem việt quất%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\bánh\mochi kem chocolate%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\bánh\mousse gấu%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\bánh\bánh mì vn%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\bánh\bimbim ngô%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\bánh\bim bim sữa dừae%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà trái cây\trà đào cam sả%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà trái cây\đào%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà trái cây\trà vải%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà trái cây\yuzu%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\Trà trái cây\olong%281%29%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+    <Content Include="img\banh\banhgau.png" />
+    <Content Include="img\banh\banhmyvn.png" />
+    <Content Include="img\banh\bimbimngo.png" />
+    <Content Include="img\banh\bimbimsuadua.png" />
+    <Content Include="img\banh\Butter_croissant.png" />
+    <Content Include="img\banh\mochi_kemchocolate.png" />
+    <Content Include="img\banh\mochi_phucbt.png" />
+    <Content Include="img\banh\mochi_vietquat.png" />
+    <Content Include="img\banh\mousse_gauchoco.png" />
+    <Content Include="img\baocao.png" />
+    <Content Include="img\bánh\bim bim sữa dừae%281%29%281%29.png" />
+    <Content Include="img\bánh\bimbim ngô%281%29%281%29.png" />
+    <Content Include="img\bánh\bánh mì vn%281%29%281%29.png" />
+    <Content Include="img\bánh\mochi kem chocolate%281%29%281%29.png" />
+    <Content Include="img\bánh\mochi kem việt quất%281%29%281%29.png" />
+    <Content Include="img\bánh\mochi phúc kem bồn tử%281%29%281%29.png" />
+    <Content Include="img\bánh\mousse gấu%281%29%281%29.png" />
+    <Content Include="img\Cafe\bacxiu.png" />
+    <Content Include="img\Cafe\bacxiulachanhnhan.png" />
+    <Content Include="img\Cafe\bacxiulacmuoi.png" />
+    <Content Include="img\Cafe\bacxiulacsua.png" />
+    <Content Include="img\Cafe\bacxiulsyenmach.png" />
     <Content Include="img\Cafe\bac_xiu.png" />
+    <Content Include="img\Cafe\bo_arabica.png" />
+    <Content Include="img\Cafe\bơ arabica.png" />
+    <Content Include="img\Cafe\cafe sữa nóng%281%29%281%29.png" />
+    <Content Include="img\Cafe\cafe sữa đá%281%29%281%29.png" />
+    <Content Include="img\Cafe\cafe đen nóng%281%29%281%29.png" />
+    <Content Include="img\Cafe\cafeden.png" />
+    <Content Include="img\Cafe\cafesuada.png" />
+    <Content Include="img\Cafe\cafesuanong.png" />
+    <Content Include="img\Cafe\cà phê đen đá%281%29%281%29.png" />
+    <Content Include="img\Cafe\cà phê đen đá.jpg" />
+    <Content Include="img\Cafe\duongdensuada.png" />
+    <Content Include="img\Cafe\loi_img.png" />
+    <Content Include="img\Cafe\traxanh%281%29%281%29.png" />
+    <Content Include="img\Cafe\traxanhespresso.png" />
+    <Content Include="img\Cafe\đường đen sữa đá%281%29%281%29.png" />
+    <Content Include="img\Cafe\đường đen%281%29%281%29.png" />
+    <Content Include="img\close.png" />
+    <Content Include="img\donhang.png" />
+    <Content Include="img\donhangicon.png" />
+    <Content Include="img\history.png" />
+    <Content Include="img\icon\basil_add-solid.png" />
+    <Content Include="img\icon\câập nhật.png" />
+    <Content Include="img\icon\f7_lessthan-square-fill %282%29.png" />
+    <Content Include="img\icon\logo 1.png" />
+    <Content Include="img\icon\material-symbols_change-circle.png" />
+    <Content Include="img\icon\mdi_search.png" />
+    <Content Include="img\icon\previous.png" />
+    <Content Include="img\icon\typcn_delete %281%29.png" />
+    <Content Include="img\icon\typcn_delete.png" />
+    <Content Include="img\khohang.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\lucide_x.png" />
+    <Content Include="img\menu.png" />
+    <Content Include="img\nhanvien.png" />
+    <Content Include="img\Resources\basil_add-solid.png" />
+    <Content Include="img\Resources\material-symbols_change-circle.png" />
+    <Content Include="img\Resources\typcn_delete %281%29.png" />
+    <Content Include="img\setting.png" />
+    <Content Include="img\Thức uống đá xay\bus%281%29%281%29.png" />
+    <Content Include="img\Thức uống đá xay\bánh kem dâu%281%29%281%29.png" />
+    <Content Include="img\Thức uống đá xay\caramel%281%29%281%29.png" />
+    <Content Include="img\Thức uống đá xay\choco_chip%281%29%281%29.png" />
+    <Content Include="img\Thức uống đá xay\cà phê đường đen%281%29%281%29.png" />
+    <Content Include="img\Thức uống đá xay\phin_gato%281%29%281%29.png" />
+    <Content Include="img\trangchu-active.png" />
+    <Content Include="img\trangchu.png" />
+    <Content Include="img\trasua\hongtrasua.png" />
+    <Content Include="img\trasua\tradenmacchiato.png" />
+    <Content Include="img\trasua\tstcduongden.png" />
+    <Content Include="img\trasua\ts_olong.png" />
+    <Content Include="img\trasua\ts_olongss.png" />
+    <Content Include="img\trasua\ts_olongtqbo.png" />
+    <Content Include="img\Trà sữa\hongtrasuatraan châu%281%29%281%29.png" />
+    <Content Include="img\Trà sữa\trà sữa olong%281%29%281%29.png" />
+    <Content Include="img\Trà sữa\trà đen macchiato%281%29%281%29.png" />
+    <Content Include="img\Trà sữa\ts chân châu đường đen%281%29%281%29.png" />
+    <Content Include="img\Trà sữa\ts tứ quý bơ%281%29%281%29.png" />
+    <Content Include="img\Trà sữa\ts tứ quý sương sáo%281%29%281%29.png" />
+    <Content Include="img\Trà trái cây\olong%281%29%281%29.png" />
+    <Content Include="img\Trà trái cây\trà vải%281%29%281%29.png" />
+    <Content Include="img\Trà trái cây\trà đào cam sả%281%29%281%29.png" />
+    <Content Include="img\Trà trái cây\yuzu%281%29%281%29.png" />
+    <Content Include="img\Trà trái cây\đào%281%29%281%29.png" />
+    <Content Include="img\ttc\dao_kombucha.png" />
+    <Content Include="img\ttc\olongtuquysen.png" />
+    <Content Include="img\ttc\tradaocamsa.png" />
+    <Content Include="img\ttc\travai.png" />
+    <Content Include="img\ttc\yuzu_kombucha.png" />
+    <Content Include="img\tudx\frosty_banhkemdau.png" />
+    <Content Include="img\tudx\frosty_caramel.png" />
+    <Content Include="img\tudx\frosty_cfduongden.png" />
+    <Content Include="img\tudx\frosty_choco.png" />
+    <Content Include="img\tudx\frosty_phin.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
