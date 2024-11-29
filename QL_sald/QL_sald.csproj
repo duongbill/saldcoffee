@@ -295,11 +295,11 @@
     <Compile Include="table\TableFood.cs" />
     <Compile Include="table\TableFoodDAL.cs" />
     <Compile Include="table\TableFoodLL.cs" />
-    <Compile Include="table\TableInfoControl.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="table\TableShow.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="table\TableInfoControl.Designer.cs">
-      <DependentUpon>TableInfoControl.cs</DependentUpon>
+    <Compile Include="table\TableShow.Designer.cs">
+      <DependentUpon>TableShow.cs</DependentUpon>
     </Compile>
     <Compile Include="themmon.cs">
       <SubType>UserControl</SubType>
@@ -401,9 +401,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="table\TableCPT.resx">
       <DependentUpon>TableCPT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="table\TableInfoControl.resx">
-      <DependentUpon>TableInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="themmon.resx">
       <DependentUpon>themmon.cs</DependentUpon>
