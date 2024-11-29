@@ -66,6 +66,7 @@
             this.txtFoodName.Size = new System.Drawing.Size(74, 12);
             this.txtFoodName.TabIndex = 5;
             this.txtFoodName.Text = "Tên sản phẩm";
+            this.txtFoodName.Click += new System.EventHandler(this.txtFoodName_Click);
             // 
             // FoodCPT
             // 
