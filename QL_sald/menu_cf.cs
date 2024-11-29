@@ -15,31 +15,25 @@ namespace QL_sald
         {
             InitializeComponent();
             foodLL = new FoodLL();
-            LoadFoodItems(); // Gọi hàm để tải dữ liệu
+            LoadFoodItems();
         }
 
         private void LoadFoodItems()
         {
             try
             {
-                // Lấy danh sách món ăn từ database
+                List<Food> foods = foodLL.GetFoodsByCategory(1); // Replace 1 with the actual category ID
 
-                List<Food> foods = foodLL.GetFoodsByCategory(1); // Thay 1 bằng CategoryId tương ứng
-
-                // Thiết lập padding và hướng sắp xếp cho FlowLayoutPanel
-                flowLayoutPanel1.Padding = new Padding(20, 5,5, 5);
+                flowLayoutPanel1.Padding = new Padding(20, 5, 5, 5);
                 flowLayoutPanel1.AutoScroll = true;
+                flowLayoutPanel1.Controls.Clear(); // Clear existing controls
 
-
-                // Duyệt qua danh sách món ăn và thêm vào FlowLayoutPanel
                 foreach (Food food in foods)
                 {
                     FoodCPT foodCPT = new FoodCPT();
-                    foodCPT.LoadData(food); // Truyền dữ liệu món ăn vào FoodCPT
-
-                    // Giảm khoảng cách giữa các FoodCPT bằng cách thiết lập Margin nhỏ hơn
-                    foodCPT.Margin = new Padding(0);  // Giảm từ 5 xuống 2 (hoặc giá trị nhỏ hơn tùy ý)
-                    foodCPT.Width = 140; // Điều chỉnh theo nhu cầu
+                    foodCPT.LoadData(food);
+                    foodCPT.Margin = new Padding(0);
+                    foodCPT.Width = 140;
                     foodCPT.Dock = DockStyle.None;
 
                     flowLayoutPanel1.Controls.Add(foodCPT);
@@ -51,9 +45,11 @@ namespace QL_sald
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void btn_them_Click(object sender, EventArgs e)
         {
-
+            AddProductForm addProductForm = new AddProductForm();
+            addProductForm.ShowDialog();
+            LoadFoodItems(); // Reload data after closing AddProductForm
         }
     }
 }
