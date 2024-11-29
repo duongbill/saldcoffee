@@ -31,18 +31,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu_cf));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_them = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,8 +79,18 @@
             this.tabPage1.Text = "Cà phê";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(816, 448);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.flowLayoutPanel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -81,97 +99,9 @@
             this.tabPage2.Text = "Trà sữa";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.guna2GradientButton3);
-            this.panel6.Controls.Add(this.guna2GradientButton2);
-            this.panel6.Controls.Add(this.guna2GradientButton1);
-            this.panel6.Location = new System.Drawing.Point(9, 497);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(823, 51);
-            this.panel6.TabIndex = 18;
-            // 
-            // guna2GradientButton3
-            // 
-            this.guna2GradientButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton3.BorderRadius = 6;
-            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton3.FillColor = System.Drawing.Color.DimGray;
-            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.DimGray;
-            this.guna2GradientButton3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientButton3.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton3.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton3.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton3.Image")));
-            this.guna2GradientButton3.Location = new System.Drawing.Point(582, 9);
-            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(98, 32);
-            this.guna2GradientButton3.TabIndex = 6;
-            this.guna2GradientButton3.Text = "Xóa món";
-            // 
-            // guna2GradientButton2
-            // 
-            this.guna2GradientButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton2.BorderRadius = 6;
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.DimGray;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.DimGray;
-            this.guna2GradientButton2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton2.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton2.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton2.Image")));
-            this.guna2GradientButton2.Location = new System.Drawing.Point(724, 9);
-            this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(98, 32);
-            this.guna2GradientButton2.TabIndex = 5;
-            this.guna2GradientButton2.Text = "Sửa món";
-            // 
-            // guna2GradientButton1
-            // 
-            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton1.BorderRadius = 6;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.DimGray;
-            this.guna2GradientButton1.FocusedColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton1.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton1.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton1.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton1.Image")));
-            this.guna2GradientButton1.Location = new System.Drawing.Point(451, 9);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(98, 32);
-            this.guna2GradientButton1.TabIndex = 4;
-            this.guna2GradientButton1.Text = "Thêm món";
-            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.flowLayoutPanel3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(822, 454);
@@ -181,6 +111,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.flowLayoutPanel4);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(822, 454);
@@ -190,6 +121,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.flowLayoutPanel5);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(822, 454);
@@ -199,6 +131,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.flowLayoutPanel6);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(822, 454);
@@ -206,15 +139,89 @@
             this.tabPage6.Text = "Cà phê gói";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel1
+            // panel6
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(816, 448);
-            this.flowLayoutPanel1.TabIndex = 0;
-         
+            this.panel6.Controls.Add(this.btn_them);
+            this.panel6.Location = new System.Drawing.Point(9, 497);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(823, 51);
+            this.panel6.TabIndex = 18;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(816, 448);
+            this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(822, 454);
+            this.flowLayoutPanel3.TabIndex = 1;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoScroll = true;
+            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(822, 454);
+            this.flowLayoutPanel4.TabIndex = 1;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.AutoScroll = true;
+            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(822, 454);
+            this.flowLayoutPanel5.TabIndex = 1;
+            // 
+            // btn_them
+            // 
+            this.btn_them.BackColor = System.Drawing.Color.Transparent;
+            this.btn_them.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_them.BorderRadius = 6;
+            this.btn_them.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_them.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_them.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_them.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_them.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_them.FillColor = System.Drawing.Color.DimGray;
+            this.btn_them.FillColor2 = System.Drawing.Color.DimGray;
+            this.btn_them.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn_them.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_them.ForeColor = System.Drawing.Color.Black;
+            this.btn_them.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_them.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btn_them.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_them.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_them.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
+            this.btn_them.Location = new System.Drawing.Point(663, 10);
+            this.btn_them.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(153, 32);
+            this.btn_them.TabIndex = 4;
+            this.btn_them.Text = "Chỉnh sửa menu";
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.AutoScroll = true;
+            this.flowLayoutPanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(822, 454);
+            this.flowLayoutPanel6.TabIndex = 1;
             // 
             // menu_cf
             // 
@@ -228,6 +235,11 @@
             this.Text = "menu_cf";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -239,13 +251,16 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel6;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_them;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
     }
 }
