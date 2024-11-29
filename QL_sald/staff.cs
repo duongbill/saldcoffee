@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace QL_sald
@@ -108,12 +109,6 @@ namespace QL_sald
             }
         }
 
-
-        private void txt_staffid_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_dlt_Click(object sender, EventArgs e)
         {
             // Kiểm tra xem người dùng đã chọn một nhân viên trong DataGridView chưa
@@ -159,15 +154,11 @@ namespace QL_sald
             }
         }
 
-        private void btn_update_Click(object sender, EventArgs e)
+        private async void btn_update_Click(object sender, EventArgs e)
         {
-            // Kiểm tra xem người dùng đã chọn một nhân viên trong DataGridView chưa
             if (viewStaff.SelectedRows.Count > 0)
             {
-                // Lấy StaffId của nhân viên được chọn từ DataGridView
                 int staffId = Convert.ToInt32(viewStaff.SelectedRows[0].Cells["StaffId"].Value);
-
-                // Lấy thông tin từ các TextBox và combobox (hoặc dtp DateTime Picker)
                 string fullName = txt_name.Text;
                 string phone = txt_phone.Text;
                 DateTime dateOfBirth = dtpDateOfBirth.Value;
@@ -175,54 +166,67 @@ namespace QL_sald
                 string gender = txt_sex.Text;
                 int roleId = GetRoleIdByRoleName(txt_role.Text);
 
-                // Kiểm tra RoleId hợp lệ
-                if (roleId > 0)
+                if (roleId <= 0)
                 {
-                    // Cập nhật câu truy vấn SQL để sửa thông tin nhân viên
-                    string updateQuery = @"
-                UPDATE Staff 
-                SET FullName = @FullName, Phone = @Phone, DateOfBirth = @DateOfBirth, 
-                    Email = @Email, Gender = @Gender, RoleId = @RoleId
-                WHERE StaffId = @StaffId";
+                    MessageBox.Show("RoleId không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                    try
+                if (string.IsNullOrWhiteSpace(fullName) || string.IsNullOrWhiteSpace(phone) || string.IsNullOrWhiteSpace(email))
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                {
+                    MessageBox.Show("Địa chỉ email không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!Regex.IsMatch(phone, @"^\d{10,15}$"))
+                {
+                    MessageBox.Show("Số điện thoại không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                string updateQuery = @"
+                    UPDATE Staff 
+                    SET FullName = @FullName, Phone = @Phone, DateOfBirth = @DateOfBirth, 
+                        Email = @Email, Gender = @Gender, RoleId = @RoleId
+                    WHERE StaffId = @StaffId";
+
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(@"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;"))
                     {
-                        using (SqlConnection conn = new SqlConnection(@"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;"))
+                        await conn.OpenAsync();
+                        using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
                         {
-                            conn.Open();
-                            using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
+                            cmd.Parameters.AddWithValue("@StaffId", staffId);
+                            cmd.Parameters.AddWithValue("@FullName", fullName);
+                            cmd.Parameters.AddWithValue("@Phone", phone);
+                            cmd.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
+                            cmd.Parameters.AddWithValue("@Email", email);
+                            cmd.Parameters.AddWithValue("@Gender", gender);
+                            cmd.Parameters.AddWithValue("@RoleId", roleId);
+
+                            int rowsAffected = await cmd.ExecuteNonQueryAsync();
+                            if (rowsAffected > 0)
                             {
-                                // Thêm các tham số vào câu lệnh SQL
-                                cmd.Parameters.AddWithValue("@StaffId", staffId);
-                                cmd.Parameters.AddWithValue("@FullName", fullName);
-                                cmd.Parameters.AddWithValue("@Phone", phone);
-                                cmd.Parameters.AddWithValue("@DateOfBirth", dateOfBirth);
-                                cmd.Parameters.AddWithValue("@Email", email);
-                                cmd.Parameters.AddWithValue("@Gender", gender);
-                                cmd.Parameters.AddWithValue("@RoleId", roleId);
-
-                                int rowsAffected = cmd.ExecuteNonQuery(); // Thực thi câu lệnh
-
-                                if (rowsAffected > 0)
-                                {
-                                    MessageBox.Show("Cập nhật thông tin nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    displayStaffData(); // Cập nhật lại DataGridView sau khi sửa
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Không thể cập nhật thông tin nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                }
+                                MessageBox.Show("Cập nhật thông tin nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                displayStaffData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không thể cập nhật thông tin nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("RoleId không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -230,6 +234,5 @@ namespace QL_sald
                 MessageBox.Show("Vui lòng chọn một nhân viên để sửa thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
     }
 }
