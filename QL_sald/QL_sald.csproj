@@ -468,6 +468,7 @@
     <Content Include="img\icon\previous.png" />
     <Content Include="img\icon\typcn_delete %281%29.png" />
     <Content Include="img\icon\typcn_delete.png" />
+    <None Include="img\intronew.png" />
     <Content Include="img\khohang.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\lucide_x.png" />
