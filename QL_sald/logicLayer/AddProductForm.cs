@@ -60,5 +60,9 @@ namespace QL_sald
            
         }
 
+        private void AddProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

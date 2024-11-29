@@ -31,35 +31,35 @@
             // 
             // txtFoodName
             // 
-            this.txtFoodName.Location = new System.Drawing.Point(97, 47);
+            this.txtFoodName.Location = new System.Drawing.Point(250, 348);
             this.txtFoodName.Name = "txtFoodName";
             this.txtFoodName.Size = new System.Drawing.Size(200, 20);
             this.txtFoodName.TabIndex = 0;
             // 
             // cmbCategory
             // 
-            this.cmbCategory.Location = new System.Drawing.Point(97, 87);
+            this.cmbCategory.Location = new System.Drawing.Point(250, 388);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(200, 21);
             this.cmbCategory.TabIndex = 1;
             // 
             // cmbIngredient
             // 
-            this.cmbIngredient.Location = new System.Drawing.Point(97, 127);
+            this.cmbIngredient.Location = new System.Drawing.Point(250, 428);
             this.cmbIngredient.Name = "cmbIngredient";
             this.cmbIngredient.Size = new System.Drawing.Size(200, 21);
             this.cmbIngredient.TabIndex = 2;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(97, 167);
+            this.txtPrice.Location = new System.Drawing.Point(250, 468);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(200, 20);
             this.txtPrice.TabIndex = 3;
             // 
             // btnBrowseImage
             // 
-            this.btnBrowseImage.Location = new System.Drawing.Point(374, 73);
+            this.btnBrowseImage.Location = new System.Drawing.Point(527, 374);
             this.btnBrowseImage.Name = "btnBrowseImage";
             this.btnBrowseImage.Size = new System.Drawing.Size(100, 23);
             this.btnBrowseImage.TabIndex = 4;
@@ -68,14 +68,14 @@
             // 
             // txtImageURL
             // 
-            this.txtImageURL.Location = new System.Drawing.Point(336, 47);
+            this.txtImageURL.Location = new System.Drawing.Point(489, 348);
             this.txtImageURL.Name = "txtImageURL";
             this.txtImageURL.Size = new System.Drawing.Size(200, 20);
             this.txtImageURL.TabIndex = 5;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(97, 247);
+            this.btnSave.Location = new System.Drawing.Point(250, 548);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(200, 23);
             this.btnSave.TabIndex = 6;
@@ -94,7 +94,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ColumnHeadersHeight = 4;
+            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -104,10 +105,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(374, 167);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(12, 12);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(595, 237);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1065, 262);
             this.guna2DataGridView1.TabIndex = 7;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -120,7 +121,7 @@
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
             this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -146,6 +147,7 @@
             this.Controls.Add(this.btnSave);
             this.Name = "AddProductForm";
             this.Text = "Thêm sản phẩm";
+            this.Load += new System.EventHandler(this.AddProductForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
