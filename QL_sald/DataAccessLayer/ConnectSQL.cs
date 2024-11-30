@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using Microsoft.Data.SqlClient;
 
 namespace DataAcessLayer
@@ -35,8 +36,9 @@ namespace DataAcessLayer
                 }
             }
         }
-        // cai nay de doc du lieu cho vao datatable nhu cai datagidview j y
-        public DataTable GetData(string strSQL) // Dùng để thực hiện truy vấn Select
+
+        // Dùng để thực hiện truy vấn Select
+        public DataTable GetData(string strSQL)
         {
             DataTable dt = new DataTable();
             if (CheckConnection())
@@ -48,7 +50,8 @@ namespace DataAcessLayer
             }
             return dt;
         }
-        //  doc proc dang bang
+
+        // Đọc proc dạng bảng
         public DataTable GetData(string procName, SqlParameter[] para)
         {
             DataTable dt = new DataTable();
@@ -72,7 +75,8 @@ namespace DataAcessLayer
             }
             return dt;
         }
-        // dung de insert update delete 
+
+        // Dùng để insert, update, delete
         public int ExecuteSQL(string strSQL)
         {
             int row = 0;
@@ -85,7 +89,8 @@ namespace DataAcessLayer
             }
             return row;
         }
-        // cai nay dung de doc proc 
+
+        // Dùng để đọc proc
         public int ExecuteSQL(string procName, SqlParameter[] para)
         {
             int row = 0;
@@ -121,6 +126,43 @@ namespace DataAcessLayer
             }
         }
 
-    }
+        public int ExecuteSQL1(string query, SqlParameter[] parameters = null)
+        {
+            int affectedRows = 0;
+            if (CheckConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+                    conn.Open();
+                    affectedRows = cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            return affectedRows;
+        }
 
+        public DataTable ExecuteData1(string procName, SqlParameter[] parameters = null)
+        {
+            DataTable dt = new DataTable();
+            if (CheckConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand(procName, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                }
+            }
+            return dt;
+        }
+
+    }
 }

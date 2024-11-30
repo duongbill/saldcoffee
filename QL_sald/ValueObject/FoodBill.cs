@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ValueObject
 {
-    public class Food
+    public class FoodBill
     {
         public int FoodId { get; set; }
         public string FoodName { get; set; } = string.Empty; // Tránh null reference
@@ -15,25 +15,25 @@ namespace ValueObject
         public string ImageURL { get; set; } = string.Empty; // Cũng nên có giá trị mặc định
 
         // Hàm tạo không tham số
-        public Food() { }
+        public FoodBill() { }
 
         // Hàm tạo có tham số
-        public Food(string foodName, decimal price, string imageURL)
+        public FoodBill(int id, string name, int categoryId, decimal price)
         {
-            FoodName = foodName;
-            Price = price;
-            ImageURL = imageURL;
+            this.FoodId = id;
+            this.FoodName = name;
+            this.CategoryId = categoryId;
+            this.Price = price;
         }
 
         // Hàm tạo từ DataRow
-        public Food(DataRow row)
+        public FoodBill(DataRow row)
         {
             FoodId = (int)row["FoodId"];
             FoodName = row["FoodName"].ToString();
             CategoryId = (int)row["CategoryId"];
-            IngredientId = (int)row["IngredientId"];
             Price = (decimal)row["Price"];
-            ImageURL = row["ImageURL"].ToString();
+       
         }
     }
 }

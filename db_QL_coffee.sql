@@ -519,11 +519,11 @@ VALUES
     (1, 2, 1, 50000),
     (2, 3, 1, 55000),
     (2, 4, 2, 55000),
-    (5, 29, 3, 10000),
-    (5, 1, 2, 45000),
-    (5, 19, 1, 45000),
-    (8, 9, 2, 30000),
-    (8, 12, 2,30000);
+    (3, 29, 3, 10000),
+    (3, 1, 2, 45000),
+    (3, 19, 1, 45000),
+    (4, 9, 2, 30000),
+    (4, 12, 2,30000);
 	
 
 
@@ -674,11 +674,210 @@ select * from invoicedetail where InvoiceId = 2
 select * from InvoiceDetail where InvoiceId = 1
 
 select f.FoodName, bi.SoLuong, f.Price, f.price*bi.SoLuong as totalPrice from InvoiceDetail as bi, Invoice as b, Food as f
-where bi.InvoiceDetailId = b.InvoiceId and bi.foodid = f.FoodId and b.TableId = 2
+where bi.InvoiceDetailId = b.InvoiceId and bi.foodid = f.FoodId and b.TrangThai = 0 and b.TableId = 5
+
+SELECT f.FoodName, bi.SoLuong, f.Price, f.Price * bi.SoLuong AS TotalPrice
+FROM InvoiceDetail AS bi
+INNER JOIN Invoice AS b ON bi.InvoiceId = b.InvoiceId AND b.TrangThai =0
+INNER JOIN Food AS f ON bi.FoodId = f.FoodId
+
+WHERE b.TableId = 5
 
 SELECT f.FoodName, bi.SoLuong, f.Price, f.Price * bi.SoLuong AS TotalPrice
 FROM InvoiceDetail AS bi
 INNER JOIN Invoice AS b ON bi.InvoiceId = b.InvoiceId
 INNER JOIN Food AS f ON bi.FoodId = f.FoodId
-WHERE b.TableId = 5
- select f.Price FROM Food f WHERE f.FoodId =9
+WHERE b.TrangThai = 0 AND b.TableId = 5;
+ select * from Category where CategoryId = 1
+
+
+ CREATE PROC Proc_InsertBill
+@TableId int
+as
+begin
+	insert Invoice
+	(DateCheckIn, DateCheckOut, TableId, TrangThai)
+
+	Values (GETdate(), null, @TableId, 0)
+
+	end
+	go
+
+
+	--EXEC Proc_InsertBill @TableId = 1;
+
+ALTER Proc Proc_InsertBillDetail
+@InvoiceId int,  
+@FoodId int, 
+@SoLuong int
+AS
+BEGIN
+    DECLARE @isExitsBillInfo int;
+    DECLARE @foodCount int = 0;
+
+    -- Kiểm tra xem bản ghi đã tồn tại hay chưa
+    SELECT @isExitsBillInfo = Invoiceid, @foodCount = InvoiceDetail.SoLuong 
+    FROM InvoiceDetail 
+    WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+
+    IF (@isExitsBillInfo > 0)
+    BEGIN
+		declare @newCount int = @foodCount + @SoLuong
+		IF (@newCount >0)
+        UPDATE InvoiceDetail 
+        SET SoLuong = @foodCount + @SoLuong
+        WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+		else
+			delete InvoiceDetail where InvoiceId = @InvoiceId and FoodId = @FoodId
+    END
+    ELSE
+    BEGIN
+        INSERT INTO InvoiceDetail (InvoiceId, FoodId, SoLuong)
+        VALUES (@InvoiceId, @FoodId, @SoLuong);
+    END
+END
+GO
+
+SELECT * FROM Food WHERE CategoryId = 1
+
+
+-- giai thich proc o tren 
+---- Tạo hoặc thay đổi thủ tục Proc_InsertBillDetail
+--ALTER PROC Proc_InsertBillDetail
+--    @InvoiceId INT,       -- Tham số đầu vào: ID của hóa đơn
+--    @FoodId INT,          -- Tham số đầu vào: ID của món ăn
+--    @SoLuong INT          -- Tham số đầu vào: Số lượng món ăn cần thêm
+--AS
+--BEGIN
+--    -- Khai báo biến để kiểm tra bản ghi tồn tại và số lượng hiện tại
+--    DECLARE @isExitsBillInfo INT;     -- Biến để kiểm tra xem món ăn đã có trong hóa đơn hay chưa
+--    DECLARE @foodCount INT = 0;       -- Biến để lưu số lượng hiện tại của món ăn trong hóa đơn
+
+--    -- Kiểm tra xem bản ghi chi tiết hóa đơn với cùng InvoiceId và FoodId đã tồn tại hay chưa
+--    SELECT @isExitsBillInfo = COUNT(*), @foodCount = SoLuong  -- lay  và lấy số lượng hiện tại
+--    FROM InvoiceDetail 
+--    WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;        -- Điều kiện kiểm tra hóa đơn và món ăn
+
+--    -- Nếu bản ghi đã tồn tại trong bảng InvoiceDetail
+--    IF (@isExitsBillInfo > 0)
+--    BEGIN
+--        -- Cập nhật số lượng món ăn trong hóa đơn hiện có
+--        UPDATE InvoiceDetail 
+--        SET SoLuong = @foodCount + @SoLuong                   -- Cộng thêm số lượng mới vào số lượng hiện tại
+--        WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;    -- Cập nhật bản ghi cụ thể theo InvoiceId và FoodId
+--    END
+--    ELSE  -- Nếu bản ghi không tồn tại
+--    BEGIN
+--        -- Thêm một bản ghi mới vào bảng InvoiceDetail
+--        INSERT INTO InvoiceDetail (InvoiceId, FoodId, SoLuong)  -- Thêm thông tin mới vào bảng
+--        VALUES (@InvoiceId, @FoodId, @SoLuong);                 -- Gán giá trị cho các cột
+--    END
+--END
+--GO
+--Giải thích tổng quát:
+--Kiểm tra bản ghi tồn tại: Dùng câu lệnh SELECT để xác định xem món ăn đã có trong hóa đơn chưa.
+--Cập nhật số lượng: Nếu món ăn đã tồn tại, sử dụng UPDATE để cộng thêm số lượng mới.
+--Thêm mới bản ghi: Nếu món ăn chưa tồn tại, sử dụng INSERT để thêm bản ghi mới vào bảng InvoiceDetail.
+
+
+----kiem tra proc
+--CREATE PROC Proc_InsertBill1
+--    @TableId INT
+--AS
+--BEGIN
+--    -- Chèn dữ liệu vào bảng Invoice
+--    INSERT INTO Invoice (DateCheckIn, DateCheckOut, TableId, TrangThai)
+--    VALUES (GETDATE(), NULL, @TableId, 0);
+
+--    -- Trả về thông tin của hóa đơn vừa chèn
+--    SELECT TOP 1 *
+--    FROM Invoice
+--    WHERE TableId = @TableId
+--    ORDER BY DateCheckIn DESC;
+--END
+--GO
+--EXEC Proc_InsertBill1 @TableId = 1;
+
+
+
+Select max(Invoice.InvoiceId) from Invoice
+
+
+SELECT Price FROM Food WHERE FoodId = 10;
+
+
+CREATE PROCEDURE GetFoodsByCategory
+    @CategoryId INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        FoodId,
+        FoodName,
+        CategoryId,
+        Price
+       
+    FROM 
+        Food
+    WHERE 
+        CategoryId = @CategoryId;
+END;
+
+ALTER PROCEDURE Proc_InsertBillDetail
+@InvoiceId INT,  
+@FoodId INT, 
+@SoLuong INT,
+@Price DECIMAL
+AS
+BEGIN
+    DECLARE @isExitsBillInfo INT;
+    DECLARE @foodCount INT = 0;
+
+    -- Kiểm tra xem bản ghi đã tồn tại hay chưa
+    SELECT @isExitsBillInfo = InvoiceId, @foodCount = SoLuong
+    FROM InvoiceDetail 
+    WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+
+    IF (@isExitsBillInfo > 0)
+    BEGIN
+        DECLARE @newCount INT = @foodCount + @SoLuong;
+
+        -- Nếu số lượng mới nhỏ hơn 0, số lượng hiện tại = số lượng hiện tại - số lượng mới
+        IF (@newCount < 0)
+        BEGIN
+            UPDATE InvoiceDetail 
+            SET SoLuong = @foodCount - @SoLuong, Price = @Price
+            WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+        END
+        ELSE IF (@newCount = 0)
+        BEGIN
+            -- Nếu số lượng mới bằng 0, giảm số lượng hiện tại về 0
+            UPDATE InvoiceDetail 
+            SET SoLuong = 0, Price = @Price
+            WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+        END
+        ELSE
+        BEGIN
+            -- Nếu số lượng mới lớn hơn 0, cập nhật số lượng mới
+            UPDATE InvoiceDetail 
+            SET SoLuong = @newCount, Price = @Price
+            WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+        END
+    END
+    ELSE
+    BEGIN
+        -- Nếu không tồn tại bản ghi, thêm mới
+        INSERT INTO InvoiceDetail (InvoiceId, FoodId, SoLuong, Price)
+        VALUES (@InvoiceId, @FoodId, @SoLuong, @Price);
+    END
+
+    -- Trả về kết quả sau khi thực hiện
+    SELECT * FROM InvoiceDetail WHERE InvoiceId = @InvoiceId;
+END
+
+
+
+-- Chạy stored procedure với các tham số cụ thể
+EXEC Proc_InsertBillDetail @InvoiceId = 2, @FoodId = 1, @SoLuong = 1, @Price = 1;
+

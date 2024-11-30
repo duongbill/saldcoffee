@@ -2,6 +2,7 @@
 using ValueObject;
 using System.Collections.Generic;
 using System;
+using DataAcessLayer;
 
 namespace QL_sald.logicLayer
 {
@@ -22,7 +23,19 @@ namespace QL_sald.logicLayer
             }
             catch (Exception ex)
             {
-                throw new Exception($"Lỗi khi lấy danh sách món ăn: {ex.Message}");
+                throw new Exception($"Lỗi: {ex.Message}");
+            }
+        }
+        public List<FoodBill> GetFoodDataByCategoryID(int categoryId)
+        {
+            try
+            {
+                List<FoodBill> foods = foodDAL.GetFoodDataByCategoryID(categoryId);
+                return foods;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Loi: {ex.Message}");
             }
         }
 
@@ -34,7 +47,7 @@ namespace QL_sald.logicLayer
             }
             catch (Exception ex)
             {
-                throw new Exception($"Lỗi khi thêm món ăn: {ex.Message}");
+                throw new Exception($"Lỗi: {ex.Message}");
             }
         }
 
@@ -46,8 +59,22 @@ namespace QL_sald.logicLayer
             }
             catch (Exception ex)
             {
-                throw new Exception($"Lỗi khi lấy danh sách tất cả món ăn: {ex.Message}");
+                throw new Exception($"Lỗi: {ex.Message}");
             }
+        }
+
+        public decimal GetFoodPriceById(int foodId)
+        {
+            try
+            {
+                return foodDAL.GetFoodPriceById(foodId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi: {ex.Message}");
+            }
+
+
         }
     }
 }

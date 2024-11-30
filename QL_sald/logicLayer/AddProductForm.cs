@@ -64,5 +64,10 @@ namespace QL_sald
         {
 
         }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
