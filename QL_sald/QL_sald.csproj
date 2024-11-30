@@ -179,7 +179,9 @@
     <Compile Include="DataAccessLayer\ConnectSQL.cs" />
     <Compile Include="DataAccessLayer\FoodDAL.cs" />
     <Compile Include="DataAccessLayer\IngredientsDAL.cs" />
+    <Compile Include="DataAccessLayer\InvoiceDAL.cs" />
     <Compile Include="DataAccessLayer\Staffdata.cs" />
+    <Compile Include="DataAccessLayer\TableDAL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,20 +288,11 @@
     <Compile Include="sửa_món.Designer.cs">
       <DependentUpon>sửa_món.cs</DependentUpon>
     </Compile>
-    <Compile Include="table\TableCPT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="table\TableCPT.Designer.cs">
-      <DependentUpon>TableCPT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="table\TableFood.cs" />
-    <Compile Include="table\TableFoodDAL.cs" />
-    <Compile Include="table\TableFoodLL.cs" />
-    <Compile Include="table\TableShow.cs">
+    <Compile Include="TableForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="table\TableShow.Designer.cs">
-      <DependentUpon>TableShow.cs</DependentUpon>
+    <Compile Include="TableForm.Designer.cs">
+      <DependentUpon>TableForm.cs</DependentUpon>
     </Compile>
     <Compile Include="themmon.cs">
       <SubType>UserControl</SubType>
@@ -336,6 +329,7 @@
     <Compile Include="ValueObject\Order.cs" />
     <Compile Include="ValueObject\Payment.cs" />
     <Compile Include="ValueObject\Staff.cs" />
+    <Compile Include="ValueObject\TableFood.cs" />
     <Compile Include="ValueObject\Warehouse.cs" />
     <Compile Include="xóa_món.cs">
       <SubType>UserControl</SubType>
@@ -399,8 +393,8 @@
     <EmbeddedResource Include="sửa_món.resx">
       <DependentUpon>sửa_món.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="table\TableCPT.resx">
-      <DependentUpon>TableCPT.cs</DependentUpon>
+    <EmbeddedResource Include="TableForm.resx">
+      <DependentUpon>TableForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="themmon.resx">
       <DependentUpon>themmon.cs</DependentUpon>
