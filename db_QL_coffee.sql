@@ -824,50 +824,38 @@ BEGIN
         CategoryId = @CategoryId;
 END;
 
+
 ALTER PROCEDURE Proc_InsertBillDetail
-@InvoiceId INT,  
-@FoodId INT, 
-@SoLuong INT,
-@Price DECIMAL
+@InvoiceId int,  
+@FoodId int, 
+@SoLuong int,
+@Price decimal
 AS
 BEGIN
-    DECLARE @isExitsBillInfo INT;
-    DECLARE @foodCount INT = 0;
+    DECLARE @isExitsBillInfo int;
+    DECLARE @foodCount int = 0;
 
     -- Kiểm tra xem bản ghi đã tồn tại hay chưa
-    SELECT @isExitsBillInfo = InvoiceId, @foodCount = SoLuong
+    SELECT @isExitsBillInfo = Invoiceid, @foodCount = InvoiceDetail.SoLuong 
     FROM InvoiceDetail 
     WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
 
     IF (@isExitsBillInfo > 0)
     BEGIN
-        DECLARE @newCount INT = @foodCount + @SoLuong;
-
-        -- Nếu số lượng mới nhỏ hơn 0, số lượng hiện tại = số lượng hiện tại - số lượng mới
-        IF (@newCount < 0)
+        DECLARE @newCount int = @foodCount + @SoLuong;
+        IF (@newCount > 0)
         BEGIN
-            UPDATE InvoiceDetail 
-            SET SoLuong = @foodCount - @SoLuong, Price = @Price
-            WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
-        END
-        ELSE IF (@newCount = 0)
-        BEGIN
-            -- Nếu số lượng mới bằng 0, giảm số lượng hiện tại về 0
-            UPDATE InvoiceDetail 
-            SET SoLuong = 0, Price = @Price
-            WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
-        END
-        ELSE
-        BEGIN
-            -- Nếu số lượng mới lớn hơn 0, cập nhật số lượng mới
             UPDATE InvoiceDetail 
             SET SoLuong = @newCount, Price = @Price
             WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
         END
+        ELSE
+        BEGIN
+            DELETE FROM InvoiceDetail WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+        END
     END
     ELSE
     BEGIN
-        -- Nếu không tồn tại bản ghi, thêm mới
         INSERT INTO InvoiceDetail (InvoiceId, FoodId, SoLuong, Price)
         VALUES (@InvoiceId, @FoodId, @SoLuong, @Price);
     END
@@ -881,3 +869,78 @@ END
 -- Chạy stored procedure với các tham số cụ thể
 EXEC Proc_InsertBillDetail @InvoiceId = 2, @FoodId = 1, @SoLuong = 1, @Price = 1;
 
+
+
+
+
+
+--test
+ALTER PROCEDURE Proc_InsertBillDetail
+@InvoiceId int,  
+@FoodId int, 
+@SoLuong int,
+@Price decimal
+AS
+BEGIN
+    DECLARE @isExitsBillInfo int;
+    DECLARE @foodCount int = 0;
+
+    -- Check if the record exists in InvoiceDetail
+    SELECT @isExitsBillInfo = Invoiceid, @foodCount = InvoiceDetail.SoLuong 
+    FROM InvoiceDetail 
+    WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+
+    IF (@isExitsBillInfo > 0)
+    BEGIN
+        DECLARE @newCount int = @foodCount + @SoLuong;
+        
+        -- If the new quantity is greater than 0, update the record
+        IF (@newCount > 0)
+        BEGIN
+            UPDATE InvoiceDetail 
+            SET SoLuong = @newCount, Price = @Price
+            WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+        END
+        ELSE IF (@newCount <= 0) -- If the new quantity is 0 or negative
+        BEGIN
+            -- Delete if the new count is 0 or negative
+            DELETE FROM InvoiceDetail WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
+        END
+    END
+    ELSE
+    BEGIN
+        -- Insert new record if not exists and SoLuong is positive
+        IF @SoLuong > 0
+        BEGIN
+            INSERT INTO InvoiceDetail (InvoiceId, FoodId, SoLuong, Price)
+            VALUES (@InvoiceId, @FoodId, @SoLuong, @Price);
+        END
+    END
+
+    -- Return the updated InvoiceDetail for the given InvoiceId
+    SELECT * FROM InvoiceDetail WHERE InvoiceId = @InvoiceId;
+END
+
+update Invoice set TrangThai = 1 where InvoiceId = 1;
+
+delete  
+
+CREATE PROCEDURE DeleteFoodById
+    @FoodId INT
+AS
+BEGIN
+    -- Xóa dữ liệu trong FoodIngredient
+    DELETE FROM FoodIngredient
+    WHERE FoodId = @FoodId;
+
+    -- Xóa dữ liệu trong InvoiceDetail
+    DELETE FROM InvoiceDetail
+    WHERE FoodId = @FoodId;
+
+    -- Xóa dữ liệu trong bảng Food
+    DELETE FROM Food
+    WHERE FoodId = @FoodId;
+END;
+GO
+
+EXEC DeleteFoodById @FoodId = 1;

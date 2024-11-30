@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using ValueObject;
 using QL_sald.logicLayer;
-using System.Data.SqlClient;
+using DataAcessLayer;
+using System.Data;
+using Microsoft.Data.SqlClient;
+
 
 namespace QL_sald
 {
@@ -109,53 +112,58 @@ namespace QL_sald
             }
         }
 
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-            string connectionString = @"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;";
-            string queryDel = "DELETE FROM Food WHERE FoodId = @FoodId";
-
-            if (guna2DataGridView1.SelectedRows.Count == 0)
+       
+            private void btnDel_Click(object sender, EventArgs e)
             {
-                MessageBox.Show("Vui lòng chọn sản phẩm cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int selectedFoodId = Convert.ToInt32(guna2DataGridView1.SelectedRows[0].Cells["FoodId"].Value);
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                ConnectSQL connectSQL = new ConnectSQL();
+                if (guna2DataGridView1.SelectedRows.Count == 0)
                 {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(queryDel, conn))
+                    MessageBox.Show("Vui lòng chọn sản phẩm cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                try
+                {
+                    foreach (DataGridViewRow row in guna2DataGridView1.SelectedRows)
                     {
-                        cmd.Parameters.AddWithValue("@FoodId", selectedFoodId);
-                        int rowsAffected = cmd.ExecuteNonQuery();
+                        int foodId = (int)row.Cells["FoodId"].Value; // Lấy giá trị FoodId từ cột tương ứng
+
+                        SqlParameter[] parameters = new SqlParameter[]
+                        {
+                new SqlParameter("@FoodId", foodId)
+                        };
+
+                        int rowsAffected = connectSQL.ExecuteSQL("DeleteFoodById", parameters); // Sử dụng stored procedure DeleteFoodById
+
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LoadFoodItems();
                         }
                         else
                         {
                             MessageBox.Show("Không thể xóa sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
-                }
-            }
-            catch (SqlException ex)
-            {
-                if (ex.Message.Contains("REFERENCE"))
-                {
-                    MessageBox.Show("Không thể xóa sản phẩm vì nó đang được sử dụng trong hóa đơn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
 
+                    // Cập nhật lại giao diện sau khi xóa
+                    LoadFoodItems();
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Message.Contains("REFERENCE"))
+                    {
+                        MessageBox.Show("Không thể xóa sản phẩm vì nó đang được sử dụng trong hóa đơn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+
+
+        
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (guna2DataGridView1.SelectedRows.Count == 0)
