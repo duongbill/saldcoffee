@@ -211,6 +211,7 @@
     <Compile Include="logicLayer\CategoriesLL.cs" />
     <Compile Include="logicLayer\FoodLL.cs" />
     <Compile Include="logicLayer\IngredientsLL.cs" />
+    <Compile Include="ValueObject\FoodBill.cs" />
     <Compile Include="ValueObject\InvoiceShow.cs" />
     <Compile Include="menu_cf.cs">
       <SubType>Form</SubType>

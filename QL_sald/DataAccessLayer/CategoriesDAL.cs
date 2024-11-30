@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using DataAcessLayer;
 using Microsoft.Data.SqlClient;
+using QL_sald.logicLayer;
 using ValueObject;
 
 namespace QL_sald.DataAccessLayer
@@ -10,7 +11,13 @@ namespace QL_sald.DataAccessLayer
     internal class CategoriesDAL
     {
         private ConnectSQL connectSQL = new ConnectSQL();
+        private static CategoriesDAL instance;
+        public static CategoriesDAL Instance
 
+        {
+            get { if (instance == null) instance = new CategoriesDAL(); return CategoriesDAL.instance; }
+            private set { CategoriesDAL.instance = value; }
+        }
         public List<Category> GetAllCategories()
         {
             List<Category> categories = new List<Category>();
@@ -29,6 +36,21 @@ namespace QL_sald.DataAccessLayer
             }
 
             return categories;
+        }
+    
+    public List<Category> GetCategories()
+        {
+            List<Category> listCate = new List<Category>();
+
+            ConnectSQL connectSQL = new ConnectSQL();
+            DataTable data = connectSQL.GetData($" select * from Category  ");
+            foreach (DataRow row in data.Rows)
+            {
+                Category cate = new Category(row);
+                listCate.Add(cate);
+
+            }
+            return listCate;
         }
     }
 }

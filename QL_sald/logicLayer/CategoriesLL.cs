@@ -12,5 +12,10 @@ namespace QL_sald.logicLayer
         {
             return categoriesDAL.GetAllCategories();
         }
+        public List<Category> GetCategories()
+        {
+            return categoriesDAL.GetCategories();
+        }
+
     }
 }

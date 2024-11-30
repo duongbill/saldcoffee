@@ -28,7 +28,7 @@ namespace QL_sald.DataAccessLayer
             ConnectSQL connectSQL = new ConnectSQL();
             DataTable data = connectSQL.GetData($"SELECT f.FoodName, bi.SoLuong, f.Price, f.Price * bi.SoLuong AS TotalPrice" +
                 $"\r\nFROM InvoiceDetail AS bi\r\nINNER JOIN Invoice AS b ON bi.InvoiceId = b.InvoiceId" +
-                $"\r\nINNER JOIN Food AS f ON bi.FoodId = f.FoodId\r\nWHERE b.TableId = {id}");
+                $"\r\nINNER JOIN Food AS f ON bi.FoodId = f.FoodId \r\n WHERE b.TrangThai = 0 AND b.TableId = {id}");
 
             foreach (DataRow row in data.Rows)
             {
@@ -40,3 +40,4 @@ namespace QL_sald.DataAccessLayer
         }
     }
 }
+
