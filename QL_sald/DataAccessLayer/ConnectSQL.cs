@@ -110,7 +110,7 @@ namespace DataAcessLayer
             }
             return row;
         }
-
+        //han che su dung
         public object ExecuteScaler(string query, SqlParameter[] parameters = null)
         {
             using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
