@@ -106,6 +106,7 @@
             this.btn_ls.Text = "     Lịch sử mua hàng";
             this.btn_ls.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ls.UseVisualStyleBackColor = false;
+            this.btn_ls.Click += new System.EventHandler(this.btn_ls_Click);
             // 
             // btn_ct
             // 
@@ -249,6 +250,7 @@
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);

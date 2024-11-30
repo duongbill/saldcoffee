@@ -48,7 +48,7 @@ namespace DataAcessLayer
             }
             return dt;
         }
-
+        //  doc proc dang bang
         public DataTable GetData(string procName, SqlParameter[] para)
         {
             DataTable dt = new DataTable();
@@ -105,5 +105,22 @@ namespace DataAcessLayer
             }
             return row;
         }
+
+        public object ExecuteScaler(string query, SqlParameter[] parameters = null)
+        {
+            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+
+                connection.Open();
+                return command.ExecuteScalar();
+            }
+        }
+
     }
+
 }

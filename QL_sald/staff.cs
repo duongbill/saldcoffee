@@ -234,5 +234,56 @@ namespace QL_sald
                 MessageBox.Show("Vui lòng chọn một nhân viên để sửa thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private string GetRoleNameByRoleId(int roleId)
+        {
+            string roleName = string.Empty;
+            string connectionString = @"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;";
+
+            string query = "SELECT RoleName FROM AccRole WHERE RoleId = @RoleId";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@RoleId", roleId);
+
+                    try
+                    {
+                        conn.Open();
+                        var result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            roleName = result.ToString();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Có lỗi xảy ra: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            return roleName;
+        }
+
+        private void getInfo(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra xem hàng được chọn có hợp lệ không
+            if (e.RowIndex >= 0 && viewStaff.Rows[e.RowIndex].Cells["StaffId"].Value != null)
+            {
+                // Lấy hàng được chọn
+                DataGridViewRow selectedRow = viewStaff.Rows[e.RowIndex];
+
+                // Lấy dữ liệu từ các cột và gán vào các ô nhập liệu
+                txt_name.Text = selectedRow.Cells["FullName"].Value?.ToString();
+                txt_phone.Text = selectedRow.Cells["Phone"].Value?.ToString();
+                txt_email.Text = selectedRow.Cells["Email"].Value?.ToString();
+                txt_sex.Text = selectedRow.Cells["Gender"].Value?.ToString();
+                dtpDateOfBirth.Value = Convert.ToDateTime(selectedRow.Cells["DateOfBirth"].Value ?? DateTime.Now);
+
+                // Gán RoleName trực tiếp từ cột "RoleName"
+                txt_role.Text = selectedRow.Cells["RoleName"].Value?.ToString();
+            }
+        }
     }
 }

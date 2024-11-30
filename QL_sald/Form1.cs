@@ -9,7 +9,7 @@ namespace QL_sald
         private menu_cf menuControl = new menu_cf();  // `menu_cafe` là Form con
         private Cài_đặt stControl = new Cài_đặt();
         private TrangChu tcControl = new TrangChu();
-        private packages pgControl = new packages();
+       // private TableShow pgControl = new TableShow();
         private staff sfControl = new staff();
         public Form1()
         {
@@ -36,11 +36,18 @@ namespace QL_sald
             childForm.TopLevel = false;                      // Đặt TopLevel là false để Form có thể được nhúng
             childForm.FormBorderStyle = FormBorderStyle.None; // Bỏ viền của Form con
             childForm.Dock = DockStyle.Fill;                 // Tùy chọn để Form con tự động giãn ra toàn bộ Panel
+            foreach (Control c in panel_Body.Controls)
+            {
+                c.Dispose();
+            }
+            panel_Body.Controls.Clear();
             panel_Body.Controls.Clear();                    // Xóa các điều khiển hiện tại trong Panel
             panel_Body.Controls.Add(childForm);             // Thêm Form con vào Panel
-            panel_Body.Tag = childForm;                     // Đặt tag để tham chiếu Form con
+            panel_Body.Tag = childForm;
+           
             childForm.BringToFront();
-            childForm.Show();                               // Hiển thị Form con
+            childForm.Show();         
+           
         }
 
         private void OpenChildControl(UserControl childControl)
@@ -82,6 +89,7 @@ namespace QL_sald
 
         private void btn_ct_Click(object sender, EventArgs e)
         {
+            Cài_đặt stControl = new Cài_đặt();
             OpenChildControl(stControl); // Truyền Form con menuControl vào
 
         }
@@ -94,7 +102,8 @@ namespace QL_sald
 
         private void btn_dh_Click(object sender, EventArgs e)
         {
-            OpenChildControl(pgControl);
+            TableForm pgControl = new TableForm();
+            OpenChildForm(pgControl);
         }
 
         private void btn_nv_Click(object sender, EventArgs e)
@@ -106,6 +115,12 @@ namespace QL_sald
         private void btnMenu_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_ls_Click(object sender, EventArgs e)
+        {
+            TableForm pgControl = new TableForm();
+            OpenChildForm(pgControl);
         }
     }
 }
