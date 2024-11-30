@@ -1,4 +1,4 @@
-﻿USE master;
+﻿tUSE master;
 GO
 
 DROP DATABASE IF EXISTS quanly_sald;
@@ -48,6 +48,7 @@ CREATE TABLE Ingredient (
     IngredientName NVARCHAR(100) NOT NULL,
     SoLuong INT NOT NULL DEFAULT 0,
 	PhanLoai Nvarchar(50) not null,
+	ImageURL VARCHAR(255) NOT NULL,
     LastUpdated DATE NOT NULL DEFAULT GETDATE()
 );
 GO
@@ -77,14 +78,6 @@ CREATE TABLE Invoice (
 );
 GO
 
--- Table: Payment
-CREATE TABLE Payment (
-    PaymentId INT PRIMARY KEY IDENTITY,
-    PaymentMethod NVARCHAR(50) NOT NULL,
-    InvoiceId INT,
-    FOREIGN KEY (InvoiceId) REFERENCES Invoice(InvoiceId)
-);
-GO
 
 
 -- Table: InvoiceDetail
@@ -134,14 +127,7 @@ CREATE TABLE Warehouse (
 );
 GO
 
--- Table: Orders
-CREATE TABLE Orders (
-    OrderId INT PRIMARY KEY IDENTITY,
-    InvoiceDetailId INT,
-    Status NVARCHAR(50) NOT NULL,
-    FOREIGN KEY (InvoiceDetailId) REFERENCES InvoiceDetail(InvoiceDetailId)
-);
-GO
+
 
 -- nhieu nguyen lieu
 CREATE TABLE FoodIngredient (
@@ -190,39 +176,40 @@ VALUES
 (N'Trà trái cây');
 
 
-INSERT INTO Ingredient (IngredientName, SoLuong, PhanLoai, LastUpdated)
+INSERT INTO Ingredient (IngredientName,SoLuong,PhanLoai, ImageURl, LastUpdated)
 VALUES
-(N'Coffee', 100, N'gói', '2024-08-05'),
-(N'Sữa', 500, N'chai', '2024-08-05'),
-(N'Đường', 200, N'gói', '2024-08-05'),
-(N'Trà', 75, N'quả', '2024-08-05'),
-(N'Táo', 50, N'quả', '2024-08-05'),
-(N'Trân châu', 100, N'bịch', '2024-08-05'),
-(N'Matcha', 120, N'gói', '2024-08-05'),
-(N'Yến mạch', 130, N'gói', '2024-08-05'),
-(N'Caramel', 140, N'cái', '2024-08-05'),
-(N'Muối', 125, N'gói', '2024-08-05'),
-(N'Hạnh nhân', 115, N'quả', '2024-08-05'),
-(N'Bơ', 120, N'quả', '2024-08-05'),
-(N'Kem', 150, N'cây', '2024-08-05'),
-(N'Chip', 130, N'gói', '2024-08-05'),
-(N'Mochi kem phúc bồn tử', 120, N'cái', '2024-08-05'),
-(N'Mochi kem việt quất', 120, N'cái', '2024-08-05'),
-(N'Mochi kem chocolate', 120, N'cái', '2024-08-05'),
-(N'Mousse gấu chocolate', 110, N'cái', '2024-08-05'),
-(N'Bánh mì', 150, N'ổ', '2024-08-05'),
-(N'Sữa đặc', 160, N'lọ', '2024-08-05'),
-(N'Cam', 135, N'quả', '2024-08-05'),
-(N'Sả', 125, N'cây', '2024-08-05'),
-(N'Hạt sen', 115, N'bịch', '2024-08-05'),
-(N'Vải', 140, N'quả', '2024-08-05'),
-(N'Yuzu', 120, N'quả', '2024-08-05'),
-(N'Đào', 120, N'quả', '2024-08-05'),
-(N'Bánh Gấu', 120, N'bịch', '2024-08-05'),
-(N'Sương Sáo', 120, N'cốc', '2024-08-05'),
-(N'Dâu', 120, N'quả', '2024-08-05'),
-(N'Bim Bim Ngô', 120, N'gói', '2024-08-05'),
-(N'Bim Bim Sữa Dừa', 120, N'gói', '2024-08-05');
+(N'Coffee', 100, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Sữa', 500, N'chai', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Đường', 200, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Trà', 75, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Táo', 50, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Trân châu', 100, N'bịch', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Matcha', 120, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Yến mạch', 130, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Caramel', 140, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Muối', 125, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Hạnh nhân', 115, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Bơ', 120, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Kem', 150, N'cây', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Chip', 130, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Mochi kem phúc bồn tử', 120, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Mochi kem việt quất', 120, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Mochi kem chocolate', 120, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Mousse gấu chocolate', 110, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Bánh mì', 150, N'ổ', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Sữa đặc', 160, N'lọ', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Cam', 135, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Sả', 125, N'cây', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Hạt sen', 115, N'bịch', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Vải', 140, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Yuzu', 120, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Đào', 120, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Bánh Gấu', 120, N'bịch', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Sương Sáo', 120, N'cốc', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Dâu', 120, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Bim Bim Ngô', 120, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
+(N'Bim Bim Sữa Dừa', 120, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05');
+
 
 
 INSERT INTO Food (FoodName, CategoryId, IngredientId, Price,ImageURL)
@@ -528,14 +515,6 @@ VALUES
 
 
 
--- Insert vào Payment
-INSERT INTO Payment (PaymentMethod, InvoiceId)
-VALUES
-(N'Tiền mặt', 1),
-(N'Thẻ tín dụng', 2);
-
-SELECT * FROM Invoice;
-
 
 
 -- Bảng Staff
@@ -706,39 +685,7 @@ begin
 
 	--EXEC Proc_InsertBill @TableId = 1;
 
-ALTER Proc Proc_InsertBillDetail
-@InvoiceId int,  
-@FoodId int, 
-@SoLuong int
-AS
-BEGIN
-    DECLARE @isExitsBillInfo int;
-    DECLARE @foodCount int = 0;
 
-    -- Kiểm tra xem bản ghi đã tồn tại hay chưa
-    SELECT @isExitsBillInfo = Invoiceid, @foodCount = InvoiceDetail.SoLuong 
-    FROM InvoiceDetail 
-    WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
-
-    IF (@isExitsBillInfo > 0)
-    BEGIN
-		declare @newCount int = @foodCount + @SoLuong
-		IF (@newCount >0)
-        UPDATE InvoiceDetail 
-        SET SoLuong = @foodCount + @SoLuong
-        WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
-		else
-			delete InvoiceDetail where InvoiceId = @InvoiceId and FoodId = @FoodId
-    END
-    ELSE
-    BEGIN
-        INSERT INTO InvoiceDetail (InvoiceId, FoodId, SoLuong)
-        VALUES (@InvoiceId, @FoodId, @SoLuong);
-    END
-END
-GO
-
-SELECT * FROM Food WHERE CategoryId = 1
 
 
 -- giai thich proc o tren 
@@ -825,57 +772,12 @@ BEGIN
 END;
 
 
-ALTER PROCEDURE Proc_InsertBillDetail
-@InvoiceId int,  
-@FoodId int, 
-@SoLuong int,
-@Price decimal
-AS
-BEGIN
-    DECLARE @isExitsBillInfo int;
-    DECLARE @foodCount int = 0;
-
-    -- Kiểm tra xem bản ghi đã tồn tại hay chưa
-    SELECT @isExitsBillInfo = Invoiceid, @foodCount = InvoiceDetail.SoLuong 
-    FROM InvoiceDetail 
-    WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
-
-    IF (@isExitsBillInfo > 0)
-    BEGIN
-        DECLARE @newCount int = @foodCount + @SoLuong;
-        IF (@newCount > 0)
-        BEGIN
-            UPDATE InvoiceDetail 
-            SET SoLuong = @newCount, Price = @Price
-            WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
-        END
-        ELSE
-        BEGIN
-            DELETE FROM InvoiceDetail WHERE InvoiceId = @InvoiceId AND FoodId = @FoodId;
-        END
-    END
-    ELSE
-    BEGIN
-        INSERT INTO InvoiceDetail (InvoiceId, FoodId, SoLuong, Price)
-        VALUES (@InvoiceId, @FoodId, @SoLuong, @Price);
-    END
-
-    -- Trả về kết quả sau khi thực hiện
-    SELECT * FROM InvoiceDetail WHERE InvoiceId = @InvoiceId;
-END
-
-
-
--- Chạy stored procedure với các tham số cụ thể
-EXEC Proc_InsertBillDetail @InvoiceId = 2, @FoodId = 1, @SoLuong = 1, @Price = 1;
 
 
 
 
 
-
---test
-ALTER PROCEDURE Proc_InsertBillDetail
+create PROCEDURE Proc_InsertBillDetail
 @InvoiceId int,  
 @FoodId int, 
 @SoLuong int,
@@ -921,9 +823,19 @@ BEGIN
     SELECT * FROM InvoiceDetail WHERE InvoiceId = @InvoiceId;
 END
 
+
+
 update Invoice set TrangThai = 1 where InvoiceId = 1;
 
-delete  
+--IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'Proc_InsertBillDetail')
+--BEGIN
+--    DROP PROCEDURE Proc_InsertBillDetail;
+--END
+
+
+
+
+
 
 CREATE PROCEDURE DeleteFoodById
     @FoodId INT
@@ -944,3 +856,59 @@ END;
 GO
 
 EXEC DeleteFoodById @FoodId = 1;
+
+
+
+DELETE FROM InvoiceDetail WHERE InvoiceId = 4
+
+--delete InvoiceDetail
+
+--delete Invoice
+
+
+CREATE TRIGGER updateInvoiceDetail
+ON InvoiceDetail
+FOR INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @InvoiceId INT;
+    
+    -- Lấy InvoiceId từ bảng inserted (bảng tạm trong trigger chứa các bản ghi mới được chèn/cập nhật)
+    SELECT @InvoiceId = InvoiceId FROM inserted;
+    
+    DECLARE @TableId INT;
+
+    -- Kiểm tra và lấy TableId từ bảng Invoice
+    SELECT @TableId = TableId FROM Invoice WHERE InvoiceId = @InvoiceId AND TrangThai = 0;
+
+	update dbo.TableFood set TrangThai = N'Đã có khách' where TableId = @TableId
+
+    -- Bạn có thể thêm các thao tác khác ở đây nếu cần thiết
+END
+GO
+
+
+create trigger updateInvoice
+on dbo.Invoice for update 
+as
+begin
+		
+		declare @InvoiceId int;
+
+		select @InvoiceId = InvoiceId from inserted;
+
+		declare @TableId int
+
+		 SELECT @TableId = TableId FROM Invoice WHERE InvoiceId = @InvoiceId
+
+		 declare @count int = 0
+
+		 select  @count = Count(*) from Invoice where TableId = @TableId and TrangThai =0 
+
+		 if(@count = 0)
+			update TableFood set TrangThai = N'Bàn trống'
+
+
+end
+go
+
