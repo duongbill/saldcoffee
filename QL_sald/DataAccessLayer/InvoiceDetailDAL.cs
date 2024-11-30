@@ -42,6 +42,9 @@ namespace QL_sald.DataAccessLayer
 
             return listBill;
         }
+       
+
+
 
         public void InsertBillDetail(int invoiceId, int foodId, int soluong)
         {

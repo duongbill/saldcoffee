@@ -179,7 +179,7 @@
             this.txtTotalPrice.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTotalPrice.ForeColor = System.Drawing.Color.Red;
             this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalPrice.Location = new System.Drawing.Point(562, 420);
+            this.txtTotalPrice.Location = new System.Drawing.Point(562, 425);
             this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.PasswordChar = '\0';

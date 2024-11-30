@@ -11,6 +11,7 @@ using System.Data;
 using QL_sald.ValueObject;
 using ValueObject;
 using System.Windows.Markup;
+using System.Windows.Forms;
 
 namespace QL_sald.DataAccessLayer
 {
@@ -43,21 +44,10 @@ namespace QL_sald.DataAccessLayer
         }
         public void CheckOut(int id)
         {
-            try
-            {
-                SqlParameter[] parameters = new SqlParameter[]
-                {
-            new SqlParameter("@InvoiceId", id)
-                };
+            DataTable data = connectSQL.GetData($"update Invoice set TrangThai = 1 where InvoiceId = {id} ");
 
-                DataTable data = connectSQL.ExecuteData1("update Invoice set TrangThai = 1 where InvoiceId = @InvoiceId", parameters);
-                Console.WriteLine("Checkout thành công.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
         }
+
 
 
 
