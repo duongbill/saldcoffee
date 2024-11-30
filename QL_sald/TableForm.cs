@@ -88,7 +88,7 @@ namespace QL_sald
             }
             CultureInfo culture = new CultureInfo("vi-VN");
             txtTotalPrice.Text = totalPrice.ToString("c", culture);
-            LoadTable();
+            
         }
 
 
@@ -171,6 +171,7 @@ namespace QL_sald
 
             // Hiển thị lại hóa đơn sau khi thêm món
             ShowBill(table.TableId);
+            LoadTable();
         }
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
@@ -190,8 +191,8 @@ namespace QL_sald
                     // Thanh toán hóa đơn và xóa dữ liệu hóa đơn
                     InvoiceDAL.Instance.CheckOut(InvoiceId);  // Cập nhật trạng thái hóa đơn
                     ShowBill(table.TableId);
+                    LoadTable();
 
-                   
                     MessageBox.Show("Thanh toán thành công!", "Thông báo");
                 }
             }
@@ -201,9 +202,10 @@ namespace QL_sald
             }
         }
 
-       
-          
-        
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

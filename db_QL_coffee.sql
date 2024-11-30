@@ -861,9 +861,9 @@ EXEC DeleteFoodById @FoodId = 1;
 
 DELETE FROM InvoiceDetail WHERE InvoiceId = 4
 
---delete InvoiceDetail
+delete InvoiceDetail
 
---delete Invoice
+delete Invoice
 
 
 CREATE TRIGGER updateInvoiceDetail
@@ -888,7 +888,11 @@ END
 GO
 
 
-create trigger updateInvoice
+
+
+--lần đầu phải chạy cái này trước mới alter đc nhé mng
+--create trigger updateInvoice 
+alter trigger updateInvoice
 on dbo.Invoice for update 
 as
 begin
@@ -906,7 +910,7 @@ begin
 		 select  @count = Count(*) from Invoice where TableId = @TableId and TrangThai =0 
 
 		 if(@count = 0)
-			update TableFood set TrangThai = N'Bàn trống'
+			update TableFood set TrangThai = N'Bàn trống' where TableId = @TableId
 
 
 end
