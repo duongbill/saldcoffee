@@ -9,6 +9,7 @@ using QL_sald.DataAccessLayer;
 using Microsoft.Data.SqlClient;
 using System.Data;
 using QL_sald.ValueObject;
+using ValueObject;
 
 namespace QL_sald.DataAccessLayer
 {
@@ -27,18 +28,16 @@ namespace QL_sald.DataAccessLayer
 
 
         public int GetUncheckInvoiceByTableID(int id)
-        { 
+        {
             ConnectSQL connectSQL = new ConnectSQL();
-            DataTable data = connectSQL.GetData("select * from invoice where TableId = "+ id +" and TrangThai = 0");
+            DataTable data = connectSQL.GetData($"SELECT * FROM invoice WHERE TableId = {id} AND TrangThai = 0");
 
-           if(data.Rows.Count > 0)
+            if (data.Rows.Count > 0)
             {
                 Invoice bill = new Invoice(data.Rows[0]);
-                return bill.id;
-
-            }return -1; // khong co thang nao het
-
-
+                return bill.InvoiceId;
+            }
+            return -1; // Không có hóa đơn nào chưa thanh toán
         }
     }
 }

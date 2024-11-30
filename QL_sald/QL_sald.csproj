@@ -180,6 +180,8 @@
     <Compile Include="DataAccessLayer\FoodDAL.cs" />
     <Compile Include="DataAccessLayer\IngredientsDAL.cs" />
     <Compile Include="DataAccessLayer\InvoiceDAL.cs" />
+    <Compile Include="DataAccessLayer\InvoiceDetailDAL.cs" />
+    <Compile Include="DataAccessLayer\ShowInvoiceDAL.cs" />
     <Compile Include="DataAccessLayer\Staffdata.cs" />
     <Compile Include="DataAccessLayer\TableDAL.cs" />
     <Compile Include="Form1.cs">
@@ -209,6 +211,7 @@
     <Compile Include="logicLayer\CategoriesLL.cs" />
     <Compile Include="logicLayer\FoodLL.cs" />
     <Compile Include="logicLayer\IngredientsLL.cs" />
+    <Compile Include="ValueObject\InvoiceShow.cs" />
     <Compile Include="menu_cf.cs">
       <SubType>Form</SubType>
     </Compile>

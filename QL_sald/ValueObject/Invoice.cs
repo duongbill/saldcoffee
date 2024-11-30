@@ -13,11 +13,11 @@ namespace ValueObject
         public DateTime DateCheckIn { get; set; }
         public DateTime? DateCheckOut { get; set; }
         public int TrangThai { get; set; } // 1 là thanh toán, 0 là chưa thanh toán
-        public decimal TotalPrice { get; set; }
+   
 
         public Invoice() { }
 
-        public Invoice(int invoiceId, int tableId, DateTime dateCheckIn, DateTime? dateCheckOut, int trangThai, decimal totalPrice)
+        public Invoice(int invoiceId, int tableId, DateTime dateCheckIn, DateTime? dateCheckOut, int trangThai)
         {
             InvoiceId = invoiceId;
             TableId = tableId;
@@ -25,7 +25,7 @@ namespace ValueObject
             DateCheckIn = dateCheckIn;
             DateCheckOut = dateCheckOut;
             TrangThai = trangThai;
-            TotalPrice = totalPrice;
+           
         }
 
         public Invoice(DataRow row)
@@ -33,9 +33,18 @@ namespace ValueObject
             InvoiceId = (int)row["InvoiceId"];
             TableId = (int)row["TableId"];
             DateCheckIn = (DateTime)row["DateCheckIn"];
-            DateCheckOut = row["DateCheckOut"] != DBNull.Value ? (DateTime?)row["DateCheckOut"] : null;
+            var dateCheckOutTemp = row["DateCheckOut"];
+            if (dateCheckOutTemp != DBNull.Value)
+            {
+                DateCheckOut = (DateTime?)dateCheckOutTemp;
+            }
+            else
+            {
+                DateCheckOut = null;
+            }
             TrangThai = (int)row["TrangThai"];
-            TotalPrice = (decimal)row["TotalPrice"];
+           
         }
+
     }
 }
