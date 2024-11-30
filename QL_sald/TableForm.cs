@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ValueObject;
 
 namespace QL_sald
 {
@@ -44,10 +45,24 @@ namespace QL_sald
                 flpTable.Controls.Add(btn);
             }
 
-        void ShowBill(int id)
+            void ShowBill(int id)
             {
+                lsvBill.Items.Clear();
+                List<InvoiceShow> ListBillInfo = ShowInvoiceDAL.Instance.GetListShowInvoiceByTable(id);
 
+                foreach (InvoiceShow item in ListBillInfo)
+                {
+                    ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
+                    lsvItem.SubItems.Add(item.SoLuong.ToString());
+                    lsvItem.SubItems.Add(item.Price.ToString());
+                    lsvItem.SubItems.Add(item.TotalPrice.ToString());
+
+                    lsvBill.Items.Add(lsvItem);
+                }
             }
+
+
+
             void btn_Click(object sender, EventArgs e)
             {
                 Button btn = sender as Button;

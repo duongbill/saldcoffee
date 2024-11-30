@@ -89,6 +89,7 @@ namespace QL_sald
 
         private void btn_ct_Click(object sender, EventArgs e)
         {
+            Cài_đặt stControl = new Cài_đặt();
             OpenChildControl(stControl); // Truyền Form con menuControl vào
 
         }

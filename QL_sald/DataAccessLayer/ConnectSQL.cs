@@ -108,7 +108,7 @@ namespace DataAcessLayer
 
         public object ExecuteScaler(string query, SqlParameter[] parameters = null)
         {
-            using (SqlConnection connection = new SqlConnection())
+            using (SqlConnection connection = new SqlConnection(conn.ConnectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 if (parameters != null)
@@ -120,6 +120,7 @@ namespace DataAcessLayer
                 return command.ExecuteScalar();
             }
         }
+
     }
-    
+
 }

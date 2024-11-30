@@ -20,8 +20,8 @@ namespace QL_sald.DataAccessLayer
             private set { TableDAL.instance = value; }
         }
 
-        public static int TableWidth = 150;
-        public static int TableHeight = 150;
+        public static int TableWidth = 120;
+        public static int TableHeight = 120;
 
         private TableDAL() { }
 

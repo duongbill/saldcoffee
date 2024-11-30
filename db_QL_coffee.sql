@@ -1,10 +1,11 @@
-﻿﻿use master
-go
-drop database  if EXISTS quanly_sald;
-go
-CREATE DATABASE quanly_sald;
+﻿USE master;
+GO
 
-go
+DROP DATABASE IF EXISTS quanly_sald;
+GO
+
+CREATE DATABASE quanly_sald;
+GO
 
 USE quanly_sald;
 GO
@@ -71,7 +72,7 @@ CREATE TABLE Invoice (
     DateCheckIn DATE NOT NULL DEFAULT GETDATE(),
     DateCheckOut DATE,
     TrangThai INT, -- 1 là thanh toán, 0 là chưa thanh toán
-    TotalPrice DECIMAL(18, 3) NOT NULL DEFAULT 0,
+
     FOREIGN KEY (TableId) REFERENCES TableFood(TableId)
 );
 GO
@@ -155,8 +156,18 @@ GO
 
 INSERT INTO TableFood (TableName, TrangThai)
 VALUES
-('Table 1', N'Bàn Trống'),
-('Table 2', N'Đã có khách');
+('Table 1', N'Đã có khách'),
+('Table 2', N'Đã có khách'),
+('Table 3', N'Bàn Trống'),
+('Table 4', N'Bàn Trống')
+,('Table 5', N'Đã có khách'),
+('Table 6', N'Bàn Trống'),
+('Table 7', N'Bàn Trống'),
+('Table 8', N'Đã có khách'),
+('Table 9', N'Bàn Trống'),
+('Table 10', N'Bàn Trống'),
+('Table 11', N'Bàn Trống'),
+('Table 12', N'Bàn Trống');
 
 INSERT INTO AccRole (RoleName)
 VALUES
@@ -493,24 +504,37 @@ VALUES
 
 
 -- Insert vào Invoice
-INSERT INTO Invoice (TableId, DateCheckIn, DateCheckOut, TrangThai, TotalPrice)
+INSERT INTO Invoice (TableId, DateCheckIn, DateCheckOut, TrangThai)
 VALUES
-(1, '2024-08-06', '2024-08-06', 0, 70000.000),
-(2, '2024-08-06', '2024-08-06', 0, 40000.000);
+(1, '2024-08-06', '2024-08-06', 0),
+(2, '2024-08-06', '2024-08-06', 0),
+(5, '2024-08-06', '2024-08-06', 0),
+(8, '2024-08-06', '2024-08-06', 0);
 
 -- Insert vào InvoiceDetail
 INSERT INTO InvoiceDetail (InvoiceId, FoodId, SoLuong, Price)
 VALUES
-(1, 1, 2, 40000.000),
-(1, 2, 1, 30000.000),
-(2, 3, 1, 25000.000),
-(2, 4, 2, 15000.000);
+
+    (1, 1, 2, 45000),
+    (1, 2, 1, 50000),
+    (2, 3, 1, 55000),
+    (2, 4, 2, 55000),
+    (5, 29, 3, 10000),
+    (5, 1, 2, 45000),
+    (5, 19, 1, 45000),
+    (8, 9, 2, 30000),
+    (8, 12, 2,30000);
+	
+
+
 
 -- Insert vào Payment
 INSERT INTO Payment (PaymentMethod, InvoiceId)
 VALUES
 (N'Tiền mặt', 1),
 (N'Thẻ tín dụng', 2);
+
+SELECT * FROM Invoice;
 
 
 
@@ -537,10 +561,10 @@ VALUES
 (4, 75, GETDATE());
 
 -- Bảng Orders
-INSERT INTO Orders (InvoiceDetailId, Status)
-VALUES
-(1, N'Hoàn thành'),
-(2, N'Chưa hoàn thành');
+--INSERT INTO Orders (InvoiceDetailId, Status)
+--VALUES
+--(1, N'Hoàn thành'),
+--(2, N'Chưa hoàn thành');
 
 
 
@@ -615,6 +639,8 @@ GO
 
 EXEC GetTop10FoodsByCategory @CategoryId = 1
 
+
+
 --DROP PROCEDURE GetTop10FoodsByCategory;
 
 select foodname, price, imageURL from food
@@ -630,6 +656,8 @@ END
 go
 exec GetTableById @TableId =1
 
+
+
 select * from TableFood
 
 CREATE PROCEDURE GetTableList
@@ -637,8 +665,20 @@ as select * from TableFood
 go
 exec GetTableList
 
-SELECT COUNT(*) FROM Invoices WHERE TableiD = @TableiD AND Status = 'Đã có khách'
+
 
 select * from invoice where TableId = 2 and TrangThai = 0
 
-select * from InvoiceDetail where TableID
+select * from invoicedetail where InvoiceId = 2
+
+select * from InvoiceDetail where InvoiceId = 1
+
+select f.FoodName, bi.SoLuong, f.Price, f.price*bi.SoLuong as totalPrice from InvoiceDetail as bi, Invoice as b, Food as f
+where bi.InvoiceDetailId = b.InvoiceId and bi.foodid = f.FoodId and b.TableId = 2
+
+SELECT f.FoodName, bi.SoLuong, f.Price, f.Price * bi.SoLuong AS TotalPrice
+FROM InvoiceDetail AS bi
+INNER JOIN Invoice AS b ON bi.InvoiceId = b.InvoiceId
+INNER JOIN Food AS f ON bi.FoodId = f.FoodId
+WHERE b.TableId = 5
+ select f.Price FROM Food f WHERE f.FoodId =9
