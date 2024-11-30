@@ -1,4 +1,4 @@
-﻿use master
+﻿﻿use master
 go
 drop database  if EXISTS quanly_sald;
 go
@@ -618,5 +618,27 @@ EXEC GetTop10FoodsByCategory @CategoryId = 1
 --DROP PROCEDURE GetTop10FoodsByCategory;
 
 select foodname, price, imageURL from food
-role id => chuc vu
-chuc vu => id 
+
+CREATE PROCEDURE GetTableById
+    @TableId INT
+AS
+BEGIN
+    SELECT TableId, TableName, TrangThai
+    FROM TableFood
+    WHERE TableId = @TableId
+END
+go
+exec GetTableById @TableId =1
+
+select * from TableFood
+
+CREATE PROCEDURE GetTableList
+as select * from TableFood
+go
+exec GetTableList
+
+SELECT COUNT(*) FROM Invoices WHERE TableiD = @TableiD AND Status = 'Đã có khách'
+
+select * from invoice where TableId = 2 and TrangThai = 0
+
+select * from InvoiceDetail where TableID

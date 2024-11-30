@@ -33,8 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableInfoControl1 = new QL_sald.table.TableInfoControl();
-            this.tableCPT1 = new QL_sald.table.TableCPT();
+  
             this.SuspendLayout();
             // 
             // label5
@@ -82,30 +81,13 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "ten";
             // 
-            // tableInfoControl1
-            // 
-            this.tableInfoControl1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tableInfoControl1.Location = new System.Drawing.Point(434, 222);
-            this.tableInfoControl1.Name = "tableInfoControl1";
-            this.tableInfoControl1.Size = new System.Drawing.Size(250, 100);
-            this.tableInfoControl1.TabIndex = 16;
-            this.tableInfoControl1.TableName = "Table Name: ";
-            this.tableInfoControl1.TrangThai = "Trang Thai: ";
-            // 
-            // tableCPT1
-            // 
-            this.tableCPT1.Location = new System.Drawing.Point(198, 68);
-            this.tableCPT1.Name = "tableCPT1";
-            this.tableCPT1.Size = new System.Drawing.Size(275, 134);
-            this.tableCPT1.TabIndex = 17;
-            // 
+        
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 537);
-            this.Controls.Add(this.tableCPT1);
-            this.Controls.Add(this.tableInfoControl1);
+        
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -124,7 +106,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private table.TableInfoControl tableInfoControl1;
-        private table.TableCPT tableCPT1;
+     
     }
 }

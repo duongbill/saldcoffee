@@ -105,5 +105,21 @@ namespace DataAcessLayer
             }
             return row;
         }
+
+        public object ExecuteScaler(string query, SqlParameter[] parameters = null)
+        {
+            using (SqlConnection connection = new SqlConnection())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+
+                connection.Open();
+                return command.ExecuteScalar();
+            }
+        }
     }
+    
 }

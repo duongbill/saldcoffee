@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using QL_sald.table;
+
 namespace QL_sald
 {
     public partial class Form1 : Form
@@ -36,11 +36,18 @@ namespace QL_sald
             childForm.TopLevel = false;                      // Đặt TopLevel là false để Form có thể được nhúng
             childForm.FormBorderStyle = FormBorderStyle.None; // Bỏ viền của Form con
             childForm.Dock = DockStyle.Fill;                 // Tùy chọn để Form con tự động giãn ra toàn bộ Panel
+            foreach (Control c in panel_Body.Controls)
+            {
+                c.Dispose();
+            }
+            panel_Body.Controls.Clear();
             panel_Body.Controls.Clear();                    // Xóa các điều khiển hiện tại trong Panel
             panel_Body.Controls.Add(childForm);             // Thêm Form con vào Panel
-            panel_Body.Tag = childForm;                     // Đặt tag để tham chiếu Form con
+            panel_Body.Tag = childForm;
+           
             childForm.BringToFront();
-            childForm.Show();                               // Hiển thị Form con
+            childForm.Show();         
+           
         }
 
         private void OpenChildControl(UserControl childControl)
@@ -94,8 +101,8 @@ namespace QL_sald
 
         private void btn_dh_Click(object sender, EventArgs e)
         {
-            //TableShow pgControl = new TableShow();
-           // OpenChildForm(pgControl);
+            TableForm pgControl = new TableForm();
+            OpenChildForm(pgControl);
         }
 
         private void btn_nv_Click(object sender, EventArgs e)
@@ -111,8 +118,8 @@ namespace QL_sald
 
         private void btn_ls_Click(object sender, EventArgs e)
         {
-           Form2 sfControl = new Form2();
-            OpenChildForm(sfControl); // Truyền Form con menuControl vào
+            TableForm pgControl = new TableForm();
+            OpenChildForm(pgControl);
         }
     }
 }
