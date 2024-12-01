@@ -43,7 +43,7 @@ namespace QL_sald.compoment
 
         private void LoadDefaultImage()
         {
-            pic.Image = Properties.Resources.bac_xiu;
+           // pic.Image = Properties.Resources.bac_xiu;
         }
 
         
