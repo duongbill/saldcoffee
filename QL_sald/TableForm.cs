@@ -168,7 +168,7 @@ namespace QL_sald
             {
                 InvoiceDetailDAL.Instance.InsertBillDetail(invoiceId, foodId, soluong);
             }
-
+            //xem
             // Hiển thị lại hóa đơn sau khi thêm món
             ShowBill(table.TableId);
             LoadTable();
