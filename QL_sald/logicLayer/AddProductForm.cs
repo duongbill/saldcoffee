@@ -130,7 +130,7 @@ namespace QL_sald
 
                         SqlParameter[] parameters = new SqlParameter[]
                         {
-                new SqlParameter("@FoodId", foodId)
+                            new SqlParameter("@FoodId", foodId)
                         };
 
                         int rowsAffected = connectSQL.ExecuteSQL("DeleteFoodById", parameters); // Sử dụng stored procedure DeleteFoodById
