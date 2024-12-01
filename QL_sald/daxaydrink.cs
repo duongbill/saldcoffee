@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QL_sald
 {
-    public partial class test : Form
+    public partial class daxaydrink : UserControl
     {
-        public test()
+        public daxaydrink()
         {
             InitializeComponent();
         }

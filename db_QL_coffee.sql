@@ -1,4 +1,6 @@
+
 USE master;
+
 GO
 
 DROP DATABASE IF EXISTS quanly_sald;
@@ -178,6 +180,7 @@ VALUES
 
 INSERT INTO Ingredient (IngredientName,SoLuong,PhanLoai, ImageURl, LastUpdated)
 VALUES
+
 (N'Coffee', 100, N'gói', '/img/nguyenlieu/coffee.png', '2024-08-05'),
 (N'Sữa', 500, N'chai', '/img/nguyenlieu/sua.png', '2024-08-05'),
 (N'Đường', 200, N'gói', '/img/nguyenlieu/duong.png', '2024-08-05'),
@@ -209,7 +212,6 @@ VALUES
 (N'Dâu', 120, N'quả', '/img/nguyenlieu/dau.png', '2024-08-05'),
 (N'Bim Bim Ngô', 120, N'gói', '/img/nguyenlieu/bimbimngo.png', '2024-08-05'),
 (N'Bim Bim Sữa Dừa', 120, N'gói', '/img/nguyenlieu/bimbimsuadua.png', '2024-08-05');
-
 
 
 INSERT INTO Food (FoodName, CategoryId, IngredientId, Price,ImageURL)
@@ -249,7 +251,9 @@ VALUES
 (N'Bim bim sữa dừa', 4, 4, 10000,'/img/banh/bimbimsuadua.png'),
 (N'Bánh gấu', 4, 4, 15000,'/img/banh/banhgau.png'),
 
-(N'Trà đào cam sả', 5, 5, 40000,'/img/ttc/tradaocamsa.png'),
+
+(N'Trà đào cam xả', 5, 5, 40000,'/img/ttc/tradaocamsa.png'),
+
 (N'Olong tứ quý sen', 5, 5, 35000,'/img/ttc/olongtuquysen.png'),
 (N'Đào kombucha', 5, 5, 45000,'/img/ttc/dao_kombucha.png'),
 (N'Trà vải', 5, 5, 35000,'/img/ttc/travai.png'),
@@ -584,6 +588,7 @@ END;
 go
 EXEC GetFoodDetailsByName @FoodName = N'Bạc xỉu';
 
+
 select IngredientName, SoLuong, ImageURL from Ingredient
 
 
@@ -637,6 +642,8 @@ END
 go
 
 
+
+
 exec GetTableById @TableId =1
 
 
@@ -646,6 +653,8 @@ select * from TableFood
 CREATE PROCEDURE GetTableList
 as select * from TableFood
 go
+
+
 
 
 exec GetTableList
@@ -894,7 +903,9 @@ END
 GO
 
 
+
 alter trigger updateInvoice
+
 on dbo.Invoice for update 
 as
 begin
@@ -912,11 +923,12 @@ begin
 		 select  @count = Count(*) from Invoice where TableId = @TableId and TrangThai =0 
 
 		 if(@count = 0)
+
 			update TableFood set TrangThai = N'Bàn trống' where TableId = @TableId
+
 
 
 end
 go
-
 
 

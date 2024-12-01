@@ -1,7 +1,12 @@
-.vs/
+
+# Ignore build folders
+bin/
 obj/
-*.cache
-*.pdb
+
+# Ignore VS-specific files
+.vs/
 *.user
 *.suo
-bin/
+*.cache
+*.pdb
+

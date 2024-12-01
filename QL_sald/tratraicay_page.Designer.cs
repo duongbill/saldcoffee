@@ -84,7 +84,7 @@
             this.guna2Button2.Location = new System.Drawing.Point(221, 20);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(141, 39);
-            this.guna2Button2.TabIndex = 17;
+            this.guna2Button2.TabIndex = 20;
             this.guna2Button2.Text = "Mang đi";
             // 
             // guna2Button1
@@ -100,7 +100,7 @@
             this.guna2Button1.Location = new System.Drawing.Point(42, 20);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(141, 39);
-            this.guna2Button1.TabIndex = 16;
+            this.guna2Button1.TabIndex = 19;
             this.guna2Button1.Text = "Dùng tại bàn";
             // 
             // panel1
@@ -114,7 +114,7 @@
             this.panel1.Location = new System.Drawing.Point(26, 82);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1017, 602);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 18;
             // 
             // guna2Button6
             // 
@@ -214,14 +214,14 @@
             this.guna2CustomGradientPanel5.Controls.Add(this.guna2PictureBox5);
             this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(598, 17);
             this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
-            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(105, 160);
+            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(105, 167);
             this.guna2CustomGradientPanel5.TabIndex = 5;
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Silver;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(6, 142);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(6, 143);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(43, 15);
             this.guna2HtmlLabel5.TabIndex = 4;
@@ -230,9 +230,9 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 121);
+            this.label5.Location = new System.Drawing.Point(3, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(91, 18);
             this.label5.TabIndex = 3;
             this.label5.Text = "Trà yuzu";
             // 
@@ -245,14 +245,14 @@
             this.guna2CustomGradientPanel4.Controls.Add(this.guna2PictureBox4);
             this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(453, 17);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(105, 160);
+            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(105, 167);
             this.guna2CustomGradientPanel4.TabIndex = 5;
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Silver;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(6, 142);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(3, 143);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(43, 15);
             this.guna2HtmlLabel4.TabIndex = 4;
@@ -263,9 +263,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 13);
+            this.label4.Size = new System.Drawing.Size(102, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Trà đào cam sả";
+            this.label4.Text = "Trà vải";
             // 
             // guna2CustomGradientPanel3
             // 
@@ -276,14 +276,14 @@
             this.guna2CustomGradientPanel3.Controls.Add(this.guna2PictureBox3);
             this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(308, 17);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(105, 160);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(105, 167);
             this.guna2CustomGradientPanel3.TabIndex = 5;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Silver;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(6, 142);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(6, 143);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(43, 15);
             this.guna2HtmlLabel3.TabIndex = 4;
@@ -291,12 +291,13 @@
             // 
             // label2
             // 
+            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Trà vải";
+            this.label2.Text = "Trà đào cam xả";
             // 
             // guna2CustomGradientPanel2
             // 
@@ -307,14 +308,14 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2PictureBox1);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(163, 17);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(105, 160);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(105, 167);
             this.guna2CustomGradientPanel2.TabIndex = 5;
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Silver;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(6, 142);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(3, 143);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(43, 15);
             this.guna2HtmlLabel2.TabIndex = 4;
@@ -325,26 +326,27 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(89, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Trà Olong";
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 15;
+            this.guna2CustomGradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(18, 17);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(105, 160);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(105, 167);
             this.guna2CustomGradientPanel1.TabIndex = 2;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Silver;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(3, 142);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(6, 143);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(43, 15);
             this.guna2HtmlLabel1.TabIndex = 4;
@@ -352,18 +354,17 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.Size = new System.Drawing.Size(94, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Trà dâu";
             // 
             // guna2PictureBox5
             // 
             this.guna2PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox5.BorderRadius = 10;
+            this.guna2PictureBox5.BorderRadius = 1;
             this.guna2PictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox5.Image = global::QL_sald.Properties.Resources.yuzu_1__1_;
             this.guna2PictureBox5.ImageRotate = 0F;
@@ -377,9 +378,9 @@
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox4.BorderRadius = 10;
+            this.guna2PictureBox4.BorderRadius = 1;
             this.guna2PictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox4.Image = global::QL_sald.Properties.Resources.trà_đào_cam_sả_1__1_;
+            this.guna2PictureBox4.Image = global::QL_sald.Properties.Resources.trà_vải_1__1_;
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
@@ -391,9 +392,9 @@
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox3.BorderRadius = 10;
+            this.guna2PictureBox3.BorderRadius = 1;
             this.guna2PictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox3.Image = global::QL_sald.Properties.Resources.trà_vải_1__1_;
+            this.guna2PictureBox3.Image = global::QL_sald.Properties.Resources.trà_đào_cam_sả_1__1_;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -405,9 +406,9 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox1.BorderRadius = 10;
+            this.guna2PictureBox1.BorderRadius = 1;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PictureBox1.Image = global::QL_sald.Properties.Resources.trà_sữa_olong_1__1_;
+            this.guna2PictureBox1.Image = global::QL_sald.Properties.Resources.olong_1__1_;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -419,7 +420,7 @@
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox2.BorderRadius = 10;
+            this.guna2PictureBox2.BorderRadius = 1;
             this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox2.Image = global::QL_sald.Properties.Resources.đào_1__1_;
             this.guna2PictureBox2.ImageRotate = 0F;

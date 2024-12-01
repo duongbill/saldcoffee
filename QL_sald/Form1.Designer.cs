@@ -30,7 +30,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -108,6 +107,7 @@
             this.btn_ls.Text = "     Lịch sử mua hàng";
             this.btn_ls.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ls.UseVisualStyleBackColor = false;
+            this.btn_ls.Click += new System.EventHandler(this.btn_ls_Click);
             // 
             // btn_ct
             // 
@@ -125,6 +125,7 @@
             this.btn_ct.Text = "          Cài đặt";
             this.btn_ct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ct.UseVisualStyleBackColor = false;
+            this.btn_ct.Click += new System.EventHandler(this.btn_ct_Click);
             // 
             // btn_nv
             // 
@@ -142,6 +143,7 @@
             this.btn_nv.Text = "          Nhân viên";
             this.btn_nv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_nv.UseVisualStyleBackColor = false;
+            this.btn_nv.Click += new System.EventHandler(this.btn_nv_Click);
             // 
             // btn_bc
             // 
@@ -176,6 +178,7 @@
             this.btnMenu.Text = "          Menu";
             this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click_1);
             // 
             // btn_kh
             // 
@@ -210,6 +213,7 @@
             this.btn_dh.Text = "          Đơn hàng";
             this.btn_dh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_dh.UseVisualStyleBackColor = false;
+            this.btn_dh.Click += new System.EventHandler(this.btn_dh_Click);
             // 
             // btn_tc
             // 
@@ -220,18 +224,20 @@
             this.btn_tc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tc.ForeColor = System.Drawing.Color.Black;
             this.btn_tc.Image = global::QL_sald.Properties.Resources.trangchu;
-            this.btn_tc.Location = new System.Drawing.Point(0, 0);
+            this.btn_tc.Location = new System.Drawing.Point(0, -2);
             this.btn_tc.Margin = new System.Windows.Forms.Padding(4);
             this.btn_tc.Name = "btn_tc";
-            this.btn_tc.Size = new System.Drawing.Size(236, 86);
+            this.btn_tc.Size = new System.Drawing.Size(236, 88);
             this.btn_tc.TabIndex = 0;
             this.btn_tc.Text = "          Trang chủ";
             this.btn_tc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_tc.UseVisualStyleBackColor = false;
+            this.btn_tc.Click += new System.EventHandler(this.btn_tc_Click);
             // 
             // panel_Body
             // 
-            this.panel_Body.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_Body.BackgroundImage")));
+            this.panel_Body.BackColor = System.Drawing.Color.LightGray;
+            this.panel_Body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_Body.Location = new System.Drawing.Point(235, 75);
             this.panel_Body.Name = "panel_Body";
             this.panel_Body.Size = new System.Drawing.Size(1127, 687);
@@ -245,6 +251,7 @@
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
