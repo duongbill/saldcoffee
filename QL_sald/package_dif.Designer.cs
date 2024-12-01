@@ -1,4 +1,4 @@
-﻿namespace QL_sald
+namespace QL_sald
 {
     partial class package_dif
     {
@@ -796,3 +796,4 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
+
