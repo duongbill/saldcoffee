@@ -211,6 +211,11 @@
     <Compile Include="logicLayer\CategoriesLL.cs" />
     <Compile Include="logicLayer\FoodLL.cs" />
     <Compile Include="logicLayer\IngredientsLL.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ValueObject\FoodBill.cs" />
     <Compile Include="ValueObject\InvoiceShow.cs" />
     <Compile Include="menu_cf.cs">
@@ -311,12 +316,6 @@
     <Compile Include="TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="trasua_page.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="trasua_page.Designer.cs">
-      <DependentUpon>trasua_page.cs</DependentUpon>
-    </Compile>
     <Compile Include="ValueObject\Account.cs" />
     <Compile Include="ValueObject\AccRole.cs" />
     <Compile Include="ValueObject\Category.cs" />
@@ -381,6 +380,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
@@ -402,9 +402,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="trasua_page.resx">
-      <DependentUpon>trasua_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xóa_món.resx">
       <DependentUpon>xóa_món.cs</DependentUpon>
