@@ -316,9 +316,6 @@
     <Compile Include="TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="trasua_page.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="ValueObject\Account.cs" />
     <Compile Include="ValueObject\AccRole.cs" />
     <Compile Include="ValueObject\Category.cs" />
@@ -405,9 +402,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="trasua_page.resx">
-      <DependentUpon>trasua_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xóa_món.resx">
       <DependentUpon>xóa_món.cs</DependentUpon>
@@ -535,4 +529,5 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
   </Target>
+>>>>>>> f30ad3f246c71ceb61e28ba1b14826a6e821e1ae
 </Project>

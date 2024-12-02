@@ -363,7 +363,7 @@ namespace QL_sald
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Bơ Arabica";
-            
+
             // 
             // guna2CustomGradientPanel4
             // 
@@ -399,7 +399,7 @@ namespace QL_sald
             // 
             // guna2PictureBox4
             // 
-            
+
             // 
             // guna2CustomGradientPanel5
             // 
@@ -435,7 +435,7 @@ namespace QL_sald
             // 
             // guna2PictureBox5
             // 
-        
+
             // guna2CustomGradientPanel6
             // 
             this.guna2CustomGradientPanel6.BorderRadius = 15;
@@ -473,7 +473,7 @@ namespace QL_sald
             this.guna2PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox6.BorderRadius = 1;
             this.guna2PictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
-       
+
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
@@ -516,7 +516,7 @@ namespace QL_sald
             // 
             // guna2PictureBox7
             // 
-            
+
             // 
             // guna2CustomGradientPanel8
             // 
@@ -600,8 +600,7 @@ namespace QL_sald
             this.guna2PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox9.BorderRadius = 1;
             this.guna2PictureBox9.Dock = System.Windows.Forms.DockStyle.Top;
-        
-            this.guna2PictureBox9.ImageRotate = 0F;
+
             this.guna2PictureBox9.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox9.Name = "guna2PictureBox9";
             this.guna2PictureBox9.Size = new System.Drawing.Size(105, 108);
@@ -646,7 +645,8 @@ namespace QL_sald
             this.guna2PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox10.BorderRadius = 1;
             this.guna2PictureBox10.Dock = System.Windows.Forms.DockStyle.Top;
-      
+
+
             this.guna2PictureBox10.ImageRotate = 0F;
             this.guna2PictureBox10.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox10.Name = "guna2PictureBox10";
