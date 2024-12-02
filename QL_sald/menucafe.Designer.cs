@@ -1,4 +1,3 @@
-
 ﻿namespace QL_sald
 {
     partial class menucafe
@@ -1020,3 +1019,4 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
+>>>>>>> f30ad3f246c71ceb61e28ba1b14826a6e821e1ae

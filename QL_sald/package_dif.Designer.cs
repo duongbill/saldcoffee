@@ -363,20 +363,7 @@ namespace QL_sald
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Bơ Arabica";
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox3.BorderRadius = 1;
-            this.guna2PictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-     
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(105, 108);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 2;
-            this.guna2PictureBox3.TabStop = false;
+
             // 
             // guna2CustomGradientPanel4
             // 
@@ -412,17 +399,7 @@ namespace QL_sald
             // 
             // guna2PictureBox4
             // 
-            this.guna2PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox4.BorderRadius = 1;
-            this.guna2PictureBox4.Dock = System.Windows.Forms.DockStyle.Top;
-    
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(105, 108);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox4.TabIndex = 2;
-            this.guna2PictureBox4.TabStop = false;
+
             // 
             // guna2CustomGradientPanel5
             // 
@@ -458,18 +435,7 @@ namespace QL_sald
             // 
             // guna2PictureBox5
             // 
-            this.guna2PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox5.BorderRadius = 1;
-            this.guna2PictureBox5.Dock = System.Windows.Forms.DockStyle.Top;
-      
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(105, 108);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox5.TabIndex = 2;
-            this.guna2PictureBox5.TabStop = false;
-            // 
+
             // guna2CustomGradientPanel6
             // 
             this.guna2CustomGradientPanel6.BorderRadius = 15;
@@ -507,7 +473,7 @@ namespace QL_sald
             this.guna2PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox6.BorderRadius = 1;
             this.guna2PictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
-     
+
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
@@ -550,17 +516,7 @@ namespace QL_sald
             // 
             // guna2PictureBox7
             // 
-            this.guna2PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox7.BorderRadius = 1;
-            this.guna2PictureBox7.Dock = System.Windows.Forms.DockStyle.Top;
-       
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(105, 108);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox7.TabIndex = 2;
-            this.guna2PictureBox7.TabStop = false;
+
             // 
             // guna2CustomGradientPanel8
             // 
@@ -645,7 +601,6 @@ namespace QL_sald
             this.guna2PictureBox9.BorderRadius = 1;
             this.guna2PictureBox9.Dock = System.Windows.Forms.DockStyle.Top;
 
-            this.guna2PictureBox9.ImageRotate = 0F;
             this.guna2PictureBox9.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox9.Name = "guna2PictureBox9";
             this.guna2PictureBox9.Size = new System.Drawing.Size(105, 108);
@@ -690,7 +645,8 @@ namespace QL_sald
             this.guna2PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox10.BorderRadius = 1;
             this.guna2PictureBox10.Dock = System.Windows.Forms.DockStyle.Top;
-  
+
+
             this.guna2PictureBox10.ImageRotate = 0F;
             this.guna2PictureBox10.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox10.Name = "guna2PictureBox10";
