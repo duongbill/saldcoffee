@@ -320,3 +320,5 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
+
+//day code chuan len
