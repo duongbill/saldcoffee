@@ -14,7 +14,7 @@ namespace QL_sald
     {
         public trasua_page()
         {
-            InitializeComponent();
+           
         }
     }
 }

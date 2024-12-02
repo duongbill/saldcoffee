@@ -6,8 +6,8 @@ GO
 DROP DATABASE IF EXISTS quanly_sald;
 GO
 
+
 CREATE DATABASE quanly_sald;
-GO
 
 USE quanly_sald;
 GO
@@ -908,8 +908,7 @@ GO
 
 --lần đầu phải chạy cái này trước mới alter đc nhé mng
 --create trigger updateInvoice 
-alter trigger updateInvoice
-
+create trigger updateInvoice
 on dbo.Invoice for update 
 as
 begin
