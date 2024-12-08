@@ -13,5 +13,11 @@ namespace QL_sald.logicLayer
         {
             return ingredientsDAL.GetAllIngredients();
         }
+
+        // Phương thức để lấy danh sách nguyên liệu theo Id
+        public List<Ingredient> GetIngredientsById(int ingredientId)
+        {
+            return ingredientsDAL.GetIngredientsById(ingredientId);
+        }
     }
 }

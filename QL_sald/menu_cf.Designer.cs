@@ -63,6 +63,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(830, 480);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged_1);
             // 
             // tabPage1
             // 
@@ -74,6 +75,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cà phê";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -83,6 +85,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(816, 448);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // tabPage2
             // 
@@ -94,6 +97,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Trà sữa";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -103,6 +107,7 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(816, 448);
             this.flowLayoutPanel2.TabIndex = 1;
+            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
             // tabPage3
             // 
@@ -113,6 +118,7 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Thức uống đá xay";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -122,6 +128,7 @@
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(822, 454);
             this.flowLayoutPanel3.TabIndex = 1;
+            this.flowLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel3_Paint);
             // 
             // tabPage4
             // 
@@ -132,6 +139,7 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Bánh & Snack";
             this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // flowLayoutPanel4
             // 
@@ -141,6 +149,7 @@
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(822, 454);
             this.flowLayoutPanel4.TabIndex = 1;
+            this.flowLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel4_Paint);
             // 
             // tabPage5
             // 
@@ -151,6 +160,7 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Trà trái cây";
             this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // flowLayoutPanel5
             // 
@@ -160,6 +170,7 @@
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(822, 454);
             this.flowLayoutPanel5.TabIndex = 1;
+            this.flowLayoutPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel5_Paint);
             // 
             // panel6
             // 
@@ -169,6 +180,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(823, 51);
             this.panel6.TabIndex = 18;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // btn_them
             // 

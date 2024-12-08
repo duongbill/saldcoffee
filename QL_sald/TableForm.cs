@@ -50,16 +50,16 @@ namespace QL_sald
         {
             flpTable.Controls.Clear(); // Xóa các bàn cu (n?u có)
             List<TableFood> tableList = TableDAL.Instance.LoadTableList();
-        
+
 
             foreach (TableFood table in tableList)
             {
                 Button btn = new Button()
                 {
                     Width = 120,
-                    Height =120,
+                    Height = 120,
                     Text = table.TableName + Environment.NewLine + table.TrangThai,
-                  
+
                     BackColor = table.TrangThai == "Bàn Trống" ? Color.Gray : Color.Pink,
                     Tag = table
                 };
@@ -88,7 +88,7 @@ namespace QL_sald
             }
             CultureInfo culture = new CultureInfo("vi-VN");
             txtTotalPrice.Text = totalPrice.ToString("c", culture);
-            
+
         }
 
 
@@ -168,7 +168,7 @@ namespace QL_sald
             {
                 InvoiceDetailDAL.Instance.InsertBillDetail(invoiceId, foodId, soluong);
             }
-            //xem
+
             // Hiển thị lại hóa đơn sau khi thêm món
             ShowBill(table.TableId);
             LoadTable();
@@ -202,11 +202,10 @@ namespace QL_sald
             }
         }
 
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
         }
     }
-    
+
 }

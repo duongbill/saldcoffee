@@ -285,5 +285,10 @@ namespace QL_sald
                 txt_role.Text = selectedRow.Cells["RoleName"].Value?.ToString();
             }
         }
+
+        private void txt_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

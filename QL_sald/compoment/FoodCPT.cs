@@ -46,6 +46,19 @@ namespace QL_sald.compoment
            // pic.Image = Properties.Resources.bac_xiu;
         }
 
-        
+        private void pic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFoodName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

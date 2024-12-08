@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-  
+            this.ingreCPT1 = new QL_sald.compoment.IngreCPT();
             this.SuspendLayout();
             // 
             // label5
@@ -81,13 +81,19 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "ten";
             // 
-        
+            // ingreCPT1
+            // 
+            this.ingreCPT1.Location = new System.Drawing.Point(464, 188);
+            this.ingreCPT1.Name = "ingreCPT1";
+            this.ingreCPT1.Size = new System.Drawing.Size(145, 217);
+            this.ingreCPT1.TabIndex = 16;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 537);
-        
+            this.Controls.Add(this.ingreCPT1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -106,6 +112,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-     
+        private compoment.IngreCPT ingreCPT1;
     }
 }
