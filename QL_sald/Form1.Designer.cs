@@ -1,4 +1,4 @@
-﻿namespace QL_sald
+namespace QL_sald
 
 {
     partial class Form1
@@ -28,8 +28,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
-            this.panel1 = new System.Windows.Forms.Panel();
+        { 
+          this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_ls = new System.Windows.Forms.Button();
@@ -261,6 +261,7 @@
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
+
         }
 
         #endregion
@@ -279,3 +280,4 @@
         private System.Windows.Forms.Panel panel_Body;
     }
 }
+

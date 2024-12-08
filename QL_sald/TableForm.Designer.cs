@@ -44,8 +44,13 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+<<<<<<< HEAD
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnDel = new Guna.UI2.WinForms.Guna2Button();
+=======
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+>>>>>>> 1b9b5004cfba1eb960f095f3422e37e659ca3a38
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCount)).BeginInit();
@@ -63,8 +68,13 @@
             // 
             // tabPage1
             // 
+<<<<<<< HEAD
             this.tabPage1.Controls.Add(this.btnDel);
             this.tabPage1.Controls.Add(this.btnUpdate);
+=======
+            this.tabPage1.Controls.Add(this.guna2Button2);
+            this.tabPage1.Controls.Add(this.guna2Button1);
+>>>>>>> 1b9b5004cfba1eb960f095f3422e37e659ca3a38
             this.tabPage1.Controls.Add(this.cbCount);
             this.tabPage1.Controls.Add(this.btn_them);
             this.tabPage1.Controls.Add(this.cbCategories);
@@ -235,7 +245,7 @@
             this.flpTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpTable.Location = new System.Drawing.Point(6, 6);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(399, 469);
+            this.flpTable.Size = new System.Drawing.Size(399, 411);
             this.flpTable.TabIndex = 0;
             // 
             // tabPage2
@@ -248,6 +258,7 @@
             this.tabPage2.Text = "Mang đi";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // btnUpdate
             // 
             this.btnUpdate.BorderRadius = 10;
@@ -280,6 +291,40 @@
             this.btnDel.Size = new System.Drawing.Size(89, 36);
             this.btnDel.TabIndex = 12;
             this.btnDel.Text = "Hủy món";
+=======
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(6, 425);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(94, 36);
+            this.guna2Button1.TabIndex = 11;
+            this.guna2Button1.Text = "Thêm bàn";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(118, 425);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(94, 36);
+            this.guna2Button2.TabIndex = 12;
+            this.guna2Button2.Text = "Xóa bàn";
+>>>>>>> 1b9b5004cfba1eb960f095f3422e37e659ca3a38
             // 
             // TableForm
             // 
@@ -316,7 +361,14 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbCategories;
         private Guna.UI2.WinForms.Guna2ComboBox cbFood;
         private Guna.UI2.WinForms.Guna2NumericUpDown cbCount;
+<<<<<<< HEAD
         private Guna.UI2.WinForms.Guna2Button btnDel;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
+=======
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+>>>>>>> 1b9b5004cfba1eb960f095f3422e37e659ca3a38
     }
 }
+
+//day code chuan len
