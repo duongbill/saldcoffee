@@ -122,5 +122,11 @@ namespace QL_sald
             TableForm pgControl = new TableForm();
             OpenChildForm(pgControl);
         }
+
+        private void btn_bc_Click(object sender, EventArgs e)
+        {
+            BaoCao baocaoForm = new BaoCao();
+            OpenChildForm(baocaoForm);
+        }
     }
 }

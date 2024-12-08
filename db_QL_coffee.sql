@@ -929,12 +929,21 @@ begin
 
 
 			update TableFood set TrangThai = N'Bàn trống' where TableId = @TableId
-
-
-
 end
 go
 
 
 SELECT COUNT(*) FROM Invoice;
 SELECT * FROM Invoice WHERE TrangThai = 1;
+
+create proc USP_GetListInvoiceByDate
+@checkIn date,@checkOut date
+as
+begin
+	select Invoice.TableId ,Invoice.DateCheckIn,Invoice.DateCheckOut,Invoice.TotalPrice,Invoice.TrangThai from Invoice
+	where DateCheckIn >= @checkIn and DateCheckOut <= @checkOut and Invoice.TrangThai = 1
+end
+go
+
+select Invoice.TableId ,Invoice.DateCheckIn,Invoice.DateCheckOut,Invoice.TotalPrice,Invoice.TrangThai from Invoice
+	where DateCheckIn >= '2024-08-06' and DateCheckOut <= '2024-08-07' and Invoice.TrangThai = 1
