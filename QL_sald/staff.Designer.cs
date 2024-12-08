@@ -354,6 +354,7 @@
             this.txt_name.SelectedText = "";
             this.txt_name.Size = new System.Drawing.Size(248, 36);
             this.txt_name.TabIndex = 11;
+            this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             // 
             // label6
             // 

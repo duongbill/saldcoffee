@@ -937,14 +937,27 @@ go
 SELECT COUNT(*) FROM Invoice;
 SELECT * FROM Invoice WHERE TrangThai = 1;
 
-create proc USP_GetListInvoiceByDate
-@checkIn date,@checkOut date
-as
-begin
-	select Invoice.TableId ,Invoice.DateCheckIn,Invoice.DateCheckOut,Invoice.TotalPrice,Invoice.TrangThai from Invoice
-	where DateCheckIn >= @checkIn and DateCheckOut <= @checkOut and Invoice.TrangThai = 1
-end
-go
+alter PROCEDURE USP_GetListInvoiceDetailsByDate
+    @checkIn DATE,
+    @checkOut DATE
+AS
+BEGIN
+    SELECT 
+        i.TableId,
+        i.DateCheckIn,
+        i.DateCheckOut,
+        SUM(id.SoLuong * id.Price) AS TotalPrice
+    FROM 
+        Invoice i
+    INNER JOIN 
+        InvoiceDetail id ON i.InvoiceId = id.InvoiceId
+    WHERE 
+        i.DateCheckIn >= @checkIn AND i.DateCheckOut <= @checkOut AND i.TrangThai = 1
+    GROUP BY 
+        i.TableId, i.DateCheckIn, i.DateCheckOut
+END
+GO
 
-select Invoice.TableId ,Invoice.DateCheckIn,Invoice.DateCheckOut,Invoice.TotalPrice,Invoice.TrangThai from Invoice
-	where DateCheckIn >= '2024-08-06' and DateCheckOut <= '2024-08-07' and Invoice.TrangThai = 1
+EXEC USP_GetListInvoiceDetailsByDate @checkIn='2000-08-01', @checkOut='2025-08-07';
+
+select * from invoice
