@@ -202,11 +202,7 @@ namespace QL_sald
             }
         }
 
-<<<<<<< HEAD
         private void btnUpdate_Click(object sender, EventArgs e)
-=======
-        private void guna2Button1_Click(object sender, EventArgs e)
->>>>>>> 1b9b5004cfba1eb960f095f3422e37e659ca3a38
         {
 
         }

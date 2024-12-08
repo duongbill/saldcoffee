@@ -935,9 +935,6 @@ begin
 end
 go
 
-<<<<<<< HEAD
+
 SELECT COUNT(*) FROM Invoice;
 SELECT * FROM Invoice WHERE TrangThai = 1;
-=======
-
->>>>>>> 1b9b5004cfba1eb960f095f3422e37e659ca3a38

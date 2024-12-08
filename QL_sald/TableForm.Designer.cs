@@ -45,12 +45,19 @@
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnDel = new Guna.UI2.WinForms.Guna2Button();
 =======
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
 >>>>>>> 1b9b5004cfba1eb960f095f3422e37e659ca3a38
+=======
+
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDel = new Guna.UI2.WinForms.Guna2Button();
+
+>>>>>>> 800885ca5140b26fedf4a6408c9b1d4a84db6432
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCount)).BeginInit();
@@ -69,6 +76,10 @@
             // tabPage1
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 800885ca5140b26fedf4a6408c9b1d4a84db6432
             this.tabPage1.Controls.Add(this.btnDel);
             this.tabPage1.Controls.Add(this.btnUpdate);
 =======
@@ -291,6 +302,7 @@
             this.btnDel.Size = new System.Drawing.Size(89, 36);
             this.btnDel.TabIndex = 12;
             this.btnDel.Text = "Hủy món";
+<<<<<<< HEAD
 =======
             // guna2Button1
             // 
@@ -325,6 +337,9 @@
             this.guna2Button2.TabIndex = 12;
             this.guna2Button2.Text = "Xóa bàn";
 >>>>>>> 1b9b5004cfba1eb960f095f3422e37e659ca3a38
+=======
+
+>>>>>>> 800885ca5140b26fedf4a6408c9b1d4a84db6432
             // 
             // TableForm
             // 
@@ -361,13 +376,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbCategories;
         private Guna.UI2.WinForms.Guna2ComboBox cbFood;
         private Guna.UI2.WinForms.Guna2NumericUpDown cbCount;
-<<<<<<< HEAD
+
         private Guna.UI2.WinForms.Guna2Button btnDel;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
-=======
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
->>>>>>> 1b9b5004cfba1eb960f095f3422e37e659ca3a38
     }
 }
 
