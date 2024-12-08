@@ -932,6 +932,7 @@ begin
 end
 go
 
+SELECT SUM(TotalPrice) FROM Invoice WHERE TrangThai = 1
 
 SELECT COUNT(*) FROM Invoice;
 SELECT * FROM Invoice WHERE TrangThai = 1;
@@ -944,6 +945,4 @@ begin
 	where DateCheckIn >= @checkIn and DateCheckOut <= @checkOut and Invoice.TrangThai = 1
 end
 go
-
-select Invoice.TableId ,Invoice.DateCheckIn,Invoice.DateCheckOut,Invoice.TotalPrice,Invoice.TrangThai from Invoice
-	where DateCheckIn >= '2024-08-06' and DateCheckOut <= '2024-08-07' and Invoice.TrangThai = 1
+exec USP_GetListInvoiceByDate '2024-08-06','2024-08-07' 
