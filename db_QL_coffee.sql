@@ -932,11 +932,13 @@ begin
 end
 go
 
+SELECT SUM(TotalPrice) FROM Invoice WHERE TrangThai = 1
 
 
 SELECT COUNT(*) FROM Invoice;
 SELECT * FROM Invoice WHERE TrangThai = 1;
 
+<<<<<<< HEAD
 alter PROCEDURE USP_GetListInvoiceDetailsByDate
     @checkIn DATE,
     @checkOut DATE
@@ -961,3 +963,14 @@ GO
 EXEC USP_GetListInvoiceDetailsByDate @checkIn='2000-08-01', @checkOut='2025-08-07';
 
 select * from invoice
+=======
+create proc USP_GetListInvoiceByDate
+@checkIn date,@checkOut date
+as
+begin
+	select Invoice.TableId ,Invoice.DateCheckIn,Invoice.DateCheckOut,Invoice.TotalPrice,Invoice.TrangThai from Invoice
+	where DateCheckIn >= @checkIn and DateCheckOut <= @checkOut and Invoice.TrangThai = 1
+end
+go
+exec USP_GetListInvoiceByDate '2024-08-06','2024-08-07' 
+>>>>>>> e017861e5e526bedb1f4a76574220f5195c4a2ab
