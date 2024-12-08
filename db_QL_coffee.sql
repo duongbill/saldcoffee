@@ -934,6 +934,7 @@ go
 
 SELECT SUM(TotalPrice) FROM Invoice WHERE TrangThai = 1
 
+
 SELECT COUNT(*) FROM Invoice;
 SELECT * FROM Invoice WHERE TrangThai = 1;
 

@@ -44,13 +44,28 @@ namespace QL_sald
             }
         }
         // Hàm tải danh sách hóa đơn theo khoảng thời gian
-        void loadListViewByDate(DateTime checkIn, DateTime checkOut)
+
+        private void loadListViewByDate(DateTime checkIn, DateTime checkOut)
         {
-            
+            try
+            {
+                // Lấy dữ liệu từ InvoiceDAL
+                DataTable dataTable = InvoiceDAL.Instance.GetListInvoiceByDate(checkIn, checkOut);
+
+                // Hiển thị dữ liệu trong DataGridView
+                dataGridViewInvoices.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi nếu có lỗi
+                MessageBox.Show($"Lỗi khi tải danh sách hóa đơn: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             loadListViewByDate(checkInDate.Value, checkOutDate.Value);
         }
+
     }
 }
