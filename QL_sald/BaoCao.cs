@@ -44,6 +44,7 @@ namespace QL_sald
             }
         }
         // Hàm tải danh sách hóa đơn theo khoảng thời gian
+
         private void loadListViewByDate(DateTime checkIn, DateTime checkOut)
         {
             try
@@ -65,5 +66,6 @@ namespace QL_sald
         {
             loadListViewByDate(checkInDate.Value, checkOutDate.Value);
         }
+
     }
 }
