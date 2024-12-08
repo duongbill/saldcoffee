@@ -35,13 +35,13 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTotalStaff = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalInvoice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -75,22 +75,21 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.White;
-            this.guna2Panel3.Controls.Add(this.label5);
+            this.guna2Panel3.Controls.Add(this.lblTotalStaff);
             this.guna2Panel3.Controls.Add(this.label6);
             this.guna2Panel3.Location = new System.Drawing.Point(564, 38);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(245, 119);
             this.guna2Panel3.TabIndex = 3;
             // 
-            // label5
+            // lblTotalStaff
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(22, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 36);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "3";
+            this.lblTotalStaff.AutoSize = true;
+            this.lblTotalStaff.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotalStaff.Location = new System.Drawing.Point(22, 69);
+            this.lblTotalStaff.Name = "lblTotalStaff";
+            this.lblTotalStaff.Size = new System.Drawing.Size(0, 36);
+            this.lblTotalStaff.TabIndex = 1;
             // 
             // label6
             // 
@@ -105,22 +104,21 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
-            this.guna2Panel2.Controls.Add(this.label3);
+            this.guna2Panel2.Controls.Add(this.lblTotalPrice);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Location = new System.Drawing.Point(297, 38);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(245, 119);
             this.guna2Panel2.TabIndex = 3;
             // 
-            // label3
+            // lblTotalPrice
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(22, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 36);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "1800";
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotalPrice.Location = new System.Drawing.Point(22, 69);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(0, 36);
+            this.lblTotalPrice.TabIndex = 1;
             // 
             // label4
             // 
@@ -135,22 +133,21 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.lblTotalInvoice);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Location = new System.Drawing.Point(27, 38);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(245, 119);
             this.guna2Panel1.TabIndex = 2;
             // 
-            // label2
+            // lblTotalInvoice
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(22, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 36);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "5";
+            this.lblTotalInvoice.AutoSize = true;
+            this.lblTotalInvoice.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotalInvoice.Location = new System.Drawing.Point(22, 69);
+            this.lblTotalInvoice.Name = "lblTotalInvoice";
+            this.lblTotalInvoice.Size = new System.Drawing.Size(0, 36);
+            this.lblTotalInvoice.TabIndex = 1;
             // 
             // label1
             // 
@@ -248,12 +245,12 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTotalInvoice;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTotalStaff;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label7;

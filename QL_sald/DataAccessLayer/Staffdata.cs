@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAcessLayer;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -45,5 +46,30 @@ namespace QL_sald.DataAccessLayer
 
             return dataTable;
         }
+        public int GetTotalEmployees()
+        {
+            int totalEmployees = 0;
+
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM Staff"; // Đếm số nhân viên từ bảng Staff
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        totalEmployees = Convert.ToInt32(command.ExecuteScalar());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+            return totalEmployees;
+        }
+
     }
 }

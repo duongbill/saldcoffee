@@ -201,9 +201,10 @@ namespace QL_sald
             }
         }
 
-       
-          
-        
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
