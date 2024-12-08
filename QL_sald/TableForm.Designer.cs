@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnAddTable = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelTable = new Guna.UI2.WinForms.Guna2Button();
             this.cbCount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btn_them = new Guna.UI2.WinForms.Guna2Button();
             this.cbCategories = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -44,10 +46,6 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDel = new Guna.UI2.WinForms.Guna2Button();
-
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCount)).BeginInit();
@@ -65,9 +63,8 @@
             // 
             // tabPage1
             // 
-
-            this.tabPage1.Controls.Add(this.btnDel);
-            this.tabPage1.Controls.Add(this.btnUpdate);
+            this.tabPage1.Controls.Add(this.btnAddTable);
+            this.tabPage1.Controls.Add(this.btnDelTable);
             this.tabPage1.Controls.Add(this.cbCount);
             this.tabPage1.Controls.Add(this.btn_them);
             this.tabPage1.Controls.Add(this.cbCategories);
@@ -85,19 +82,52 @@
             this.tabPage1.Text = "Dùng tại bàn";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnAddTable
+            // 
+            this.btnAddTable.BorderRadius = 10;
+            this.btnAddTable.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddTable.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddTable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddTable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddTable.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAddTable.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddTable.ForeColor = System.Drawing.Color.White;
+            this.btnAddTable.Location = new System.Drawing.Point(6, 428);
+            this.btnAddTable.Name = "btnAddTable";
+            this.btnAddTable.Size = new System.Drawing.Size(111, 36);
+            this.btnAddTable.TabIndex = 12;
+            this.btnAddTable.Text = "Thêm bàn";
+            // 
+            // btnDelTable
+            // 
+            this.btnDelTable.BorderRadius = 10;
+            this.btnDelTable.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelTable.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelTable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelTable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelTable.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelTable.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelTable.ForeColor = System.Drawing.Color.White;
+            this.btnDelTable.Location = new System.Drawing.Point(146, 428);
+            this.btnDelTable.Name = "btnDelTable";
+            this.btnDelTable.Size = new System.Drawing.Size(111, 36);
+            this.btnDelTable.TabIndex = 11;
+            this.btnDelTable.Text = "Xóa bàn";
+            this.btnDelTable.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // cbCount
             // 
             this.cbCount.BackColor = System.Drawing.Color.Transparent;
             this.cbCount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.cbCount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cbCount.Location = new System.Drawing.Point(500, 12);
+            this.cbCount.Location = new System.Drawing.Point(713, 12);
             this.cbCount.Minimum = new decimal(new int[] {
             1000,
             0,
             0,
             -2147483648});
             this.cbCount.Name = "cbCount";
-            this.cbCount.Size = new System.Drawing.Size(53, 36);
+            this.cbCount.Size = new System.Drawing.Size(88, 36);
             this.cbCount.TabIndex = 10;
             // 
             // btn_them
@@ -110,7 +140,7 @@
             this.btn_them.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_them.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_them.ForeColor = System.Drawing.Color.White;
-            this.btn_them.Location = new System.Drawing.Point(571, 12);
+            this.btn_them.Location = new System.Drawing.Point(821, 12);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(89, 36);
             this.btn_them.TabIndex = 9;
@@ -129,7 +159,7 @@
             this.cbCategories.ItemHeight = 30;
             this.cbCategories.Location = new System.Drawing.Point(415, 12);
             this.cbCategories.Name = "cbCategories";
-            this.cbCategories.Size = new System.Drawing.Size(67, 36);
+            this.cbCategories.Size = new System.Drawing.Size(248, 36);
             this.cbCategories.TabIndex = 8;
             this.cbCategories.SelectedIndexChanged += new System.EventHandler(this.cbCategories_SelectedIndexChanged);
             // 
@@ -160,6 +190,7 @@
             // 
             // btn_thanhtoan
             // 
+            this.btn_thanhtoan.BorderRadius = 15;
             this.btn_thanhtoan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_thanhtoan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_thanhtoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -251,45 +282,11 @@
             this.tabPage2.Text = "Mang đi";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BorderRadius = 10;
-            this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(683, 12);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(89, 36);
-            this.btnUpdate.TabIndex = 11;
-            this.btnUpdate.Text = "Sửa món";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDel
-            // 
-            this.btnDel.BorderRadius = 10;
-            this.btnDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(800, 12);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(89, 36);
-            this.btnDel.TabIndex = 12;
-            this.btnDel.Text = "Hủy món";
-
-            // 
             // TableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 531);
+            this.ClientSize = new System.Drawing.Size(951, 531);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TableForm";
@@ -320,8 +317,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbCategories;
         private Guna.UI2.WinForms.Guna2ComboBox cbFood;
         private Guna.UI2.WinForms.Guna2NumericUpDown cbCount;
-        private Guna.UI2.WinForms.Guna2Button btnDel;
-        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+
+        private Guna.UI2.WinForms.Guna2Button btnAddTable;
+        private Guna.UI2.WinForms.Guna2Button btnDelTable;
     }
 }
 

@@ -1,147 +1,228 @@
-﻿    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Web.UI.Design.WebControls;
-    using DataAcessLayer;
-    using QL_sald.DataAccessLayer;
-    using Microsoft.Data.SqlClient;
-    using System.Data;
-    using QL_sald.ValueObject;
-    using ValueObject;
-    using System.Windows.Markup;
-    using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Text;
+using QL_sald.ValueObject;
 
-    namespace QL_sald.DataAccessLayer
+namespace QL_sald.DataAccessLayer
+{
+    public class InvoiceDAL
     {
-        public class InvoiceDAL
+        private static InvoiceDAL instance;
+        private readonly string connectionString = @"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;TrustServerCertificate=True;";
+
+        // Singleton instance
+        public static InvoiceDAL Instance
         {
-            ConnectSQL connectSQL = new ConnectSQL();
-            private static InvoiceDAL instance;
+            get { if (instance == null) instance = new InvoiceDAL(); return instance; }
+            private set { instance = value; }
+        }
 
-            public static InvoiceDAL Instance
-            {
-                get { if (instance == null) instance = new InvoiceDAL(); return InvoiceDAL.instance; }
-                private set { InvoiceDAL.instance = value; }
-            }
+        private InvoiceDAL() { }
 
-            private InvoiceDAL() { }
+        private SqlConnection GetConnection()
+        {
+            return new SqlConnection(connectionString);
+        }
 
-
-
-            public int GetUncheckInvoiceByTableID(int id)
-            {
-            
-                DataTable data = connectSQL.GetData($"SELECT * FROM invoice WHERE TableId = {id} AND TrangThai = 0");
-
-                if (data.Rows.Count > 0)
-                {
-                    Invoice bill = new Invoice(data.Rows[0]);
-                    return bill.InvoiceId;
-                }
-                return -1; // Không có hóa đơn nào chưa thanh toán
-            }
-            public void CheckOut(int id)
-            {
-                DataTable data = connectSQL.GetData($"update Invoice set TrangThai = 1 where InvoiceId = {id} ");
-
-            }
-
-
-
-
-
-
-
-            public void InsertBill(int id)
+        // Lấy danh sách hóa đơn
+        public DataTable sfData()
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection conn = GetConnection())
             {
                 try
                 {
-                    // Khởi tạo tham số SqlParameter
+                    conn.Open();
+                    string selectData = "SELECT Invoice.TableId, Invoice.DateCheckIn, Invoice.DateCheckOut, Invoice.TotalPrice, Invoice.TrangThai FROM Invoice";
+                    using (SqlCommand cmd = new SqlCommand(selectData, conn))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(dataTable);  // Lưu trữ dữ liệu vào DataTable
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi: " + ex.Message);
+                }
+            }
+            return dataTable;
+        }
+
+        // Lấy hóa đơn chưa thanh toán theo TableId
+        public int GetUncheckInvoiceByTableID(int id)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT * FROM Invoice WHERE TableId = @TableId AND TrangThai = 0";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TableId", id);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return Convert.ToInt32(reader["InvoiceId"]);
+                        }
+                    }
+                }
+            }
+            return -1; // Không có hóa đơn nào chưa thanh toán
+        }
+
+        // Đánh dấu hóa đơn là đã thanh toán
+        public void CheckOut(int id)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                string query = "UPDATE Invoice SET TrangThai = 1 WHERE InvoiceId = @InvoiceId";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@InvoiceId", id);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Thêm hóa đơn mới
+        public void InsertBill(int id)
+        {
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    connection.Open();
                     SqlParameter[] parameters = new SqlParameter[]
                     {
-                new SqlParameter("@TableId", id)
+                        new SqlParameter("@TableId", id)
                     };
 
-                    // Thực hiện stored procedure và lấy số hàng bị ảnh hưởng
-                    int affectedRows = connectSQL.ExecuteSQL("Proc_InsertBill", parameters);
+                    string procedure = "Proc_InsertBill";
+                    using (SqlCommand command = new SqlCommand(procedure, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddRange(parameters);
+                        int affectedRows = command.ExecuteNonQuery();
 
-                    // Kiểm tra kết quả trả về
-                    if (affectedRows > 0)
-                    {
-                        Console.WriteLine("Thêm thành công.");
+                        if (affectedRows > 0)
+                        {
+                            Console.WriteLine("Thêm thành công.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Thất bại.");
+                        }
                     }
-                    else
-                    {
-                        Console.WriteLine("Thất bại.");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    // Xử lý lỗi nếu có
-                    Console.WriteLine($"Error: {ex.Message}");
                 }
             }
-
-            // ham lay id bill max de truyen vao
-            public int GetMaxBill()
+            catch (Exception ex)
             {
-                try
-                {
-                    // Gọi phương thức ExecuteScalar để lấy giá trị tối đa của InvoiceId
-                    object result = connectSQL.ExecuteScaler("SELECT MAX(InvoiceId) FROM Invoice");
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
 
-                    // Kiểm tra và chuyển đổi kết quả trả về
-                    if (result != null && result != DBNull.Value)
-                    {
-                        return Convert.ToInt32(result);
-                    }
-                    else
-                    {
-                        return 1; // Trả về giá trị mặc định nếu không có kết quả
-                    }
-                }
-                catch (Exception ex)
+        // Lấy ID hóa đơn tối đa
+        public int GetMaxBill()
+        {
+            try
+            {
+                using (SqlConnection connection = GetConnection())
                 {
-                    // Xử lý lỗi nếu có
-                    Console.WriteLine($"Error: {ex.Message}");
-                    return 1; // Trả về giá trị mặc định nếu có lỗi
+                    connection.Open();
+                    string query = "SELECT MAX(InvoiceId) FROM Invoice";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        object result = command.ExecuteScalar();
+                        return result != DBNull.Value ? Convert.ToInt32(result) : 1;
+                    }
                 }
             }
-            //tinh tong so ban
-            public int GetTotalInvoices()
+            catch (Exception ex)
             {
-                try
+                Console.WriteLine($"Error: {ex.Message}");
+                return 1;
+            }
+        }
+
+        // Tính tổng số hóa đơn
+        public int GetTotalInvoices()
+        {
+            try
+            {
+                using (SqlConnection connection = GetConnection())
                 {
+                    connection.Open();
                     string query = "SELECT COUNT(*) FROM Invoice";
-                    object result = connectSQL.ExecuteScaler(query);
-                    return result != DBNull.Value ? Convert.ToInt32(result) : 0;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error while calculating total invoices: {ex.Message}");
-                    return 0; // Trả về 0 nếu xảy ra lỗi
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        object result = command.ExecuteScalar();
+                        return result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                    }
                 }
             }
-
-            // tinh totalPrice
-            public decimal GetTotalRevenue()
+            catch (Exception ex)
             {
-                try
+                Console.WriteLine($"Error while calculating total invoices: {ex.Message}");
+                return 0;
+            }
+        }
+
+        // Tính tổng doanh thu
+        public decimal GetTotalRevenue()
+        {
+            try
+            {
+                using (SqlConnection connection = GetConnection())
                 {
+                    connection.Open();
                     string query = "SELECT SUM(TotalPrice) FROM Invoice WHERE TrangThai = 1";
-                    object result = connectSQL.ExecuteScaler(query); // Sử dụng connectSQL thay vì DataProvider
-                    return result != DBNull.Value ? Convert.ToDecimal(result) : 0;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error while calculating total revenue: {ex.Message}");
-                    return 0; // Trả về 0 nếu xảy ra lỗi
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        object result = command.ExecuteScalar();
+                        return result != DBNull.Value ? Convert.ToDecimal(result) : 0;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error while calculating total revenue: {ex.Message}");
+                return 0;
+            }
+        }
 
+        // Lấy danh sách hóa đơn theo ngày
+        public DataTable GetListInvoiceByDate(DateTime checkIn, DateTime checkOut)
+        {
+            DataTable dataTable = new DataTable();
 
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "exec USP_GetListInvoiceByDate @checkIn, @checkOut";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@checkIn", checkIn);
+                        command.Parameters.AddWithValue("@checkOut", checkOut);
 
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error while fetching invoices: {ex.Message}");
+            }
+
+            return dataTable;
         }
     }
+}
