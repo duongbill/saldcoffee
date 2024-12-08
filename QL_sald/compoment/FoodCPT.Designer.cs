@@ -43,6 +43,7 @@
             this.pic.Size = new System.Drawing.Size(138, 144);
             this.pic.TabIndex = 0;
             this.pic.TabStop = false;
+            this.pic.Click += new System.EventHandler(this.pic_Click);
             // 
             // txtPrice
             // 
@@ -55,6 +56,7 @@
             this.txtPrice.TabIndex = 6;
             this.txtPrice.Text = "35.000đ";
             this.txtPrice.UseCompatibleTextRendering = true;
+            this.txtPrice.Click += new System.EventHandler(this.txtPrice_Click);
             // 
             // txtFoodName
             // 
@@ -66,7 +68,7 @@
             this.txtFoodName.Size = new System.Drawing.Size(74, 12);
             this.txtFoodName.TabIndex = 5;
             this.txtFoodName.Text = "Tên sản phẩm";
-          
+            this.txtFoodName.Click += new System.EventHandler(this.txtFoodName_Click);
             // 
             // FoodCPT
             // 

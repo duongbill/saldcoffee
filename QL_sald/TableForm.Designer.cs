@@ -120,7 +120,7 @@
             this.cbCount.BackColor = System.Drawing.Color.Transparent;
             this.cbCount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.cbCount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cbCount.Location = new System.Drawing.Point(713, 12);
+            this.cbCount.Location = new System.Drawing.Point(622, 12);
             this.cbCount.Minimum = new decimal(new int[] {
             1000,
             0,
@@ -140,7 +140,7 @@
             this.btn_them.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_them.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_them.ForeColor = System.Drawing.Color.White;
-            this.btn_them.Location = new System.Drawing.Point(821, 12);
+            this.btn_them.Location = new System.Drawing.Point(721, 12);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(89, 36);
             this.btn_them.TabIndex = 9;
@@ -159,7 +159,7 @@
             this.cbCategories.ItemHeight = 30;
             this.cbCategories.Location = new System.Drawing.Point(415, 12);
             this.cbCategories.Name = "cbCategories";
-            this.cbCategories.Size = new System.Drawing.Size(248, 36);
+            this.cbCategories.Size = new System.Drawing.Size(201, 36);
             this.cbCategories.TabIndex = 8;
             this.cbCategories.SelectedIndexChanged += new System.EventHandler(this.cbCategories_SelectedIndexChanged);
             // 
@@ -175,14 +175,14 @@
             this.cbFood.ItemHeight = 30;
             this.cbFood.Location = new System.Drawing.Point(415, 54);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(495, 36);
+            this.cbFood.Size = new System.Drawing.Size(395, 36);
             this.cbFood.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(436, 433);
+            this.label1.Location = new System.Drawing.Point(416, 436);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 20);
             this.label1.TabIndex = 6;
@@ -198,7 +198,7 @@
             this.btn_thanhtoan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_thanhtoan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_thanhtoan.ForeColor = System.Drawing.Color.White;
-            this.btn_thanhtoan.Location = new System.Drawing.Point(799, 420);
+            this.btn_thanhtoan.Location = new System.Drawing.Point(699, 428);
             this.btn_thanhtoan.Name = "btn_thanhtoan";
             this.btn_thanhtoan.Size = new System.Drawing.Size(111, 44);
             this.btn_thanhtoan.TabIndex = 5;
@@ -217,14 +217,14 @@
             this.txtTotalPrice.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTotalPrice.ForeColor = System.Drawing.Color.Red;
             this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalPrice.Location = new System.Drawing.Point(611, 431);
+            this.txtTotalPrice.Location = new System.Drawing.Point(558, 428);
             this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.PasswordChar = '\0';
             this.txtTotalPrice.PlaceholderText = "";
             this.txtTotalPrice.ReadOnly = true;
             this.txtTotalPrice.SelectedText = "";
-            this.txtTotalPrice.Size = new System.Drawing.Size(133, 28);
+            this.txtTotalPrice.Size = new System.Drawing.Size(133, 36);
             this.txtTotalPrice.TabIndex = 4;
             this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -238,7 +238,7 @@
             this.lsvBill.HideSelection = false;
             this.lsvBill.Location = new System.Drawing.Point(415, 96);
             this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(495, 321);
+            this.lsvBill.Size = new System.Drawing.Size(395, 321);
             this.lsvBill.TabIndex = 3;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
@@ -279,14 +279,14 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(916, 481);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mang đi";
+            this.tabPage2.Text = "Đơn Onl";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // TableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 531);
+            this.ClientSize = new System.Drawing.Size(836, 531);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TableForm";

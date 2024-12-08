@@ -9,7 +9,8 @@ namespace QL_sald
         private menu_cf menuControl = new menu_cf();  // `menu_cafe` là Form con
         private Cài_đặt stControl = new Cài_đặt();
         private TrangChu tcControl = new TrangChu();
-       // private TableShow pgControl = new TableShow();
+        private MenuIngre menuig = new MenuIngre();
+        // private TableShow pgControl = new TableShow();
         private staff sfControl = new staff();
         public Form1()
         {
@@ -119,7 +120,7 @@ namespace QL_sald
 
         private void btn_ls_Click(object sender, EventArgs e)
         {
-            TableForm pgControl = new TableForm();
+            Form2 pgControl = new Form2();
             OpenChildForm(pgControl);
         }
 
@@ -127,6 +128,12 @@ namespace QL_sald
         {
             BaoCao baocaoForm = new BaoCao();
             OpenChildForm(baocaoForm);
+        }
+
+        private void btn_kh_Click(object sender, EventArgs e)
+        {
+            MenuIngre menuControl1 = new MenuIngre();
+            OpenChildForm(menuControl1); // Truyền Form con menuControl vào
         }
     }
 }
