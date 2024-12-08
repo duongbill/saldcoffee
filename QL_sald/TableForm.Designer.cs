@@ -44,8 +44,10 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnDel = new Guna.UI2.WinForms.Guna2Button();
+
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCount)).BeginInit();
@@ -63,6 +65,7 @@
             // 
             // tabPage1
             // 
+
             this.tabPage1.Controls.Add(this.btnDel);
             this.tabPage1.Controls.Add(this.btnUpdate);
             this.tabPage1.Controls.Add(this.cbCount);
@@ -235,7 +238,7 @@
             this.flpTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpTable.Location = new System.Drawing.Point(6, 6);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(399, 469);
+            this.flpTable.Size = new System.Drawing.Size(399, 411);
             this.flpTable.TabIndex = 0;
             // 
             // tabPage2
@@ -280,6 +283,7 @@
             this.btnDel.Size = new System.Drawing.Size(89, 36);
             this.btnDel.TabIndex = 12;
             this.btnDel.Text = "Hủy món";
+
             // 
             // TableForm
             // 
@@ -320,3 +324,5 @@
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
     }
 }
+
+//day code chuan len

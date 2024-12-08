@@ -1,11 +1,13 @@
-﻿tUSE master;
+
+USE master;
+
 GO
 
 DROP DATABASE IF EXISTS quanly_sald;
 GO
 
+
 CREATE DATABASE quanly_sald;
-GO
 
 USE quanly_sald;
 GO
@@ -178,38 +180,38 @@ VALUES
 
 INSERT INTO Ingredient (IngredientName,SoLuong,PhanLoai, ImageURl, LastUpdated)
 VALUES
-(N'Coffee', 100, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Sữa', 500, N'chai', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Đường', 200, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Trà', 75, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Táo', 50, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Trân châu', 100, N'bịch', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Matcha', 120, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Yến mạch', 130, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Caramel', 140, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Muối', 125, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Hạnh nhân', 115, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Bơ', 120, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Kem', 150, N'cây', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Chip', 130, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Mochi kem phúc bồn tử', 120, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Mochi kem việt quất', 120, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Mochi kem chocolate', 120, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Mousse gấu chocolate', 110, N'cái', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Bánh mì', 150, N'ổ', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Sữa đặc', 160, N'lọ', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Cam', 135, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Sả', 125, N'cây', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Hạt sen', 115, N'bịch', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Vải', 140, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Yuzu', 120, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Đào', 120, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Bánh Gấu', 120, N'bịch', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Sương Sáo', 120, N'cốc', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Dâu', 120, N'quả', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Bim Bim Ngô', 120, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05'),
-(N'Bim Bim Sữa Dừa', 120, N'gói', '/img/Cafe/traxanhespresso.png', '2024-08-05');
 
+(N'Coffee', 100, N'gói', '/img/nguyenlieu/coffee.png', '2024-08-05'),
+(N'Sữa', 500, N'chai', '/img/nguyenlieu/sua.png', '2024-08-05'),
+(N'Đường', 200, N'gói', '/img/nguyenlieu/duong.png', '2024-08-05'),
+(N'Trà', 75, N'gói', '/img/nguyenlieu/tra.png', '2024-08-05'),
+(N'Táo', 50, N'quả', '/img/nguyenlieu/tao.png', '2024-08-05'),
+(N'Trân châu', 100, N'túi', '/img/nguyenlieu/tranchau.png', '2024-08-05'),
+(N'Matcha', 120, N'gói', '/img/nguyenlieu/matcha.png', '2024-08-05'),
+(N'Yến mạch', 130, N'gói', '/img/nguyenlieu/yenmach.png', '2024-08-05'),
+(N'Caramel', 140, N'lọ', '/img/nguyenlieu/caramel.png', '2024-08-05'),
+(N'Muối', 125, N'gói', '/img/nguyenlieu/muoi.png', '2024-08-05'),
+(N'Hạnh nhân', 115, N'lọ', '/img/nguyenlieu/hanhnhan.png', '2024-08-05'),
+(N'Bơ', 120, N'quả', '/img/nguyenlieu/bo.png', '2024-08-05'),
+(N'Kem', 150, N'hộp', '/img/nguyenlieu/kem.png', '2024-08-05'),
+(N'Choco Chip', 130, N'gói', '/img/nguyenlieu/choco_chip.png', '2024-08-05'),
+(N'Mochi kem phúc bồn tử', 120, N'cái', '/img/nguyenlieu/mochi_kpbt.png', '2024-08-05'),
+(N'Mochi kem việt quất', 120, N'cái', '/img/nguyenlieu/mochi_kvq.png', '2024-08-05'),
+(N'Mochi kem chocolate', 120, N'cái', '/img/nguyenlieu/mochi_kemchoco.png', '2024-08-05'),
+(N'Mousse gấu chocolate', 110, N'cái', '/img/nguyenlieu/mousse_gau.png', '2024-08-05'),
+(N'Bánh mỳ', 150, N'ổ', '/img/nguyenlieu/banhmy.png', '2024-08-05'),
+(N'Sữa đặc', 160, N'hộp', '/img/nguyenlieu/suadac.png', '2024-08-05'),
+(N'Cam', 135, N'quả', '/img/nguyenlieu/cam.png', '2024-08-05'),
+(N'Sả', 125, N'cây', '/img/nguyenlieu/sa.png', '2024-08-05'),
+(N'Hạt sen', 115, N'túi', '/img/nguyenlieu/hatsen.png', '2024-08-05'),
+(N'Vải', 140, N'quả', '/img/nguyenlieu/vai.png', '2024-08-05'),
+(N'Mứt Yuzu', 120, N'lọ', '/img/nguyenlieu/yuzu.png', '2024-08-05'),
+(N'Đào', 120, N'hộp', '/img/nguyenlieu/dao.png', '2024-08-05'),
+(N'Bánh Gấu', 120, N'gói', '/img/nguyenlieu/banhgau.png', '2024-08-05'),
+(N'Sương Sáo', 120, N'cốc', '/img/nguyenlieu/suongsao.png', '2024-08-05'),
+(N'Dâu', 120, N'quả', '/img/nguyenlieu/dau.png', '2024-08-05'),
+(N'Bim Bim Ngô', 120, N'gói', '/img/nguyenlieu/bimbimngo.png', '2024-08-05'),
+(N'Bim Bim Sữa Dừa', 120, N'gói', '/img/nguyenlieu/bimbimsuadua.png', '2024-08-05');
 
 
 INSERT INTO Food (FoodName, CategoryId, IngredientId, Price,ImageURL)
@@ -249,7 +251,9 @@ VALUES
 (N'Bim bim sữa dừa', 4, 4, 10000,'/img/banh/bimbimsuadua.png'),
 (N'Bánh gấu', 4, 4, 15000,'/img/banh/banhgau.png'),
 
+
 (N'Trà đào cam xả', 5, 5, 40000,'/img/ttc/tradaocamsa.png'),
+
 (N'Olong tứ quý sen', 5, 5, 35000,'/img/ttc/olongtuquysen.png'),
 (N'Đào kombucha', 5, 5, 45000,'/img/ttc/dao_kombucha.png'),
 (N'Trà vải', 5, 5, 35000,'/img/ttc/travai.png'),
@@ -585,6 +589,9 @@ go
 EXEC GetFoodDetailsByName @FoodName = N'Bạc xỉu';
 
 
+select IngredientName, SoLuong, ImageURL from Ingredient
+
+
 
 SELECT 
     FoodName, 
@@ -633,6 +640,10 @@ BEGIN
     WHERE TableId = @TableId
 END
 go
+
+
+
+
 exec GetTableById @TableId =1
 
 
@@ -642,6 +653,10 @@ select * from TableFood
 CREATE PROCEDURE GetTableList
 as select * from TableFood
 go
+
+
+
+
 exec GetTableList
 
 
@@ -861,9 +876,9 @@ EXEC DeleteFoodById @FoodId = 1;
 
 DELETE FROM InvoiceDetail WHERE InvoiceId = 4
 
---delete InvoiceDetail
+delete InvoiceDetail
 
---delete Invoice
+delete Invoice
 
 
 CREATE TRIGGER updateInvoiceDetail
@@ -888,6 +903,11 @@ END
 GO
 
 
+
+
+
+--lần đầu phải chạy cái này trước mới alter đc nhé mng
+--create trigger updateInvoice 
 create trigger updateInvoice
 on dbo.Invoice for update 
 as
@@ -906,11 +926,15 @@ begin
 		 select  @count = Count(*) from Invoice where TableId = @TableId and TrangThai =0 
 
 		 if(@count = 0)
-			update TableFood set TrangThai = N'Bàn trống'
+
+
+			update TableFood set TrangThai = N'Bàn trống' where TableId = @TableId
+
 
 
 end
 go
+
 
 SELECT COUNT(*) FROM Invoice;
 SELECT * FROM Invoice WHERE TrangThai = 1;

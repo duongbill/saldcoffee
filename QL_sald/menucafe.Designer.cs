@@ -783,8 +783,7 @@
             this.pictureBox12.TabStop = false;
             // 
             // pictureBox11
-            // 
-            this.pictureBox11.BackgroundImage = global::QL_sald.Properties.Resources.bánh_kem_dâu_1__1_;
+   
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox11.Location = new System.Drawing.Point(0, -1);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
@@ -1020,3 +1019,4 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
+>>>>>>> f30ad3f246c71ceb61e28ba1b14826a6e821e1ae
