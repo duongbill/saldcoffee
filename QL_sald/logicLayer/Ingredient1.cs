@@ -45,7 +45,16 @@ namespace QL_sald
             dtpDate.DataBindings.Add(new Binding("Text", viewIngredient.DataSource, "LastUpdated"));
             guna2TextBoxanh.DataBindings.Add(new Binding("Text", viewIngredient.DataSource, "ImageURL"));
         }
-
+        private void btn_anh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                guna2TextBoxanh.Text = ofd.FileName; // Hiển thị đường dẫn ảnh được chọn
+            }
+        }
+       
         // Xử lý sự kiện Thêm nguyên liệu
         private void btn_them_Click(object sender, EventArgs e)
         {
@@ -215,10 +224,7 @@ namespace QL_sald
 
 
 
-        private void btn_anh_Click(object sender, EventArgs e)
-        {
-            // Cần triển khai mã xử lý ảnh nếu có
-        }
+      
 
         // Các sự kiện khác (không sử dụng trong đoạn mã hiện tại)
         private void guna2HtmlLabel1_Click(object sender, EventArgs e) { }

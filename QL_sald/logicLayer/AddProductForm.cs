@@ -240,6 +240,9 @@ namespace QL_sald
             }
         }
 
+        private void txtImageURL_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
