@@ -39,10 +39,10 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.btn_them);
-            this.panel6.Location = new System.Drawing.Point(12, 497);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Location = new System.Drawing.Point(16, 612);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(827, 51);
+            this.panel6.Size = new System.Drawing.Size(1103, 63);
             this.panel6.TabIndex = 20;
             // 
             // btn_them
@@ -66,18 +66,20 @@
             this.btn_them.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_them.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
-            this.btn_them.Location = new System.Drawing.Point(663, 10);
-            this.btn_them.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_them.Location = new System.Drawing.Point(884, 12);
+            this.btn_them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(153, 32);
+            this.btn_them.Size = new System.Drawing.Size(204, 39);
             this.btn_them.TabIndex = 4;
             this.btn_them.Text = "Chỉnh sửa menu";
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 45);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 55);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(827, 447);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1103, 550);
             this.flowLayoutPanel1.TabIndex = 21;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint_1);
             // 
@@ -85,21 +87,23 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(339, 12);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(452, 15);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(183, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(213, 32);
             this.guna2HtmlLabel1.TabIndex = 22;
             this.guna2HtmlLabel1.Text = "Kho Nguyên Liệu";
             // 
             // MenuIngre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 555);
+            this.ClientSize = new System.Drawing.Size(1139, 683);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MenuIngre";
             this.Text = "MenuIngre";
             this.panel6.ResumeLayout(false);
