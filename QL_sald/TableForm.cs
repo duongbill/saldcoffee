@@ -173,6 +173,22 @@ namespace QL_sald
             ShowBill(table.TableId);
             LoadTable();
         }
+
+        private float CalculateTotalPrice(int invoiceId)
+        {
+            float totalPrice = 0;
+            // Lấy danh sách các chi tiết hóa đơn từ cơ sở dữ liệu
+            List<InvoiceDetail> invoiceDetails = InvoiceDetailDAL.Instance.GetInvoiceDetails(invoiceId);
+            foreach (var item in invoiceDetails)
+            {
+                totalPrice += (float)(item.Price * item.SoLuong);
+            }
+            return totalPrice;
+        }
+
+
+
+
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
             TableFood table = lsvBill.Tag as TableFood;
@@ -188,8 +204,10 @@ namespace QL_sald
             {
                 if (MessageBox.Show("Bạn có muốn thanh toán hóa đơn cho bàn " + table.TableName + "?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
+                 
+
                     // Thanh toán hóa đơn và xóa dữ liệu hóa đơn
-                    InvoiceDAL.Instance.CheckOut(InvoiceId);  // Cập nhật trạng thái hóa đơn
+                    InvoiceDAL.Instance.CheckOut(InvoiceId); // Cập nhật trạng thái hóa đơn
                     ShowBill(table.TableId);
                     LoadTable();
 
@@ -202,7 +220,10 @@ namespace QL_sald
             }
         }
 
-        private void btnAddTable_Click(object sender, EventArgs e)
+
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+
         {
             TableDAL tableDAL = new TableDAL();
             bool isSuccess = tableDAL.InsertTable();

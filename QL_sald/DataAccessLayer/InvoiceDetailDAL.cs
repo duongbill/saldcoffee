@@ -42,7 +42,32 @@ namespace QL_sald.DataAccessLayer
 
             return listBill;
         }
-       
+
+        public List<InvoiceDetail> GetInvoiceDetails(int invoiceId)
+        {
+            List<InvoiceDetail> listInvoiceDetails = new List<InvoiceDetail>();
+
+            string query = @"
+        SELECT InvoiceDetailId, InvoiceId, FoodId, SoLuong, Price
+        FROM InvoiceDetail
+        WHERE InvoiceId = @InvoiceId";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+        new SqlParameter("@InvoiceId", SqlDbType.Int) { Value = invoiceId }
+            };
+
+            DataTable data = connectSQL.GetData(query, parameters);
+
+            foreach (DataRow row in data.Rows)
+            {
+                InvoiceDetail invoiceDetail = new InvoiceDetail(row);
+                listInvoiceDetails.Add(invoiceDetail);
+            }
+
+            return listInvoiceDetails;
+        }
+
 
 
 

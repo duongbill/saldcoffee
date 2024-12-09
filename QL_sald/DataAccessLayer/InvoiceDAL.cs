@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using QL_sald.ValueObject;
+using ValueObject;
 
 namespace QL_sald.DataAccessLayer
 {
@@ -74,12 +75,18 @@ namespace QL_sald.DataAccessLayer
         }
 
         // Đánh dấu hóa đơn là đã thanh toán
+
         public void CheckOut(int id)
         {
             using (SqlConnection connection = GetConnection())
             {
                 connection.Open();
-                string query = $"UPDATE Invoice SET DateCheckout = GETDATE(), TrangThai = 1 WHERE InvoiceId = {id}";
+
+                string query = "UPDATE Invoice \r\nSET \r\n    DateCheckOut = GETDATE(), \r\n    " +
+                    "TrangThai = 1, \r\n    Total = (SELECT SUM(bdt.Price * bdt.SoLuong)\r\n            " +
+                    " FROM InvoiceDetail AS bdt\r\n             WHERE bdt.InvoiceId = Invoice.InvoiceId)\r\nWHERE " +
+                    "InvoiceId = @InvoiceId;\r\n";
+
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@InvoiceId", id);
@@ -87,6 +94,35 @@ namespace QL_sald.DataAccessLayer
                 }
             }
         }
+
+
+        public DataTable GetBillByDate(DateTime checkin, DateTime checkout)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection conn = GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string selectData = "EXEC usp_GetBillByDate @datecheckin, @datecheckout;";
+                    using (SqlCommand cmd = new SqlCommand(selectData, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@datecheckin", checkin);
+                        cmd.Parameters.AddWithValue("@datecheckout", checkout);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(dataTable);  // Lưu trữ dữ liệu vào DataTable
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi: " + ex.Message);
+                }
+            }
+            return dataTable;
+        }
+
+
 
         // Thêm hóa đơn mới
         public void InsertBill(int id)
