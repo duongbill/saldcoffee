@@ -33,7 +33,6 @@ namespace QL_sald
             this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_ls = new System.Windows.Forms.Button();
             this.btn_ct = new System.Windows.Forms.Button();
             this.btn_nv = new System.Windows.Forms.Button();
             this.btn_bc = new System.Windows.Forms.Button();
@@ -76,7 +75,6 @@ namespace QL_sald
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.btn_ls);
             this.panel2.Controls.Add(this.btn_ct);
             this.panel2.Controls.Add(this.btn_nv);
             this.panel2.Controls.Add(this.btn_bc);
@@ -91,25 +89,6 @@ namespace QL_sald
             this.panel2.Size = new System.Drawing.Size(238, 689);
             this.panel2.TabIndex = 1;
             // 
-            // btn_ls
-            // 
-            this.btn_ls.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_ls.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_ls.FlatAppearance.BorderSize = 0;
-            this.btn_ls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ls.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ls.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_ls.Image = ((System.Drawing.Image)(resources.GetObject("btn_ls.Image")));
-            this.btn_ls.Location = new System.Drawing.Point(0, 516);
-            this.btn_ls.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ls.Name = "btn_ls";
-            this.btn_ls.Size = new System.Drawing.Size(236, 86);
-            this.btn_ls.TabIndex = 6;
-            this.btn_ls.Text = "     Lịch sử mua hàng";
-            this.btn_ls.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ls.UseVisualStyleBackColor = false;
-            this.btn_ls.Click += new System.EventHandler(this.btn_ls_Click);
-            // 
             // btn_ct
             // 
             this.btn_ct.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -119,7 +98,7 @@ namespace QL_sald
             this.btn_ct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ct.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_ct.Image = ((System.Drawing.Image)(resources.GetObject("btn_ct.Image")));
-            this.btn_ct.Location = new System.Drawing.Point(0, 602);
+            this.btn_ct.Location = new System.Drawing.Point(-2, 511);
             this.btn_ct.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ct.Name = "btn_ct";
             this.btn_ct.Size = new System.Drawing.Size(236, 86);
@@ -254,7 +233,7 @@ namespace QL_sald
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 762);
             this.Controls.Add(this.panel_Body);
@@ -279,7 +258,6 @@ namespace QL_sald
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_tc;
         private System.Windows.Forms.Button btn_ct;
-        private System.Windows.Forms.Button btn_ls;
         private System.Windows.Forms.Button btn_nv;
         private System.Windows.Forms.Button btn_bc;
         private System.Windows.Forms.Button btnMenu;

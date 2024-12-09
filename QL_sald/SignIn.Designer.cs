@@ -74,7 +74,6 @@
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(196, 53);
             this.guna2HtmlLabel3.TabIndex = 5;
             this.guna2HtmlLabel3.Text = "Đăng nhập";
-   
             // 
             // guna2HtmlLabel4
             // 
@@ -150,6 +149,7 @@
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.Size = new System.Drawing.Size(306, 39);
             this.txtMatKhau.TabIndex = 12;
+
             // 
             // txtTaiKhoan
             // 

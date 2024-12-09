@@ -6,11 +6,12 @@ namespace QL_sald
     public partial class Cài_đặt : UserControl
     {
         public event EventHandler LogoutRequested;
+        private Form mainForm;
 
-        public Cài_đặt()
+        public Cài_đặt(Form mainForm)
         {
             InitializeComponent();
-          
+            this.mainForm = mainForm;
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -19,10 +20,14 @@ namespace QL_sald
             if (check == DialogResult.Yes)
             {
                 LogoutRequested?.Invoke(this, EventArgs.Empty);
+
+                // Hiển thị form đăng nhập
+                SignIn si = new SignIn();
+                si.Show();
+
+                // Đóng form chính
+                mainForm.Close();
             }
-            SignIn si = new SignIn();
-            si.Show();
         }
     }
 }
-

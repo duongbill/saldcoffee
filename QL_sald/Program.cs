@@ -16,7 +16,7 @@ namespace QL_sald
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new SignIn());
+            Application.Run(new SignIn());
             Application.Run(new Form1());
         }
     }
