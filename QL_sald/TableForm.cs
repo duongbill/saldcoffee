@@ -265,6 +265,22 @@ namespace QL_sald
             }
         }
 
+        private void btnAddTable_Click(object sender, EventArgs e)
+        {
+            TableDAL tableDAL = new TableDAL();
+            bool isSuccess = tableDAL.InsertTable();
+
+            if (isSuccess)
+            {
+                MessageBox.Show("Thêm bàn thành công!", "Thông báo");
+                LoadTable(); // Tải lại danh sách bàn
+            }
+            else
+            {
+                MessageBox.Show("Thêm bàn thất bại.", "Lỗi");
+            }
+        }
+
     }
 
 }
