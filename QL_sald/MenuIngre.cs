@@ -60,5 +60,12 @@ namespace QL_sald
         {
 
         }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+           
+                Ingredient1 addIngredient = new Ingredient1();
+                addIngredient.ShowDialog();
+        }
     }
 }
