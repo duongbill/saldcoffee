@@ -79,5 +79,10 @@ namespace QL_sald.compoment
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

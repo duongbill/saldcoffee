@@ -37,11 +37,10 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.AutoSize = true;
             this.txtQuantity.ForeColor = System.Drawing.Color.Red;
-            this.txtQuantity.Location = new System.Drawing.Point(41, 202);
+            this.txtQuantity.Location = new System.Drawing.Point(41, 200);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(35, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(53, 17);
             this.txtQuantity.TabIndex = 9;
             this.txtQuantity.Text = "1000";
             this.txtQuantity.UseCompatibleTextRendering = true;
@@ -62,7 +61,7 @@
             this.pic.FillColor = System.Drawing.Color.DimGray;
             this.pic.ImageRotate = 0F;
             this.pic.Location = new System.Drawing.Point(0, 0);
-            this.pic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic.Margin = new System.Windows.Forms.Padding(4);
             this.pic.Name = "pic";
             this.pic.Size = new System.Drawing.Size(184, 177);
             this.pic.TabIndex = 7;
@@ -70,9 +69,8 @@
             // 
             // lbl_sl
             // 
-            this.lbl_sl.AutoSize = true;
             this.lbl_sl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_sl.Location = new System.Drawing.Point(3, 204);
+            this.lbl_sl.Location = new System.Drawing.Point(3, 202);
             this.lbl_sl.Name = "lbl_sl";
             this.lbl_sl.Size = new System.Drawing.Size(32, 15);
             this.lbl_sl.TabIndex = 10;
@@ -87,7 +85,7 @@
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtIngredientName);
             this.Controls.Add(this.pic);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngreCPT";
             this.Size = new System.Drawing.Size(208, 238);
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
