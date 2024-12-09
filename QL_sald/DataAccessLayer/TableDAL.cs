@@ -73,7 +73,7 @@ namespace QL_sald.DataAccessLayer
                     {
                         // Tạo tên bàn tự động dựa trên số lượng bàn hiện có
                         int tableCount = GetTableCount();
-                        string tableName = "Bàn " + (tableCount + 1);
+                        string tableName = "Table " + (tableCount + 1);
 
                         // Gán tham số
                         command.Parameters.AddWithValue("@tableName", tableName);

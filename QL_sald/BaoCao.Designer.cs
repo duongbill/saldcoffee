@@ -43,6 +43,8 @@
             this.checkInDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.dataGridViewInvoices = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.flpTable.SuspendLayout();
@@ -65,23 +67,27 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1247, 606);
+            this.tabControl1.Size = new System.Drawing.Size(935, 492);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.btnThongKe);
             this.tabPage2.Controls.Add(this.checkOutDate);
             this.tabPage2.Controls.Add(this.checkInDate);
             this.tabPage2.Controls.Add(this.flpTable);
             this.tabPage2.ForeColor = System.Drawing.Color.Black;
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1239, 577);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(927, 466);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Hóa Đơn";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -90,11 +96,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 89);
+            this.label1.Location = new System.Drawing.Point(2, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 28);
+            this.label1.Size = new System.Drawing.Size(267, 21);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Danh sách hóa đơn";
+            this.label1.Text = "Danh sách hóa đơn đã thanh toán";
             // 
             // btnThongKe
             // 
@@ -105,9 +112,10 @@
             this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Location = new System.Drawing.Point(313, 22);
+            this.btnThongKe.Location = new System.Drawing.Point(339, 12);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(180, 36);
+            this.btnThongKe.Size = new System.Drawing.Size(135, 29);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
@@ -119,11 +127,12 @@
             this.checkOutDate.FillColor = System.Drawing.Color.Cyan;
             this.checkOutDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.checkOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.checkOutDate.Location = new System.Drawing.Point(561, 22);
+            this.checkOutDate.Location = new System.Drawing.Point(650, 12);
+            this.checkOutDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkOutDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.checkOutDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.checkOutDate.Name = "checkOutDate";
-            this.checkOutDate.Size = new System.Drawing.Size(220, 36);
+            this.checkOutDate.Size = new System.Drawing.Size(165, 29);
             this.checkOutDate.TabIndex = 1;
             this.checkOutDate.Value = new System.DateTime(2024, 12, 9, 0, 30, 20, 800);
             // 
@@ -134,11 +143,12 @@
             this.checkInDate.FillColor = System.Drawing.Color.Cyan;
             this.checkInDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.checkInDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.checkInDate.Location = new System.Drawing.Point(8, 22);
+            this.checkInDate.Location = new System.Drawing.Point(124, 12);
+            this.checkInDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkInDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.checkInDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.checkInDate.Name = "checkInDate";
-            this.checkInDate.Size = new System.Drawing.Size(220, 36);
+            this.checkInDate.Size = new System.Drawing.Size(165, 29);
             this.checkInDate.TabIndex = 0;
             this.checkInDate.Value = new System.DateTime(2024, 12, 9, 0, 29, 59, 652);
             // 
@@ -147,9 +157,10 @@
             this.flpTable.AutoScroll = true;
             this.flpTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpTable.Controls.Add(this.dataGridViewInvoices);
-            this.flpTable.Location = new System.Drawing.Point(3, 129);
+            this.flpTable.Location = new System.Drawing.Point(2, 105);
+            this.flpTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(921, 334);
+            this.flpTable.Size = new System.Drawing.Size(825, 342);
             this.flpTable.TabIndex = 3;
             // 
             // dataGridViewInvoices
@@ -175,12 +186,11 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewInvoices.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewInvoices.Location = new System.Drawing.Point(4, 4);
-            this.dataGridViewInvoices.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewInvoices.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewInvoices.Name = "dataGridViewInvoices";
             this.dataGridViewInvoices.RowHeadersVisible = false;
             this.dataGridViewInvoices.RowHeadersWidth = 51;
-            this.dataGridViewInvoices.Size = new System.Drawing.Size(896, 325);
+            this.dataGridViewInvoices.Size = new System.Drawing.Size(839, 338);
             this.dataGridViewInvoices.TabIndex = 0;
             this.dataGridViewInvoices.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewInvoices.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -203,16 +213,37 @@
             this.dataGridViewInvoices.ThemeStyle.RowsStyle.Height = 22;
             this.dataGridViewInvoices.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridViewInvoices.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridViewInvoices.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInvoices_CellContentClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 21);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Ngày bắt đầu";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(519, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 21);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Ngày kết thúc";
             // 
             // BaoCao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1247, 606);
+            this.ClientSize = new System.Drawing.Size(935, 492);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BaoCao";
             this.Text = "BaoCao";
             this.tabControl1.ResumeLayout(false);
@@ -237,6 +268,8 @@
         private System.Windows.Forms.FlowLayoutPanel flpTable;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridViewInvoices;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 
 }

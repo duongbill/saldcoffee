@@ -29,5 +29,17 @@ namespace QL_sald
                 mainForm.Close();
             }
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tính năng chưa khả dụng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Tính năng chưa khả dụng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
