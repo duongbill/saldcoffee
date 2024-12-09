@@ -9,8 +9,17 @@ using QL_sald.ValueObject;
 
 internal class FoodDAL
 {
+
+    private static FoodDAL instance;
     private ConnectSQL connectSQL = new ConnectSQL();
     private string connectionString = "Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;TrustServerCertificate=True;";
+
+    // Singleton instance
+    public static FoodDAL Instance
+    {
+        get { if (instance == null) instance = new FoodDAL(); return instance; }
+        private set { instance = value; }
+    }
 
     public List<Food> GetFoodDataByCategory(int categoryId)
     {

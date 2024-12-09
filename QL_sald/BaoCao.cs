@@ -17,40 +17,39 @@ namespace QL_sald
         public BaoCao()
         {
             InitializeComponent();
-            LoadStatistics();
         }
-        private void LoadStatistics()
-        {
-            try
-            {
-                // Lấy tổng hóa đơn và tổng doanh thu từ lớp InvoiceDAL
-                int totalInvoices = InvoiceDAL.Instance.GetTotalInvoices();
-                decimal totalRevenue = InvoiceDAL.Instance.GetTotalRevenue();
-                Staffdata staffdata = new Staffdata();
-                int totalStaff = staffdata.GetTotalEmployees();
+        //private void LoadStatistics()
+        //{
+        //    try
+        //    {
+        //        // Lấy tổng hóa đơn và tổng doanh thu từ lớp InvoiceDAL
+        //        int totalInvoices = InvoiceDAL.Instance.GetTotalInvoices();
+        //        decimal totalRevenue = InvoiceDAL.Instance.GetTotalRevenue();
+        //        Staffdata staffdata = new Staffdata();
+        //        int totalStaff = staffdata.GetTotalEmployees();
 
-                // Sử dụng định dạng tiền tệ Việt Nam Đồng (₫)
-                CultureInfo vietnamCulture = new CultureInfo("vi-VN");
+        //        // Sử dụng định dạng tiền tệ Việt Nam Đồng (₫)
+        //        CultureInfo vietnamCulture = new CultureInfo("vi-VN");
 
-                // Hiển thị dữ liệu lên các label
-                lblTotalInvoice.Text = $"{totalInvoices}";
-                lblTotalPrice.Text = $"{totalRevenue.ToString("C0", vietnamCulture)}"; // Định dạng tiền tệ
-                lblTotalStaff.Text = $"{totalStaff}";
-            }
-            catch (Exception ex)
-            {
-                // Hiển thị thông báo lỗi nếu có lỗi
-                MessageBox.Show($"Lỗi khi hiển thị thống kê: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //        // Hiển thị dữ liệu lên các label
+        //        lblTotalInvoice.Text = $"{totalInvoices}";
+        //        lblTotalPrice.Text = $"{totalRevenue.ToString("C0", vietnamCulture)}"; // Định dạng tiền tệ
+        //        lblTotalStaff.Text = $"{totalStaff}";
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Hiển thị thông báo lỗi nếu có lỗi
+        //        MessageBox.Show($"Lỗi khi hiển thị thống kê: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
         // Hàm tải danh sách hóa đơn theo khoảng thời gian
 
-        private void loadListViewByDate(DateTime checkIn, DateTime checkOut)
+        private void loadGetBillByDate(DateTime checkin, DateTime checkout)
         {
             try
             {
                 // Lấy dữ liệu từ InvoiceDAL
-                DataTable dataTable = InvoiceDAL.Instance.GetListInvoiceByDate(checkIn, checkOut);
+                DataTable dataTable = InvoiceDAL.Instance.GetBillByDate(checkin, checkout);
 
                 // Hiển thị dữ liệu trong DataGridView
                 dataGridViewInvoices.DataSource = dataTable;
@@ -64,8 +63,11 @@ namespace QL_sald
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            loadListViewByDate(checkInDate.Value, checkOutDate.Value);
+            DateTime checkin = checkInDate.Value;
+            DateTime checkout = checkOutDate.Value;
+            loadGetBillByDate(checkin, checkout);
         }
+
 
     }
 }
