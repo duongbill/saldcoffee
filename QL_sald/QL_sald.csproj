@@ -243,16 +243,16 @@
     <Compile Include="menu_cf.Designer.cs">
       <DependentUpon>menu_cf.cs</DependentUpon>
     </Compile>
-    <Compile Include="nhân_viên1.cs">
+    <Compile Include="NewFolder1\nhân_viên1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="nhân_viên1.Designer.cs">
+    <Compile Include="NewFolder1\nhân_viên1.Designer.cs">
       <DependentUpon>nhân_viên1.cs</DependentUpon>
     </Compile>
-    <Compile Include="package_dif.cs">
+    <Compile Include="NewFolder1\package_dif.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="package_dif.Designer.cs">
+    <Compile Include="NewFolder1\package_dif.Designer.cs">
       <DependentUpon>package_dif.cs</DependentUpon>
     </Compile>
     <Compile Include="packages.cs">
@@ -261,34 +261,34 @@
     <Compile Include="packages.Designer.cs">
       <DependentUpon>packages.cs</DependentUpon>
     </Compile>
-    <Compile Include="menubanh_snack.cs">
+    <Compile Include="NewFolder1\menubanh_snack.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="menubanh_snack.Designer.cs">
+    <Compile Include="NewFolder1\menubanh_snack.Designer.cs">
       <DependentUpon>menubanh_snack.cs</DependentUpon>
     </Compile>
-    <Compile Include="menucafe.cs">
+    <Compile Include="NewFolder1\menucafe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="menucafe.Designer.cs">
+    <Compile Include="NewFolder1\menucafe.Designer.cs">
       <DependentUpon>menucafe.cs</DependentUpon>
     </Compile>
-    <Compile Include="menuthucuongdaxay.cs">
+    <Compile Include="NewFolder1\menuthucuongdaxay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="menuthucuongdaxay.Designer.cs">
+    <Compile Include="NewFolder1\menuthucuongdaxay.Designer.cs">
       <DependentUpon>menuthucuongdaxay.cs</DependentUpon>
     </Compile>
-    <Compile Include="menutrasua.cs">
+    <Compile Include="NewFolder1\menutrasua.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="menutrasua.Designer.cs">
+    <Compile Include="NewFolder1\menutrasua.Designer.cs">
       <DependentUpon>menutrasua.cs</DependentUpon>
     </Compile>
-    <Compile Include="menutratraicay.cs">
+    <Compile Include="NewFolder1\menutratraicay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="menutratraicay.Designer.cs">
+    <Compile Include="NewFolder1\menutratraicay.Designer.cs">
       <DependentUpon>menutratraicay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -305,10 +305,10 @@
     <Compile Include="staff.Designer.cs">
       <DependentUpon>staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="sửa_món.cs">
+    <Compile Include="NewFolder1\sửa_món.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="sửa_món.Designer.cs">
+    <Compile Include="NewFolder1\sửa_món.Designer.cs">
       <DependentUpon>sửa_món.cs</DependentUpon>
     </Compile>
     <Compile Include="TableForm.cs">
@@ -317,16 +317,16 @@
     <Compile Include="TableForm.Designer.cs">
       <DependentUpon>TableForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="themmon.cs">
+    <Compile Include="NewFolder1\themmon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="themmon.Designer.cs">
+    <Compile Include="NewFolder1\themmon.Designer.cs">
       <DependentUpon>themmon.cs</DependentUpon>
     </Compile>
-    <Compile Include="thêm_nhân_viên.cs">
+    <Compile Include="NewFolder1\thêm_nhân_viên.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="thêm_nhân_viên.Designer.cs">
+    <Compile Include="NewFolder1\thêm_nhân_viên.Designer.cs">
       <DependentUpon>thêm_nhân_viên.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangChu.cs">
@@ -348,10 +348,10 @@
     <Compile Include="ValueObject\Staff.cs" />
     <Compile Include="ValueObject\TableFood.cs" />
     <Compile Include="ValueObject\Warehouse.cs" />
-    <Compile Include="xóa_món.cs">
+    <Compile Include="NewFolder1\xóa_món.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="xóa_món.Designer.cs">
+    <Compile Include="NewFolder1\xóa_món.Designer.cs">
       <DependentUpon>xóa_món.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaoCao.resx">
@@ -384,28 +384,28 @@
     <EmbeddedResource Include="menu_cf.resx">
       <DependentUpon>menu_cf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="nhân_viên1.resx">
+    <EmbeddedResource Include="NewFolder1\nhân_viên1.resx">
       <DependentUpon>nhân_viên1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="package_dif.resx">
+    <EmbeddedResource Include="NewFolder1\package_dif.resx">
       <DependentUpon>package_dif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="packages.resx">
       <DependentUpon>packages.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menubanh_snack.resx">
+    <EmbeddedResource Include="NewFolder1\menubanh_snack.resx">
       <DependentUpon>menubanh_snack.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menucafe.resx">
+    <EmbeddedResource Include="NewFolder1\menucafe.resx">
       <DependentUpon>menucafe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menuthucuongdaxay.resx">
+    <EmbeddedResource Include="NewFolder1\menuthucuongdaxay.resx">
       <DependentUpon>menuthucuongdaxay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menutrasua.resx">
+    <EmbeddedResource Include="NewFolder1\menutrasua.resx">
       <DependentUpon>menutrasua.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menutratraicay.resx">
+    <EmbeddedResource Include="NewFolder1\menutratraicay.resx">
       <DependentUpon>menutratraicay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -418,22 +418,22 @@
     <EmbeddedResource Include="staff.resx">
       <DependentUpon>staff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sửa_món.resx">
+    <EmbeddedResource Include="NewFolder1\sửa_món.resx">
       <DependentUpon>sửa_món.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableForm.resx">
       <DependentUpon>TableForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="themmon.resx">
+    <EmbeddedResource Include="NewFolder1\themmon.resx">
       <DependentUpon>themmon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="thêm_nhân_viên.resx">
+    <EmbeddedResource Include="NewFolder1\thêm_nhân_viên.resx">
       <DependentUpon>thêm_nhân_viên.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="xóa_món.resx">
+    <EmbeddedResource Include="NewFolder1\xóa_món.resx">
       <DependentUpon>xóa_món.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
