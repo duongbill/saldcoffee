@@ -752,7 +752,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Image = global::QL_sald.Properties.Resources.bac_xiu;
+           
             this.pictureBox3.Location = new System.Drawing.Point(0, -1);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
@@ -763,7 +763,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Image = global::QL_sald.Properties.Resources.bacxiulacsua;
+           
             this.pictureBox8.Location = new System.Drawing.Point(0, -1);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
@@ -774,7 +774,7 @@
             // pictureBox12
             // 
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox12.Image = global::QL_sald.Properties.Resources.bac_xiu;
+         
             this.pictureBox12.Location = new System.Drawing.Point(0, -1);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox12.Name = "pictureBox12";

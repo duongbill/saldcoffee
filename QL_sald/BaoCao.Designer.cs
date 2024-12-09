@@ -417,7 +417,6 @@
             this.flpTable.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datatable)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -446,6 +445,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker checkOutDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker checkInDate;
         private Guna.UI2.WinForms.Guna2Button btnThongKe;
+
         private System.Windows.Forms.FlowLayoutPanel flpTable;
         private Guna.UI2.WinForms.Guna2DataGridView datatable;
     }

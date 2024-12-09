@@ -1,3 +1,4 @@
+
 ﻿using QL_sald.DataAccessLayer;
 using System;
 using System.Collections.Generic;
@@ -64,3 +65,4 @@ namespace QL_sald
         }
     }
 }
+

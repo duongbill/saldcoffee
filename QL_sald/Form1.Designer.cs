@@ -29,6 +29,7 @@ namespace QL_sald
         /// </summary>
         private void InitializeComponent()
         { 
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -64,7 +65,7 @@ namespace QL_sald
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = global::QL_sald.Properties.Resources.logo;
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.Location = new System.Drawing.Point(26, 12);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(187, 46);
@@ -98,6 +99,7 @@ namespace QL_sald
             this.btn_ls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ls.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ls.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_ls.Image = ((System.Drawing.Image)(resources.GetObject("btn_ls.Image")));
             this.btn_ls.Location = new System.Drawing.Point(0, 516);
             this.btn_ls.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ls.Name = "btn_ls";
@@ -116,6 +118,7 @@ namespace QL_sald
             this.btn_ct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ct.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_ct.Image = ((System.Drawing.Image)(resources.GetObject("btn_ct.Image")));
             this.btn_ct.Location = new System.Drawing.Point(0, 602);
             this.btn_ct.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ct.Name = "btn_ct";
@@ -134,6 +137,7 @@ namespace QL_sald
             this.btn_nv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nv.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nv.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_nv.Image = ((System.Drawing.Image)(resources.GetObject("btn_nv.Image")));
             this.btn_nv.Location = new System.Drawing.Point(0, 430);
             this.btn_nv.Margin = new System.Windows.Forms.Padding(4);
             this.btn_nv.Name = "btn_nv";
@@ -152,6 +156,7 @@ namespace QL_sald
             this.btn_bc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bc.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_bc.Image = ((System.Drawing.Image)(resources.GetObject("btn_bc.Image")));
             this.btn_bc.Location = new System.Drawing.Point(0, 344);
             this.btn_bc.Margin = new System.Windows.Forms.Padding(4);
             this.btn_bc.Name = "btn_bc";
@@ -170,6 +175,7 @@ namespace QL_sald
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.Location = new System.Drawing.Point(0, 172);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenu.Name = "btnMenu";
@@ -188,6 +194,7 @@ namespace QL_sald
             this.btn_kh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_kh.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_kh.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_kh.Image = ((System.Drawing.Image)(resources.GetObject("btn_kh.Image")));
             this.btn_kh.Location = new System.Drawing.Point(0, 258);
             this.btn_kh.Margin = new System.Windows.Forms.Padding(4);
             this.btn_kh.Name = "btn_kh";
@@ -196,6 +203,7 @@ namespace QL_sald
             this.btn_kh.Text = "          Kho hàng ";
             this.btn_kh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_kh.UseVisualStyleBackColor = false;
+            this.btn_kh.Click += new System.EventHandler(this.btn_kh_Click);
             // 
             // btn_dh
             // 
@@ -205,6 +213,7 @@ namespace QL_sald
             this.btn_dh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dh.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dh.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_dh.Image = ((System.Drawing.Image)(resources.GetObject("btn_dh.Image")));
             this.btn_dh.Location = new System.Drawing.Point(0, 86);
             this.btn_dh.Margin = new System.Windows.Forms.Padding(4);
             this.btn_dh.Name = "btn_dh";
@@ -223,7 +232,7 @@ namespace QL_sald
             this.btn_tc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tc.ForeColor = System.Drawing.Color.Black;
-            this.btn_tc.Image = global::QL_sald.Properties.Resources.trangchu;
+            this.btn_tc.Image = ((System.Drawing.Image)(resources.GetObject("btn_tc.Image")));
             this.btn_tc.Location = new System.Drawing.Point(0, -2);
             this.btn_tc.Margin = new System.Windows.Forms.Padding(4);
             this.btn_tc.Name = "btn_tc";
@@ -245,7 +254,7 @@ namespace QL_sald
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 762);
             this.Controls.Add(this.panel_Body);

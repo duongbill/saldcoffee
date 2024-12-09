@@ -181,6 +181,12 @@
     <Compile Include="compoment\FoodCPT.Designer.cs">
       <DependentUpon>FoodCPT.cs</DependentUpon>
     </Compile>
+    <Compile Include="compoment\IngreCPT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="compoment\IngreCPT.Designer.cs">
+      <DependentUpon>IngreCPT.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataAccessLayer\CategoriesDAL.cs" />
     <Compile Include="DataAccessLayer\ConnectSQL.cs" />
     <Compile Include="DataAccessLayer\FoodDAL.cs" />
@@ -208,6 +214,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="logicLayer\Ingredient1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logicLayer\Ingredient1.Designer.cs">
+      <DependentUpon>Ingredient1.cs</DependentUpon>
+    </Compile>
     <Compile Include="logicLayer\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,10 +229,11 @@
     <Compile Include="logicLayer\CategoriesLL.cs" />
     <Compile Include="logicLayer\FoodLL.cs" />
     <Compile Include="logicLayer\IngredientsLL.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
+    <Compile Include="MenuIngre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuIngre.Designer.cs">
+      <DependentUpon>MenuIngre.cs</DependentUpon>
     </Compile>
     <Compile Include="ValueObject\FoodBill.cs" />
     <Compile Include="ValueObject\InvoiceShow.cs" />
@@ -347,6 +360,9 @@
     <EmbeddedResource Include="compoment\FoodCPT.resx">
       <DependentUpon>FoodCPT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="compoment\IngreCPT.resx">
+      <DependentUpon>IngreCPT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,8 +372,14 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="logicLayer\Ingredient1.resx">
+      <DependentUpon>Ingredient1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="logicLayer\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuIngre.resx">
+      <DependentUpon>MenuIngre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu_cf.resx">
       <DependentUpon>menu_cf.cs</DependentUpon>
@@ -389,7 +411,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
