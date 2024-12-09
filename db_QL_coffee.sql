@@ -932,12 +932,6 @@ begin
 end
 go
 
-SELECT SUM(TotalPrice) FROM Invoice WHERE TrangThai = 1
-
-
-SELECT COUNT(*) FROM Invoice;
-SELECT * FROM Invoice WHERE TrangThai = 1;
-
 Create PROCEDURE USP_GetListInvoiceDetailsByDate
     @checkIn DATE,
     @checkOut DATE
@@ -959,6 +953,5 @@ BEGIN
 END
 GO
 
-EXEC USP_GetListInvoiceDetailsByDate @checkIn='2000-08-01', @checkOut='2025-08-07';
-
-select * from invoice
+EXEC USP_GetListInvoiceDetailsByDate @checkIn='2024-08-01', @checkOut='2025-08-07';
+ 

@@ -27,7 +27,7 @@ namespace QL_sald.DataAccessLayer
         }
 
         // Lấy danh sách hóa đơn
-        public DataTable sfData()
+        public DataTable sfData(DateTime checkIn,DateTime checkOut)
         {
             DataTable dataTable = new DataTable();
             using (SqlConnection conn = GetConnection())
@@ -35,7 +35,7 @@ namespace QL_sald.DataAccessLayer
                 try
                 {
                     conn.Open();
-                    string selectData = "SELECT Invoice.TableId, Invoice.DateCheckIn, Invoice.DateCheckOut, Invoice.TotalPrice, Invoice.TrangThai FROM Invoice";
+                    string selectData = $"exec USP_GetListInvoiceByDate @{checkIn}, @{checkOut}";
                     using (SqlCommand cmd = new SqlCommand(selectData, conn))
                     {
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -79,7 +79,7 @@ namespace QL_sald.DataAccessLayer
             using (SqlConnection connection = GetConnection())
             {
                 connection.Open();
-                string query = "UPDATE Invoice SET TrangThai = 1 WHERE InvoiceId = @InvoiceId";
+                string query = $"UPDATE Invoice SET DateCheckout = GETDATE(), TrangThai = 1 WHERE InvoiceId = {id}";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@InvoiceId", id);
@@ -193,6 +193,7 @@ namespace QL_sald.DataAccessLayer
                 return 0;
             }
         }
+
 
         // Lấy danh sách hóa đơn theo ngày
         public DataTable GetListInvoiceByDate(DateTime checkIn, DateTime checkOut)
