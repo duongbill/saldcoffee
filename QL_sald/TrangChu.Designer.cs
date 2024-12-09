@@ -71,7 +71,7 @@
             this.panel3.Controls.Add(this.guna2PictureBox1);
             this.panel3.Location = new System.Drawing.Point(53, 34);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 159);
+            this.panel3.Size = new System.Drawing.Size(224, 159);
             this.panel3.TabIndex = 4;
             // 
             // guna2PictureBox1
