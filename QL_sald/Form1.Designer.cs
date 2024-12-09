@@ -41,8 +41,10 @@ namespace QL_sald
             this.btn_dh = new System.Windows.Forms.Button();
             this.btn_tc = new System.Windows.Forms.Button();
             this.panel_Body = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel_Body.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -212,7 +214,7 @@ namespace QL_sald
             this.btn_tc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tc.ForeColor = System.Drawing.Color.Black;
             this.btn_tc.Image = ((System.Drawing.Image)(resources.GetObject("btn_tc.Image")));
-            this.btn_tc.Location = new System.Drawing.Point(0, -2);
+            this.btn_tc.Location = new System.Drawing.Point(-2, -2);
             this.btn_tc.Margin = new System.Windows.Forms.Padding(4);
             this.btn_tc.Name = "btn_tc";
             this.btn_tc.Size = new System.Drawing.Size(236, 88);
@@ -226,14 +228,25 @@ namespace QL_sald
             // 
             this.panel_Body.BackColor = System.Drawing.Color.LightGray;
             this.panel_Body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_Body.Controls.Add(this.panel3);
             this.panel_Body.Location = new System.Drawing.Point(235, 75);
             this.panel_Body.Name = "panel_Body";
             this.panel_Body.Size = new System.Drawing.Size(1127, 687);
             this.panel_Body.TabIndex = 2;
+            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(0, -2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1124, 689);
+            this.panel3.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 762);
             this.Controls.Add(this.panel_Body);
@@ -248,6 +261,7 @@ namespace QL_sald
             this.Text = " ";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel_Body.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -265,6 +279,7 @@ namespace QL_sald
         private System.Windows.Forms.Button btn_dh;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel_Body;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

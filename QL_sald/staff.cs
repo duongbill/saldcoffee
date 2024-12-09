@@ -1,4 +1,5 @@
-﻿using QL_sald.DataAccessLayer;
+﻿using Guna.UI2.WinForms;
+using QL_sald.DataAccessLayer;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -22,6 +23,7 @@ namespace QL_sald
             DataTable dataTable = data.sfData();
             viewStaff.DataSource = dataTable; // Gán DataTable cho DataSource của DataGridView
         }
+        
 
         // hàm để lấy roleId từ roleName
         private int GetRoleIdByRoleName(string roleName)
@@ -287,6 +289,11 @@ namespace QL_sald
         }
 
         private void txt_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

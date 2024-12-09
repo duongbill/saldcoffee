@@ -132,5 +132,10 @@ namespace QL_sald
             MenuIngre menuControl1 = new MenuIngre();
             OpenChildForm(menuControl1); // Truyền Form con menuControl vào
         }
+
+        private void panel_Body_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

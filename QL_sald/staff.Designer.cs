@@ -76,7 +76,7 @@
             this.guna2Panel1.Controls.Add(this.viewStaff);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Location = new System.Drawing.Point(16, 15);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1101, 319);
             this.guna2Panel1.TabIndex = 1;
@@ -105,7 +105,7 @@
             this.viewStaff.DefaultCellStyle = dataGridViewCellStyle3;
             this.viewStaff.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.viewStaff.Location = new System.Drawing.Point(20, 41);
-            this.viewStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.viewStaff.Margin = new System.Windows.Forms.Padding(4);
             this.viewStaff.Name = "viewStaff";
             this.viewStaff.RowHeadersVisible = false;
             this.viewStaff.RowHeadersWidth = 51;
@@ -132,6 +132,7 @@
             this.viewStaff.ThemeStyle.RowsStyle.Height = 22;
             this.viewStaff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.viewStaff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.viewStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewStaff_CellContentClick);
             this.viewStaff.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.getInfo);
             // 
             // guna2HtmlLabel1
@@ -139,7 +140,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(20, 4);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(231, 29);
             this.guna2HtmlLabel1.TabIndex = 0;
@@ -165,7 +166,7 @@
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Location = new System.Drawing.Point(16, 352);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1101, 306);
             this.guna2Panel2.TabIndex = 2;
@@ -177,7 +178,7 @@
             this.dtpDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpDateOfBirth.Location = new System.Drawing.Point(772, 16);
-            this.dtpDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDateOfBirth.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateOfBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDateOfBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
@@ -302,7 +303,7 @@
             "Pha Chế",
             "Bảo Vệ"});
             this.txt_role.Location = new System.Drawing.Point(772, 138);
-            this.txt_role.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_role.Margin = new System.Windows.Forms.Padding(4);
             this.txt_role.Name = "txt_role";
             this.txt_role.Size = new System.Drawing.Size(176, 36);
             this.txt_role.TabIndex = 14;
@@ -341,7 +342,7 @@
             "Nam",
             "Nữ"});
             this.txt_sex.Location = new System.Drawing.Point(772, 83);
-            this.txt_sex.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_sex.Margin = new System.Windows.Forms.Padding(4);
             this.txt_sex.Name = "txt_sex";
             this.txt_sex.Size = new System.Drawing.Size(99, 36);
             this.txt_sex.TabIndex = 12;
@@ -435,7 +436,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "staff";
             this.Text = "staff";
             this.guna2Panel1.ResumeLayout(false);
