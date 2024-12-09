@@ -46,11 +46,21 @@ namespace QL_sald
         // Hàm tải danh sách hóa đơn theo khoảng thời gian
         void loadListViewByDate(DateTime checkIn, DateTime checkOut)
         {
-            
+            // Lấy giá trị từ các điều khiển ngày giờ
+            DateTime checkin = checkInDate.Value;
+            DateTime checkout = checkOutDate.Value;
+
+            // Gọi phương thức để lấy danh sách hóa đơn
+            InvoiceDAL invoice = new InvoiceDAL();
+            DataTable dataTable = invoice.sfData();
+
+            // Hiển thị dữ liệu trong DataGridView
+            datatable.DataSource = dataTable;
         }
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             loadListViewByDate(checkInDate.Value, checkOutDate.Value);
+           
         }
     }
 }

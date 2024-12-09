@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,17 +51,18 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTotalInvoice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
+            this.checkOutDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.checkInDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.checkInDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.checkOutDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
-            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.datatable = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -67,6 +70,9 @@
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.flpTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datatable)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,20 +98,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.flpTable);
-            this.tabPage2.Controls.Add(this.btnThongKe);
-            this.tabPage2.Controls.Add(this.checkOutDate);
-            this.tabPage2.Controls.Add(this.checkInDate);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(927, 466);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -140,17 +132,17 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 53);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(782, 265);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -254,15 +246,71 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Số hóa đơn";
             // 
-            // guna2Elipse1
+            // tabPage2
             // 
-            this.guna2Elipse1.BorderRadius = 20;
+            this.tabPage2.Controls.Add(this.flpTable);
+            this.tabPage2.Controls.Add(this.btnThongKe);
+            this.tabPage2.Controls.Add(this.checkOutDate);
+            this.tabPage2.Controls.Add(this.checkInDate);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(927, 466);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // contextMenuStrip1
+            // flpTable
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.flpTable.AutoScroll = true;
+            this.flpTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpTable.Controls.Add(this.datatable);
+            this.flpTable.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flpTable.Location = new System.Drawing.Point(3, 69);
+            this.flpTable.Name = "flpTable";
+            this.flpTable.Size = new System.Drawing.Size(921, 394);
+            this.flpTable.TabIndex = 3;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.Location = new System.Drawing.Point(392, 16);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(180, 36);
+            this.btnThongKe.TabIndex = 2;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
+            // checkOutDate
+            // 
+            this.checkOutDate.Checked = true;
+            this.checkOutDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.checkOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.checkOutDate.Location = new System.Drawing.Point(719, 16);
+            this.checkOutDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.checkOutDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.checkOutDate.Name = "checkOutDate";
+            this.checkOutDate.Size = new System.Drawing.Size(200, 36);
+            this.checkOutDate.TabIndex = 1;
+            this.checkOutDate.Value = new System.DateTime(2024, 12, 9, 0, 30, 20, 800);
+            // 
+            // checkInDate
+            // 
+            this.checkInDate.Checked = true;
+            this.checkInDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.checkInDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.checkInDate.Location = new System.Drawing.Point(8, 16);
+            this.checkInDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.checkInDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.checkInDate.Name = "checkInDate";
+            this.checkInDate.Size = new System.Drawing.Size(200, 36);
+            this.checkInDate.TabIndex = 0;
+            this.checkInDate.Value = new System.DateTime(2024, 12, 9, 0, 29, 59, 652);
             // 
             // tabPage3
             // 
@@ -284,56 +332,64 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // checkInDate
+            // guna2Elipse1
             // 
-            this.checkInDate.Checked = true;
-            this.checkInDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.checkInDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.checkInDate.Location = new System.Drawing.Point(8, 16);
-            this.checkInDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.checkInDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.checkInDate.Name = "checkInDate";
-            this.checkInDate.Size = new System.Drawing.Size(200, 36);
-            this.checkInDate.TabIndex = 0;
-            this.checkInDate.Value = new System.DateTime(2024, 12, 9, 0, 29, 59, 652);
+            this.guna2Elipse1.BorderRadius = 20;
             // 
-            // checkOutDate
+            // contextMenuStrip1
             // 
-            this.checkOutDate.Checked = true;
-            this.checkOutDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.checkOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.checkOutDate.Location = new System.Drawing.Point(719, 16);
-            this.checkOutDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.checkOutDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.checkOutDate.Name = "checkOutDate";
-            this.checkOutDate.Size = new System.Drawing.Size(200, 36);
-            this.checkOutDate.TabIndex = 1;
-            this.checkOutDate.Value = new System.DateTime(2024, 12, 9, 0, 30, 20, 800);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // btnThongKe
+            // datatable
             // 
-            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Location = new System.Drawing.Point(392, 16);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(180, 36);
-            this.btnThongKe.TabIndex = 2;
-            this.btnThongKe.Text = "Thống Kê";
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
-            // 
-            // flpTable
-            // 
-            this.flpTable.AutoScroll = true;
-            this.flpTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpTable.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flpTable.Location = new System.Drawing.Point(3, 78);
-            this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(921, 385);
-            this.flpTable.TabIndex = 3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.datatable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datatable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.datatable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datatable.DefaultCellStyle = dataGridViewCellStyle3;
+            this.datatable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.datatable.Location = new System.Drawing.Point(3, 3);
+            this.datatable.Name = "datatable";
+            this.datatable.RowHeadersVisible = false;
+            this.datatable.Size = new System.Drawing.Size(912, 385);
+            this.datatable.TabIndex = 0;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.datatable.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.datatable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.datatable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.datatable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.datatable.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datatable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.datatable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datatable.ThemeStyle.HeaderStyle.Height = 4;
+            this.datatable.ThemeStyle.ReadOnly = false;
+            this.datatable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.datatable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.datatable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datatable.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.datatable.ThemeStyle.RowsStyle.Height = 22;
+            this.datatable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.datatable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // BaoCao
             // 
@@ -346,7 +402,6 @@
             this.Text = "BaoCao";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
@@ -358,6 +413,9 @@
             this.guna2Panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.flpTable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datatable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -389,5 +447,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker checkInDate;
         private Guna.UI2.WinForms.Guna2Button btnThongKe;
         private System.Windows.Forms.FlowLayoutPanel flpTable;
+        private Guna.UI2.WinForms.Guna2DataGridView datatable;
     }
 }
