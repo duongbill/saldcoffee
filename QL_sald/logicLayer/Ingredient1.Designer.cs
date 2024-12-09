@@ -45,15 +45,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_anh = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2TextBoxanh = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxphanloai = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxten = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxid = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btn_anh = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_xoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_sua = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_them = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.viewIngredient)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -75,9 +75,9 @@
             this.labelid.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelid.Location = new System.Drawing.Point(39, 92);
             this.labelid.Name = "labelid";
-            this.labelid.Size = new System.Drawing.Size(134, 27);
+            this.labelid.Size = new System.Drawing.Size(200, 27);
             this.labelid.TabIndex = 3;
-            this.labelid.Text = "Tên đồ ăn: ";
+            this.labelid.Text = "Tên nguyên liệu: ";
             // 
             // labelten
             // 
@@ -85,9 +85,9 @@
             this.labelten.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelten.Location = new System.Drawing.Point(39, 33);
             this.labelten.Name = "labelten";
-            this.labelten.Size = new System.Drawing.Size(106, 27);
+            this.labelten.Size = new System.Drawing.Size(160, 27);
             this.labelten.TabIndex = 2;
-            this.labelten.Text = "Id đồ ăn:";
+            this.labelten.Text = "Id nguên liệu:";
             this.labelten.Click += new System.EventHandler(this.label2_Click);
             // 
             // viewIngredient
@@ -259,6 +259,32 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Ngày: ";
             // 
+            // btn_anh
+            // 
+            this.btn_anh.BackColor = System.Drawing.Color.Transparent;
+            this.btn_anh.BorderRadius = 6;
+            this.btn_anh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_anh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_anh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_anh.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_anh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_anh.FillColor = System.Drawing.Color.DimGray;
+            this.btn_anh.FillColor2 = System.Drawing.Color.DimGray;
+            this.btn_anh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_anh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_anh.ForeColor = System.Drawing.Color.Black;
+            this.btn_anh.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_anh.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_anh.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn_anh.Image = ((System.Drawing.Image)(resources.GetObject("btn_anh.Image")));
+            this.btn_anh.Location = new System.Drawing.Point(623, 146);
+            this.btn_anh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_anh.Name = "btn_anh";
+            this.btn_anh.Size = new System.Drawing.Size(131, 39);
+            this.btn_anh.TabIndex = 26;
+            this.btn_anh.Text = "Chọn ảnh";
+            this.btn_anh.Click += new System.EventHandler(this.btn_anh_Click);
+            // 
             // guna2TextBoxanh
             // 
             this.guna2TextBoxanh.BorderRadius = 12;
@@ -351,36 +377,6 @@
             this.guna2TextBoxid.TabIndex = 22;
             this.guna2TextBoxid.TextChanged += new System.EventHandler(this.guna2TextBoxten_TextChanged);
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 20;
-            // 
-            // btn_anh
-            // 
-            this.btn_anh.BackColor = System.Drawing.Color.Transparent;
-            this.btn_anh.BorderRadius = 6;
-            this.btn_anh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_anh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_anh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_anh.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_anh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_anh.FillColor = System.Drawing.Color.DimGray;
-            this.btn_anh.FillColor2 = System.Drawing.Color.DimGray;
-            this.btn_anh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_anh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_anh.ForeColor = System.Drawing.Color.Black;
-            this.btn_anh.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_anh.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_anh.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_anh.Image = ((System.Drawing.Image)(resources.GetObject("btn_anh.Image")));
-            this.btn_anh.Location = new System.Drawing.Point(623, 146);
-            this.btn_anh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_anh.Name = "btn_anh";
-            this.btn_anh.Size = new System.Drawing.Size(131, 39);
-            this.btn_anh.TabIndex = 26;
-            this.btn_anh.Text = "Chọn ảnh";
-            this.btn_anh.Click += new System.EventHandler(this.btn_anh_Click);
-            // 
             // btn_xoa
             // 
             this.btn_xoa.BackColor = System.Drawing.Color.Transparent;
@@ -462,7 +458,11 @@
             this.btn_them.Text = "Thêm";
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
-            // Ingredient
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 20;
+            // 
+            // Ingredient1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -470,7 +470,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Ingredient";
+            this.Name = "Ingredient1";
             this.Text = "Ingredient";
             ((System.ComponentModel.ISupportInitialize)(this.viewIngredient)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
