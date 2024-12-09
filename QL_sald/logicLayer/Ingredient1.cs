@@ -22,6 +22,48 @@ namespace QL_sald
             AddIngredientBinding();
         }
 
+        private void txttim_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txttim.Text.Trim();
+            SearchIngredient(keyword);
+        }
+
+        void SearchIngredient(string keyword)
+        {
+            string connectionString = @"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;";
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            // Nếu từ khóa rỗng, trả về toàn bộ danh sách nguyên liệu
+            string query = string.IsNullOrWhiteSpace(keyword)
+                ? "SELECT * FROM Ingredient"
+                : "SELECT * FROM Ingredient WHERE IngredientName LIKE @Keyword";
+
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+
+                // Thêm tham số từ khóa nếu không rỗng
+                if (!string.IsNullOrWhiteSpace(keyword))
+                {
+                    command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
+                }
+
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                connection.Close();
+
+                // Cập nhật dữ liệu vào DataGridView
+                viewIngredient.DataSource = data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         void LoadIngredientList()
         {
             string connectionString = @"Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;";
@@ -224,9 +266,13 @@ namespace QL_sald
 
 
 
-      
+
 
         // Các sự kiện khác (không sử dụng trong đoạn mã hiện tại)
+        private void tim_Click(object sender, EventArgs e)
+        {
+
+        }
         private void guna2HtmlLabel1_Click(object sender, EventArgs e) { }
         private void label2_Click(object sender, EventArgs e) { }
         private void viewStaff_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
@@ -235,5 +281,7 @@ namespace QL_sald
         private void guna2TextBoxid_TextChanged(object sender, EventArgs e) { }
         private void guna2TextBoxgia_TextChanged(object sender, EventArgs e) { }
         private void guna2TextBoxanh_TextChanged(object sender, EventArgs e) { }
+
+       
     }
 }

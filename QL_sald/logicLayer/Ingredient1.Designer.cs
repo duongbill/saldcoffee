@@ -41,6 +41,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txttim = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxsoluong = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -54,6 +55,7 @@
             this.btn_sua = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_them = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewIngredient)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -180,6 +182,8 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderRadius = 12;
             this.guna2Panel2.BorderThickness = 3;
+            this.guna2Panel2.Controls.Add(this.label2);
+            this.guna2Panel2.Controls.Add(this.txttim);
             this.guna2Panel2.Controls.Add(this.guna2TextBoxsoluong);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.dtpDate);
@@ -200,6 +204,34 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1101, 306);
             this.guna2Panel2.TabIndex = 4;
+            // 
+            // txttim
+            // 
+            this.txttim.BackColor = System.Drawing.Color.Transparent;
+            this.txttim.BorderColor = System.Drawing.Color.Silver;
+            this.txttim.BorderRadius = 6;
+            this.txttim.BorderThickness = 0;
+            this.txttim.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txttim.DefaultText = " ";
+            this.txttim.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txttim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txttim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttim.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttim.FillColor = System.Drawing.Color.Gainsboro;
+            this.txttim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txttim.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txttim.ForeColor = System.Drawing.Color.White;
+            this.txttim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txttim.IconLeft = ((System.Drawing.Image)(resources.GetObject("txttim.IconLeft")));
+            this.txttim.Location = new System.Drawing.Point(790, 227);
+            this.txttim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txttim.Name = "txttim";
+            this.txttim.PasswordChar = '\0';
+            this.txttim.PlaceholderText = "";
+            this.txttim.SelectedText = "";
+            this.txttim.Size = new System.Drawing.Size(279, 39);
+            this.txttim.TabIndex = 31;
+            this.txttim.TextChanged += new System.EventHandler(this.txttim_TextChanged);
             // 
             // guna2TextBoxsoluong
             // 
@@ -462,6 +494,16 @@
             // 
             this.guna2Elipse1.BorderRadius = 20;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(618, 239);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 27);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Tìm kiếm: ";
+            // 
             // Ingredient1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -503,5 +545,7 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxsoluong;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox txttim;
+        private System.Windows.Forms.Label label2;
     }
 }
