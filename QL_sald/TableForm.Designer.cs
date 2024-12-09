@@ -97,7 +97,7 @@
             this.btnAddTable.Size = new System.Drawing.Size(111, 36);
             this.btnAddTable.TabIndex = 12;
             this.btnAddTable.Text = "Thêm bàn";
-            this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
+
             // 
             // btnDelTable
             // 
