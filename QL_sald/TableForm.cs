@@ -60,7 +60,7 @@ namespace QL_sald
                     Height = 120,
                     Text = table.TableName + Environment.NewLine + table.TrangThai,
 
-                    BackColor = table.TrangThai == "Bàn Trống" ? Color.Gray : Color.Pink,
+                    //BackColor = table.TrangThai == "Bàn Trống" ? Color.Gray : Color.Pink,
                     Tag = table
                 };
 

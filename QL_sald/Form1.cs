@@ -95,8 +95,11 @@ namespace QL_sald
 
         private void btn_ct_Click(object sender, EventArgs e)
         {
+            // Khởi tạo instance mới của Cài_đặt mỗi lần nhấn nút
+            Cài_đặt stControl = new Cài_đặt(this);
             OpenChildControl(stControl); // Truyền Form con menuControl vào
         }
+
 
         private void btn_tc_Click(object sender, EventArgs e)
         {

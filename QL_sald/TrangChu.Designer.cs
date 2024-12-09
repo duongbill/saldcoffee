@@ -60,28 +60,28 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.guna2Panel3);
             this.panel2.Controls.Add(this.guna2Panel1);
-            this.panel2.Location = new System.Drawing.Point(4, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1112, 220);
+            this.panel2.Size = new System.Drawing.Size(834, 179);
             this.panel2.TabIndex = 20;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.guna2PictureBox1);
-            this.panel3.Location = new System.Drawing.Point(53, 34);
+            this.panel3.Location = new System.Drawing.Point(40, 28);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(224, 159);
+            this.panel3.Size = new System.Drawing.Size(168, 129);
             this.panel3.TabIndex = 4;
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(124, 126);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(162, 126);
             this.guna2PictureBox1.TabIndex = 4;
             this.guna2PictureBox1.TabStop = false;
             // 
@@ -90,42 +90,38 @@
             this.guna2Panel3.BackColor = System.Drawing.Color.White;
             this.guna2Panel3.Controls.Add(this.lblTotalStaff);
             this.guna2Panel3.Controls.Add(this.label6);
-            this.guna2Panel3.Location = new System.Drawing.Point(388, 34);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel3.Location = new System.Drawing.Point(291, 28);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(327, 159);
+            this.guna2Panel3.Size = new System.Drawing.Size(245, 129);
             this.guna2Panel3.TabIndex = 3;
             // 
             // lblTotalStaff
             // 
             this.lblTotalStaff.AutoSize = true;
             this.lblTotalStaff.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalStaff.Location = new System.Drawing.Point(29, 85);
-            this.lblTotalStaff.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalStaff.Location = new System.Drawing.Point(22, 69);
             this.lblTotalStaff.Name = "lblTotalStaff";
-            this.lblTotalStaff.Size = new System.Drawing.Size(0, 45);
+            this.lblTotalStaff.Size = new System.Drawing.Size(0, 36);
             this.lblTotalStaff.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(19, 26);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(14, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 32);
+            this.label6.Size = new System.Drawing.Size(181, 24);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Số nhân viên";
+            this.label6.Text = "Tổng số nhân viên";
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.Controls.Add(this.lblTotalInvoice);
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Location = new System.Drawing.Point(752, 34);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(564, 28);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(327, 159);
+            this.guna2Panel1.Size = new System.Drawing.Size(245, 129);
             this.guna2Panel1.TabIndex = 2;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -133,20 +129,18 @@
             // 
             this.lblTotalInvoice.AutoSize = true;
             this.lblTotalInvoice.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalInvoice.Location = new System.Drawing.Point(29, 85);
-            this.lblTotalInvoice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalInvoice.Location = new System.Drawing.Point(22, 69);
             this.lblTotalInvoice.Name = "lblTotalInvoice";
-            this.lblTotalInvoice.Size = new System.Drawing.Size(0, 45);
+            this.lblTotalInvoice.Size = new System.Drawing.Size(0, 36);
             this.lblTotalInvoice.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(19, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(14, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 32);
+            this.label1.Size = new System.Drawing.Size(169, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tổng số hóa đơn";
             // 
@@ -160,10 +154,10 @@
             // 
             this.panel1.Controls.Add(this.guna2Panel4);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(4, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1117, 674);
+            this.panel1.Size = new System.Drawing.Size(838, 548);
             this.panel1.TabIndex = 1;
             // 
             // guna2Panel4
@@ -171,21 +165,19 @@
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel4.BackgroundImage")));
             this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2Panel4.Location = new System.Drawing.Point(9, 244);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel4.Location = new System.Drawing.Point(7, 198);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(1084, 398);
+            this.guna2Panel4.Size = new System.Drawing.Size(813, 323);
             this.guna2Panel4.TabIndex = 3;
             // 
             // TrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1128, 679);
+            this.ClientSize = new System.Drawing.Size(846, 552);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TrangChu";
             this.Text = "TrangChu";
             this.panel2.ResumeLayout(false);
