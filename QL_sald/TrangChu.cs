@@ -28,7 +28,7 @@ namespace QL_sald
 
                 // Hiển thị dữ liệu lên các label
                 lblTotalInvoice.Text = $"{totalInvoices}";
-                lblTotalPrice.Text = $"{totalRevenue.ToString("C0", vietnamCulture)}"; // Định dạng tiền tệ
+      
                 lblTotalStaff.Text = $"{totalStaff}";
             }
             catch (Exception ex)
@@ -38,7 +38,13 @@ namespace QL_sald
             }
         }
 
+
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

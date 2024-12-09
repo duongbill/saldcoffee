@@ -5,22 +5,24 @@ namespace QL_sald
 {
     public partial class Form1 : Form
     {
-      
         private menu_cf menuControl = new menu_cf();  // `menu_cafe` là Form con
-        private Cài_đặt stControl = new Cài_đặt();
+        private Cài_đặt stControl;
         private TrangChu tcControl = new TrangChu();
         private MenuIngre menuig = new MenuIngre();
         // private TableShow pgControl = new TableShow();
         private staff sfControl = new staff();
+
         public Form1()
         {
             InitializeComponent();
+
+            // Khởi tạo `Cài_đặt` với tham chiếu đến `Form1`
+            stControl = new Cài_đặt(this);
 
             // Gán sự kiện Click cho btnMenu
             btnMenu.Click += new EventHandler(btnMenu_Click);
             // Gán sự kiện đăng xuất cho `Cài_đặt`
             stControl.LogoutRequested += OnLogoutRequested;
-
         }
 
         private Form currentFormChild;
@@ -41,14 +43,13 @@ namespace QL_sald
             {
                 c.Dispose();
             }
-            panel_Body.Controls.Clear();
             panel_Body.Controls.Clear();                    // Xóa các điều khiển hiện tại trong Panel
             panel_Body.Controls.Add(childForm);             // Thêm Form con vào Panel
             panel_Body.Tag = childForm;
-           
+
             childForm.BringToFront();
-            childForm.Show();         
-           
+            childForm.Show();
+
         }
 
         private void OpenChildControl(UserControl childControl)
@@ -59,7 +60,7 @@ namespace QL_sald
             }
 
             currentUserControlChild = childControl;
-      
+
             childControl.Dock = DockStyle.Fill;                 // Tùy chọn để Form con tự động giãn ra toàn bộ Panel
             panel_Body.Controls.Clear();                    // Xóa các điều khiển hiện tại trong Panel
             panel_Body.Controls.Add(childControl);             // Thêm Form con vào Panel
@@ -67,19 +68,23 @@ namespace QL_sald
             childControl.BringToFront();
             childControl.Show();                               // Hiển thị Form con
         }
+
         // Phương thức xử lý sự kiện đăng xuất
         private void OnLogoutRequested(object sender, EventArgs e)
         {
+            // Hiển thị form đăng nhập
+            SignIn si = new SignIn();
+            si.Show();
+
             // Đóng form chính và mở lại form đăng nhập
-            this.Hide();
+            this.Close();
         }
 
         // Sự kiện Click cho nút btnMenu để hiển thị menuControl
         private void btnMenu_Click(object sender, EventArgs e)
         {
-         menu_cf menuControl1 = new menu_cf();
-        OpenChildForm(menuControl1); // Truyền Form con menuControl vào
-
+            menu_cf menuControl1 = new menu_cf();
+            OpenChildForm(menuControl1); // Truyền Form con menuControl vào
         }
 
         // Sự kiện thoát ứng dụng
@@ -90,9 +95,7 @@ namespace QL_sald
 
         private void btn_ct_Click(object sender, EventArgs e)
         {
-            Cài_đặt stControl = new Cài_đặt();
             OpenChildControl(stControl); // Truyền Form con menuControl vào
-
         }
 
         private void btn_tc_Click(object sender, EventArgs e)
@@ -116,12 +119,6 @@ namespace QL_sald
         private void btnMenu_Click_1(object sender, EventArgs e)
         {
 
-        }
-
-        private void btn_ls_Click(object sender, EventArgs e)
-        {
-            Form2 pgControl = new Form2();
-            OpenChildForm(pgControl);
         }
 
         private void btn_bc_Click(object sender, EventArgs e)

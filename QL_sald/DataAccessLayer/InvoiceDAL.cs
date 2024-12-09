@@ -28,7 +28,7 @@ namespace QL_sald.DataAccessLayer
         }
 
         // Lấy danh sách hóa đơn
-        public DataTable sfData(DateTime checkIn,DateTime checkOut)
+        public DataTable sfData(DateTime checkIn, DateTime checkOut)
         {
             DataTable dataTable = new DataTable();
             using (SqlConnection conn = GetConnection())
@@ -94,6 +94,8 @@ namespace QL_sald.DataAccessLayer
                 }
             }
         }
+
+
 
 
         public DataTable GetBillByDate(DateTime checkin, DateTime checkout)
@@ -184,6 +186,39 @@ namespace QL_sald.DataAccessLayer
             }
         }
 
+
+        // Lấy danh sách hóa đơn theo ngày
+        public DataTable GetListInvoiceByDate(DateTime checkIn, DateTime checkOut)
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    connection.Open();
+                    string query = "exec USP_GetListInvoiceByDate @checkIn, @checkOut";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@checkIn", checkIn);
+                        command.Parameters.AddWithValue("@checkOut", checkOut);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi lấy danh sách hóa đơn: {ex.Message}");
+            }
+
+            return dataTable;
+        }
+
+
         // Tính tổng số hóa đơn
         public int GetTotalInvoices()
         {
@@ -230,36 +265,5 @@ namespace QL_sald.DataAccessLayer
             }
         }
 
-
-        // Lấy danh sách hóa đơn theo ngày
-        public DataTable GetListInvoiceByDate(DateTime checkIn, DateTime checkOut)
-        {
-            DataTable dataTable = new DataTable();
-
-            try
-            {
-                using (SqlConnection connection = GetConnection())
-                {
-                    connection.Open();
-                    string query = "exec USP_GetListInvoiceByDate @checkIn, @checkOut";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@checkIn", checkIn);
-                        command.Parameters.AddWithValue("@checkOut", checkOut);
-
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                        {
-                            adapter.Fill(dataTable);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error while fetching invoices: {ex.Message}");
-            }
-
-            return dataTable;
-        }
     }
 }
