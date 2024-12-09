@@ -214,6 +214,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="logicLayer\Ingredient1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logicLayer\Ingredient1.Designer.cs">
+      <DependentUpon>Ingredient1.cs</DependentUpon>
+    </Compile>
     <Compile Include="logicLayer\AddProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logicLayer\Ingredient1.resx">
+      <DependentUpon>Ingredient1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="logicLayer\AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>

@@ -221,10 +221,50 @@ namespace QL_sald
         }
 
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+
+        {
+            TableDAL tableDAL = new TableDAL();
+            bool isSuccess = tableDAL.InsertTable();
+
+            if (isSuccess)
+            {
+                MessageBox.Show("Thêm bàn thành công!", "Thông báo");
+                LoadTable(); // Tải lại danh sách bàn
+            }
+            else
+            {
+                MessageBox.Show("Thêm bàn thất bại.", "Lỗi");
+            }
         }
+
+        private void btnDelTable_Click(object sender, EventArgs e)
+        {
+            TableFood selectedTable = lsvBill.Tag as TableFood;
+
+            if (selectedTable == null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn để xóa.", "Thông báo");
+                return;
+            }
+
+            if (MessageBox.Show($"Bạn có chắc chắn muốn xóa {selectedTable.TableName}?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                bool result = TableDAL.Instance.DeleteTable(selectedTable.TableId);
+
+                if (result)
+                {
+                    MessageBox.Show("Xóa bàn thành công!", "Thông báo");
+                    LoadTable(); // Cập nhật lại danh sách bàn
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xóa bàn. Vui lòng thử lại.", "Lỗi");
+                }
+            }
+        }
+
     }
 
 }

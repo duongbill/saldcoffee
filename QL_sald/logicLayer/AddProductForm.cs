@@ -63,6 +63,47 @@ namespace QL_sald
         {
 
         }
+        private void txttim_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txttim.Text.Trim();
+            SearchIngredient(keyword);
+        }
+
+        void SearchIngredient(string keyword)
+        {
+           string connectionString = "Server=localhost,1433;Database=quanly_sald;User Id=sa;Password=123456;TrustServerCertificate=True;";
+
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            // Nếu từ khóa rỗng, trả về toàn bộ danh sách món ăn
+            string query = string.IsNullOrWhiteSpace(keyword)
+                ? "SELECT * FROM Food"
+                : "SELECT * FROM Food WHERE FoodName LIKE @Keyword";
+
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+
+                // Thêm tham số từ khóa nếu không rỗng
+                if (!string.IsNullOrWhiteSpace(keyword))
+                {
+                    command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
+                }
+
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                connection.Close();
+
+                // Cập nhật dữ liệu vào DataGridView
+                guna2DataGridView1.DataSource = data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -238,6 +279,11 @@ namespace QL_sald
             {
                 MessageBox.Show("Có lỗi xảy ra khi lấy thông tin sản phẩm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtImageURL_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 

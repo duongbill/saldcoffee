@@ -97,6 +97,7 @@
             this.btnAddTable.Size = new System.Drawing.Size(111, 36);
             this.btnAddTable.TabIndex = 12;
             this.btnAddTable.Text = "Thêm bàn";
+            this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
             // btnDelTable
             // 
@@ -113,7 +114,7 @@
             this.btnDelTable.Size = new System.Drawing.Size(111, 36);
             this.btnDelTable.TabIndex = 11;
             this.btnDelTable.Text = "Xóa bàn";
-            this.btnDelTable.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnDelTable.Click += new System.EventHandler(this.btnDelTable_Click);
             // 
             // cbCount
             // 

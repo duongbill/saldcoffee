@@ -938,7 +938,6 @@ SELECT SUM(TotalPrice) FROM Invoice WHERE TrangThai = 1
 SELECT COUNT(*) FROM Invoice;
 SELECT * FROM Invoice WHERE TrangThai = 1;
 
-<<<<<<< HEAD
 alter PROCEDURE USP_GetListInvoiceDetailsByDate
     @checkIn DATE,
     @checkOut DATE
@@ -963,7 +962,7 @@ GO
 EXEC USP_GetListInvoiceDetailsByDate @checkIn='2000-08-01', @checkOut='2025-08-07';
 
 select * from invoice
-=======
+
 create proc USP_GetListInvoiceByDate
 @checkIn date,@checkOut date
 as
@@ -973,4 +972,111 @@ begin
 end
 go
 exec USP_GetListInvoiceByDate '2024-08-06','2024-08-07' 
->>>>>>> e017861e5e526bedb1f4a76574220f5195c4a2ab
+
+
+
+select * from invoice
+
+
+--select tf.TableName,  DateCheckIn , DateCheckOut
+--from invoice as b, TableFood as tf , Food as f, InvoiceDetail bdt
+
+--where DateCheckIn >= '20241201' and DateCheckOut<= '20241209'
+--and b.TrangThai = 1 and b.TableId = tf.TableId and b.TableId = tf.TableId
+--and bdt.FoodId = f.FoodId
+
+delete InvoiceDetail
+delete Invoice
+
+alter table invoice add totalprice float
+
+ select * from invoice
+
+SELECT 
+    tf.TableName,  
+    b.DateCheckIn, 
+    b.DateCheckOut,
+    SUM(bdt.Price * bdt.SoLuong) AS TotalAmount
+FROM 
+    invoice AS b
+JOIN 
+    TableFood AS tf ON b.TableId = tf.TableId
+JOIN 
+    InvoiceDetail AS bdt ON b.InvoiceId = bdt.InvoiceId
+JOIN 
+    Food AS f ON bdt.FoodId = f.FoodId
+WHERE 
+    b.DateCheckIn >= '2024-12-01' 
+    AND b.DateCheckOut <= '2024-12-09'
+    AND b.TrangThai = 1
+GROUP BY 
+    tf.TableName, b.DateCheckIn, b.DateCheckOut;
+
+
+
+
+SELECT InvoiceDetailId, InvoiceId, FoodId, SoLuong, Price
+    FROM InvoiceDetail
+    WHERE InvoiceId = 1;
+
+SELECT 
+    tf.TableName,  
+    b.DateCheckIn, 
+    b.DateCheckOut,
+    SUM(bdt.Price * bdt.SoLuong) AS TotalAmount
+FROM 
+    invoice AS b
+JOIN 
+    TableFood AS tf ON b.TableId = tf.TableId
+JOIN 
+    InvoiceDetail AS bdt ON b.InvoiceId = bdt.InvoiceId
+JOIN 
+    Food AS f ON bdt.FoodId = f.FoodId
+WHERE 
+    b.DateCheckIn >= '2024-12-01' 
+    AND b.DateCheckOut <= '2024-12-09'
+    AND b.TrangThai = 1
+GROUP BY 
+    tf.TableName, b.DateCheckIn, b.DateCheckOut;
+
+DECLARE @InvoiceId INT;
+SET @InvoiceId = <your_invoice_id_here>;
+
+UPDATE Invoice 
+SET 
+    DateCheckOut = GETDATE(), 
+    TrangThai = 1, 
+    Total = (SELECT SUM(bdt.Price * bdt.SoLuong)
+             FROM InvoiceDetail AS bdt
+             WHERE bdt.InvoiceId = Invoice.InvoiceId)
+WHERE InvoiceId = @InvoiceId;
+
+ALTER TABLE Invoice
+ADD Total DECIMAL(18, 3) DEFAULT 0;
+
+go
+
+CREATE PROCEDURE usp_GetBillByDate
+    @datecheckin DATE,
+    @datecheckout DATE
+AS
+BEGIN
+    SELECT 
+        tf.TableName,  
+        b.DateCheckIn, 
+        b.DateCheckOut,
+        b.Total AS TongTien
+    FROM 
+        Invoice AS b
+    JOIN 
+        TableFood AS tf ON b.TableId = tf.TableId
+    WHERE 
+        b.DateCheckIn >= @datecheckin 
+        AND b.DateCheckOut <= @datecheckout
+        AND b.TrangThai = 1
+    GROUP BY 
+        tf.TableName, b.DateCheckIn, b.DateCheckOut, b.Total;
+END;
+GO
+
+EXEC usp_GetBillByDate @datecheckin = '2024-12-01', @datecheckout = '2024-12-09';
