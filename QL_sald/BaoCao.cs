@@ -1,3 +1,4 @@
+
 ﻿using QL_sald.DataAccessLayer;
 using System;
 using System.Collections.Generic;
@@ -44,28 +45,24 @@ namespace QL_sald
             }
         }
         // Hàm tải danh sách hóa đơn theo khoảng thời gian
-
-        private void loadListViewByDate(DateTime checkIn, DateTime checkOut)
+        void loadListViewByDate(DateTime checkIn, DateTime checkOut)
         {
-            try
-            {
-                // Lấy dữ liệu từ InvoiceDAL
-                DataTable dataTable = InvoiceDAL.Instance.GetListInvoiceByDate(checkIn, checkOut);
+            // Lấy giá trị từ các điều khiển ngày giờ
+            DateTime checkin = checkInDate.Value;
+            DateTime checkout = checkOutDate.Value;
 
-                // Hiển thị dữ liệu trong DataGridView
-                dataGridViewInvoices.DataSource = dataTable;
-            }
-            catch (Exception ex)
-            {
-                // Hiển thị thông báo lỗi nếu có lỗi
-                MessageBox.Show($"Lỗi khi tải danh sách hóa đơn: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            // Gọi phương thức để lấy danh sách hóa đơn
+            InvoiceDAL invoice = new InvoiceDAL();
+            DataTable dataTable = invoice.sfData();
+
+            // Hiển thị dữ liệu trong DataGridView
+            datatable.DataSource = dataTable;
         }
-
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             loadListViewByDate(checkInDate.Value, checkOutDate.Value);
+           
         }
-
     }
 }
+

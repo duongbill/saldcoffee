@@ -60,7 +60,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dataGridViewInvoices = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.datatable = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -72,7 +72,7 @@
             this.guna2Panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.flpTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datatable)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -264,11 +264,11 @@
             // 
             this.flpTable.AutoScroll = true;
             this.flpTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpTable.Controls.Add(this.dataGridViewInvoices);
+            this.flpTable.Controls.Add(this.datatable);
             this.flpTable.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flpTable.Location = new System.Drawing.Point(3, 78);
+            this.flpTable.Location = new System.Drawing.Point(3, 69);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(921, 385);
+            this.flpTable.Size = new System.Drawing.Size(921, 394);
             this.flpTable.TabIndex = 3;
             // 
             // btnThongKe
@@ -342,56 +342,54 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dataGridViewInvoices
+            // datatable
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridViewInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.datatable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewInvoices.ColumnHeadersHeight = 4;
-            this.dataGridViewInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.datatable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.datatable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewInvoices.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewInvoices.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewInvoices.Name = "dataGridViewInvoices";
-            this.dataGridViewInvoices.RowHeadersVisible = false;
-            this.dataGridViewInvoices.Size = new System.Drawing.Size(914, 388);
-            this.dataGridViewInvoices.TabIndex = 0;
-            this.dataGridViewInvoices.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewInvoices.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dataGridViewInvoices.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dataGridViewInvoices.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dataGridViewInvoices.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dataGridViewInvoices.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewInvoices.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewInvoices.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dataGridViewInvoices.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridViewInvoices.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dataGridViewInvoices.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewInvoices.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataGridViewInvoices.ThemeStyle.HeaderStyle.Height = 4;
-            this.dataGridViewInvoices.ThemeStyle.ReadOnly = false;
-            this.dataGridViewInvoices.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewInvoices.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridViewInvoices.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dataGridViewInvoices.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridViewInvoices.ThemeStyle.RowsStyle.Height = 22;
-            this.dataGridViewInvoices.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewInvoices.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-           
+            this.datatable.DefaultCellStyle = dataGridViewCellStyle3;
+            this.datatable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.datatable.Location = new System.Drawing.Point(3, 3);
+            this.datatable.Name = "datatable";
+            this.datatable.RowHeadersVisible = false;
+            this.datatable.Size = new System.Drawing.Size(912, 385);
+            this.datatable.TabIndex = 0;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.datatable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.datatable.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.datatable.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.datatable.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.datatable.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.datatable.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datatable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.datatable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datatable.ThemeStyle.HeaderStyle.Height = 4;
+            this.datatable.ThemeStyle.ReadOnly = false;
+            this.datatable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.datatable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.datatable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datatable.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.datatable.ThemeStyle.RowsStyle.Height = 22;
+            this.datatable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.datatable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // BaoCao
             // 
@@ -417,9 +415,8 @@
             this.guna2Panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.flpTable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datatable)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -448,7 +445,8 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker checkOutDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker checkInDate;
         private Guna.UI2.WinForms.Guna2Button btnThongKe;
+
         private System.Windows.Forms.FlowLayoutPanel flpTable;
-        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewInvoices;
+        private Guna.UI2.WinForms.Guna2DataGridView datatable;
     }
 }

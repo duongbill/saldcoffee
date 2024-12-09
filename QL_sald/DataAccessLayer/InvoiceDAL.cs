@@ -19,7 +19,7 @@ namespace QL_sald.DataAccessLayer
             private set { instance = value; }
         }
 
-        private InvoiceDAL() { }
+        public InvoiceDAL() { }
 
         private SqlConnection GetConnection()
         {
