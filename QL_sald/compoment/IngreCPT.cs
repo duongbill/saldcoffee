@@ -69,5 +69,15 @@ namespace QL_sald.compoment
         {
 
         }
+
+        private void txtQuantity_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_sl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

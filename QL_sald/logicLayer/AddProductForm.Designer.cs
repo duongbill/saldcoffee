@@ -18,6 +18,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductForm));
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtFoodName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -32,6 +33,8 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnChooseImg = new Guna.UI2.WinForms.Guna2Button();
             this.txtImageURL = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txttim = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +62,7 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(16, 15);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
@@ -132,7 +135,7 @@
             this.cmbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbCategory.ItemHeight = 30;
             this.cmbCategory.Location = new System.Drawing.Point(229, 465);
-            this.cmbCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(360, 36);
             this.cmbCategory.TabIndex = 10;
@@ -160,7 +163,7 @@
             this.cmbIngredient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbIngredient.ItemHeight = 30;
             this.cmbIngredient.Location = new System.Drawing.Point(229, 544);
-            this.cmbIngredient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbIngredient.Margin = new System.Windows.Forms.Padding(4);
             this.cmbIngredient.Name = "cmbIngredient";
             this.cmbIngredient.Size = new System.Drawing.Size(360, 36);
             this.cmbIngredient.TabIndex = 12;
@@ -218,7 +221,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(43, 719);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(167, 55);
             this.btnAdd.TabIndex = 16;
@@ -235,7 +238,7 @@
             this.btnDel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.ForeColor = System.Drawing.Color.White;
             this.btnDel.Location = new System.Drawing.Point(319, 719);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(4);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(167, 55);
             this.btnDel.TabIndex = 17;
@@ -252,7 +255,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(595, 719);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(167, 55);
             this.btnUpdate.TabIndex = 18;
@@ -269,7 +272,7 @@
             this.btnChooseImg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChooseImg.ForeColor = System.Drawing.Color.White;
             this.btnChooseImg.Location = new System.Drawing.Point(1055, 544);
-            this.btnChooseImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChooseImg.Margin = new System.Windows.Forms.Padding(4);
             this.btnChooseImg.Name = "btnChooseImg";
             this.btnChooseImg.Size = new System.Drawing.Size(167, 55);
             this.btnChooseImg.TabIndex = 20;
@@ -298,11 +301,51 @@
             this.txtImageURL.TabIndex = 21;
             this.txtImageURL.TextChanged += new System.EventHandler(this.txtImageURL_TextChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(796, 396);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 27);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Tìm kiếm: ";
+            // 
+            // txttim
+            // 
+            this.txttim.BackColor = System.Drawing.Color.Transparent;
+            this.txttim.BorderColor = System.Drawing.Color.Silver;
+            this.txttim.BorderRadius = 6;
+            this.txttim.BorderThickness = 0;
+            this.txttim.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txttim.DefaultText = " ";
+            this.txttim.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txttim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txttim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttim.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttim.FillColor = System.Drawing.Color.Gainsboro;
+            this.txttim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txttim.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txttim.ForeColor = System.Drawing.Color.White;
+            this.txttim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txttim.IconLeft = ((System.Drawing.Image)(resources.GetObject("txttim.IconLeft")));
+            this.txttim.Location = new System.Drawing.Point(936, 377);
+            this.txttim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txttim.Name = "txttim";
+            this.txttim.PasswordChar = '\0';
+            this.txttim.PlaceholderText = "";
+            this.txttim.SelectedText = "";
+            this.txttim.Size = new System.Drawing.Size(404, 54);
+            this.txttim.TabIndex = 33;
+            this.txttim.TextChanged += new System.EventHandler(this.txttim_TextChanged);
+            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1404, 820);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txttim);
             this.Controls.Add(this.txtImageURL);
             this.Controls.Add(this.btnChooseImg);
             this.Controls.Add(this.btnUpdate);
@@ -317,7 +360,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFoodName);
             this.Controls.Add(this.guna2DataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddProductForm";
             this.Text = "Thêm sản phẩm";
             this.Load += new System.EventHandler(this.AddProductForm_Load);
@@ -340,5 +383,7 @@
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnChooseImg;
         private Guna.UI2.WinForms.Guna2TextBox txtImageURL;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2TextBox txttim;
     }
 }
